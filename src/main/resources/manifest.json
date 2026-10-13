@@ -1,0 +1,19 @@
+{
+  "Group": "dev.ifelse",
+  "Name": "Genesis",
+  "Version": "${modVersion}",
+  "Description": "Genesis for Hytale. Developed by Zirion. Published by if-else.dev.",
+  "Authors": [
+    {
+      "Name": "Zirion"
+    }
+  ],
+  "Website": "https://if-else.dev",
+  "Main": "${pluginMainClass}",
+  "ServerVersion": "${hytaleVersion}",
+  "Dependencies": {},
+  "OptionalDependencies": {},
+  "LoadBefore": {},
+  "DisabledByDefault": false,
+  "IncludesAssetPack": true
+}

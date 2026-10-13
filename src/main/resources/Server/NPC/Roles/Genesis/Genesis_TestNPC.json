@@ -1,0 +1,23 @@
+{
+  "Type": "Generic",
+  "Appearance": "Genesis_TestNPC",
+  "NameTranslationKey": "server.genesis.npcRoles.Genesis_TestNPC.name",
+  "Invulnerable": true,
+  "KnockbackScale": 0,
+  "MaxHealth": 100,
+  "MotionControllerList": [
+    {
+      "Type": "Walk",
+      "MaxWalkSpeed": 3,
+      "Gravity": 10,
+      "MaxFallSpeed": 8,
+      "Acceleration": 10
+    }
+  ],
+  "Instructions": [
+    {
+      "Sensor": { "Type": "Any" },
+      "BodyMotion": { "Type": "Nothing" }
+    }
+  ]
+}
