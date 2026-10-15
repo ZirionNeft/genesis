@@ -36,6 +36,7 @@ dependencies {
 
     testImplementation(platform("org.junit:junit-bom:6.0.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
+    testImplementation("com.hypixel.hytale:Server:$hytaleVersion")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
@@ -60,15 +61,20 @@ tasks.jar {
     isReproducibleFileOrder = true
 }
 
+val pluginJar = tasks.named<Jar>("jar")
+
 tasks.test {
     useJUnitPlatform()
+    systemProperty("java.util.logging.manager", "com.hypixel.hytale.logger.backend.HytaleLogManager")
+    dependsOn(pluginJar)
+    inputs.file(pluginJar.flatMap { it.archiveFile })
+    systemProperty("genesis.pluginJar", pluginJar.flatMap { it.archiveFile }.get().asFile.absolutePath)
+    systemProperty("genesis.hytaleVersion", hytaleVersion)
 }
-
-val pluginJar = tasks.named<Jar>("jar")
 
 val verifyPluginJar = tasks.register("verifyPluginJar") {
     group = "verification"
-    description = "Checks the Hytale manifest, plugin entry point and test NPC resources."
+    description = "Checks the Hytale manifest, plugin entry point and prototype NPC resources."
     dependsOn(pluginJar)
     inputs.file(pluginJar.flatMap { it.archiveFile })
     doLast {
@@ -81,7 +87,7 @@ val verifyPluginJar = tasks.register("verifyPluginJar") {
             }
             check(manifest["Name"] == "Genesis")
             check(manifest["Version"] == modVersion)
-            check(manifest["ServerVersion"] == hytaleVersion)
+            check(manifest["ServerVersion"] == "=$hytaleVersion")
             check(manifest["Main"] == pluginMainClass)
             check(manifest["IncludesAssetPack"] == true)
             check(jar.getJarEntry(pluginMainClass.replace('.', '/') + ".class") != null) {
@@ -118,6 +124,39 @@ val verifyPluginJar = tasks.register("verifyPluginJar") {
                 val entry = checkNotNull(jar.getJarEntry("Server/Languages/$locale/server.lang"))
                 val translations = jar.getInputStream(entry).bufferedReader(Charsets.UTF_8).use { it.readText() }
                 check(translations.lineSequence().any { it.startsWith("genesis.npcRoles.Genesis_TestNPC.name = ") })
+                check(translations.lineSequence().any { it.startsWith("genesis.npcRoles.Genesis_AnatomyProbe.name = ") })
+            }
+            val probeRole = readJson("Server/NPC/Roles/Genesis/Genesis_AnatomyProbe.json")
+            check(probeRole["Appearance"] == "Genesis_AnatomyProbe")
+            check(jar.getJarEntry("Common/UI/Custom/Genesis/AnatomyProbe.ui") != null)
+            for (suffix in listOf("", "_Orange", "_Whole", "_Whole_Orange")) {
+                val probe = readJson("Server/Models/Genesis/Genesis_AnatomyProbe$suffix.json")
+                fun checkVisualResource(config: Map<*, *>) {
+                    for (field in listOf("Model", "Texture")) {
+                        val path = config[field] as String
+                        check(path.startsWith("NPC/Genesis/AnatomyProbe/"))
+                        check(jar.getJarEntry("Common/$path") != null) { "Missing prototype resource: $path" }
+                    }
+                }
+                checkVisualResource(probe)
+                val attachmentSets = probe["RandomAttachmentSets"] as? Map<*, *>
+                if (!suffix.startsWith("_Whole")) {
+                    checkNotNull(attachmentSets)
+                    check(attachmentSets.keys == setOf("head", "tail"))
+                    for (set in attachmentSets.values) {
+                        val variants = set as Map<*, *>
+                        check(variants.keys == setOf("wolf", "fox"))
+                        variants.values.forEach { checkVisualResource(it as Map<*, *>) }
+                    }
+                }
+                val animationSets = probe["AnimationSets"] as Map<*, *>
+                for (name in listOf("Idle", "Walk")) {
+                    val set = animationSets[name] as Map<*, *>
+                    val animation = (set["Animations"] as List<*>).single() as Map<*, *>
+                    val data = readJson("Common/${animation["Animation"]}")
+                    check((data["duration"] as Number).toInt() > 0)
+                    check((data["nodeAnimations"] as Map<*, *>).isNotEmpty())
+                }
             }
         }
     }
@@ -147,12 +186,13 @@ tasks.register<JavaExec>("runServer") {
     mainClass.set("com.hypixel.hytale.Main")
     // JavaExec uses the classpath, so the server JAR's Enable-Native-Access is not applied.
     jvmArgs("--enable-native-access=ALL-UNNAMED")
+    systemProperty("genesis.anatomyProbe", providers.gradleProperty("genesisAnatomyProbe").getOrElse("false"))
     workingDir(layout.projectDirectory.dir("run"))
     standardInput = System.`in`
 
     doFirst {
         val assetsFile = hytaleAssetsFile
-            ?: throw GradleException("Pass -PhytaleAssets=/absolute/path/to/0.7.0/Assets.zip.")
+            ?: throw GradleException("Pass -PhytaleAssets=/absolute/path/to/$hytaleVersion/Assets.zip.")
         if (!assetsFile.isFile) {
             throw GradleException("Hytale Assets.zip does not exist: $assetsFile")
         }

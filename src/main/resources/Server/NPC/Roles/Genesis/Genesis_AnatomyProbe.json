@@ -1,0 +1,42 @@
+{
+  "Type": "Generic",
+  "Appearance": "Genesis_AnatomyProbe",
+  "NameTranslationKey": "server.genesis.npcRoles.Genesis_AnatomyProbe.name",
+  "Invulnerable": true,
+  "KnockbackScale": 0,
+  "MaxHealth": 100,
+  "MotionControllerList": [
+    {
+      "Type": "Walk",
+      "MaxWalkSpeed": 3,
+      "Gravity": 10,
+      "MaxFallSpeed": 8,
+      "Acceleration": 10
+    }
+  ],
+  "Instructions": [
+    {
+      "Sensor": {
+        "Type": "State",
+        "State": "Move",
+        "IgnoreMissingSetState": true
+      },
+      "BodyMotion": {
+        "Type": "WanderInCircle",
+        "Radius": 4,
+        "MaxHeadingChange": 1,
+        "RelativeSpeed": 0.4
+      }
+    },
+    {
+      "Sensor": {
+        "Type": "State",
+        "State": "Idle"
+      },
+      "BodyMotion": {
+        "Type": "Nothing"
+      }
+    }
+  ],
+  "StartState": "Idle"
+}

@@ -1,1 +1,19 @@
 genesis.npcRoles.Genesis_TestNPC.name = Genesis Test NPC
+
+genesis.npcRoles.Genesis_AnatomyProbe.name = Genesis anatomy prototype
+genesis.probe.description = Switch the appearance of the targeted anatomy prototype
+genesis.probe.head = Head: wolf or fox
+genesis.probe.tail = Tail: wolf or fox
+genesis.probe.coat = Coat: grey or orange
+genesis.probe.scale = Scale: 1 or 1.25
+genesis.probe.whole = Use the prepared whole model (wolf head + fox tail)
+genesis.probe.walk = Preview the walking animation in place
+genesis.probe.invalid = Use: /genesisprobe <wolf|fox> <wolf|fox> <grey|orange> <1|1.25> [--whole] [--walk] [--move] [--ui]
+genesis.probe.wholeCombination = The whole reference has a wolf head and fox tail; use: wolf fox.
+genesis.probe.target = Look at a Genesis_AnatomyProbe NPC within 8 metres.
+genesis.probe.missingAsset = Missing prototype model asset: {id}
+genesis.probe.applied = NPC {id}: head={head}, tail={tail}, coat={coat}, scale={scale}, model={model}, animation={animation}.
+genesis.probe.move = Move in a small circle using the NPC motion controller
+genesis.probe.ui = Open the prototype information page
+genesis.probe.uiTitle = Genesis anatomy prototype
+genesis.probe.uiHint = Press Esc to return to the world.

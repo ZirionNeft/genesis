@@ -1,1 +1,19 @@
 genesis.npcRoles.Genesis_TestNPC.name = Тестовый NPC Genesis
+
+genesis.npcRoles.Genesis_AnatomyProbe.name = Прототип анатомии Genesis
+genesis.probe.description = Изменить внешность прототипа анатомии под прицелом
+genesis.probe.head = Голова: wolf или fox
+genesis.probe.tail = Хвост: wolf или fox
+genesis.probe.coat = Окрас: grey или orange
+genesis.probe.scale = Масштаб: 1 или 1.25
+genesis.probe.whole = Цельная контрольная модель (голова волка + хвост лисицы)
+genesis.probe.walk = Показать анимацию ходьбы на месте
+genesis.probe.invalid = Формат: /genesisprobe <wolf|fox> <wolf|fox> <grey|orange> <1|1.25> [--whole] [--walk] [--move] [--ui]
+genesis.probe.wholeCombination = Цельная модель имеет голову волка и хвост лисицы; укажите: wolf fox.
+genesis.probe.target = Наведите прицел на NPC Genesis_AnatomyProbe в пределах 8 метров.
+genesis.probe.missingAsset = Не найден модельный ассет прототипа: {id}
+genesis.probe.applied = NPC {id}: голова={head}, хвост={tail}, окрас={coat}, масштаб={scale}, модель={model}, анимация={animation}.
+genesis.probe.move = Двигаться по небольшому кругу через контроллер NPC
+genesis.probe.ui = Открыть информационную страницу прототипа
+genesis.probe.uiTitle = Прототип анатомии Genesis
+genesis.probe.uiHint = Нажмите Esc, чтобы вернуться в мир.

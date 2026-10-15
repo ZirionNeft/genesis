@@ -10,7 +10,7 @@
   ],
   "Website": "https://if-else.dev",
   "Main": "${pluginMainClass}",
-  "ServerVersion": "${hytaleVersion}",
+  "ServerVersion": "=${hytaleVersion}",
   "Dependencies": {},
   "OptionalDependencies": {},
   "LoadBefore": {},

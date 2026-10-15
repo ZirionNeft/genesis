@@ -1,0 +1,21 @@
+Group {
+  Anchor: (Width: 640, Height: 260);
+  Background: #1d2733;
+  Padding: (Full: 24);
+  LayoutMode: Top;
+
+  Label #Title {
+    Anchor: (Height: 40);
+    Style: (FontSize: 24, TextColor: #e2cda5);
+  }
+
+  Label #Summary {
+    Anchor: (Height: 140);
+    Style: (FontSize: 17, TextColor: #d9e3ed, Wrap: true);
+  }
+
+  Label #Hint {
+    Anchor: (Height: 30);
+    Style: (FontSize: 15, TextColor: #9ab1c7);
+  }
+}
