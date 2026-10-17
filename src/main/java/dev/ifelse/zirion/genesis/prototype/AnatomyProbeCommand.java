@@ -11,7 +11,7 @@ import com.hypixel.hytale.server.core.command.system.arguments.system.FlagArg;
 import com.hypixel.hytale.server.core.command.system.arguments.system.RequiredArg;
 import com.hypixel.hytale.server.core.command.system.arguments.types.ArgTypes;
 import com.hypixel.hytale.server.core.command.system.basecommands.AbstractPlayerCommand;
-import com.hypixel.hytale.server.core.entity.AnimationUtils;
+import com.hypixel.hytale.server.core.entity.Dirty;
 import com.hypixel.hytale.server.core.entity.UUIDComponent;
 import com.hypixel.hytale.server.core.entity.entities.Player;
 import com.hypixel.hytale.server.core.modules.entity.component.ModelComponent;
@@ -94,13 +94,17 @@ public final class AnatomyProbeCommand extends AbstractPlayerCommand {
         store.putComponent(target, PersistentModel.getComponentType(), new PersistentModel(model.toReference()));
         store.putComponent(target, ModelComponent.getComponentType(), new ModelComponent(model));
         npc.getRole().updateMotionControllers(target, model, model.getBoundingBox(), store);
+        // PersistentModel updates the saved payload, but does not invalidate its chunk's saved snapshot.
+        store.ensureAndGetComponent(target, Dirty.getComponentType()).markDirty();
         boolean moving = move.get(context);
         StateSupport.get(target, store).setState(target, moving ? "Move" : "Idle", null, store);
         String animation = moving ? "Movement" : walk.get(context) ? "Walk" : "Idle";
-        if (moving) {
-            AnimationUtils.stopAnimation(target, AnimationSlot.Action, true, store);
+        // Keep Action in the NPC's active-animation snapshot for newly visible clients.
+        // The role owns Status/Idle; the Walk preview remains transient across world reloads.
+        if (moving || !walk.get(context)) {
+            npc.playAnimation(target, AnimationSlot.Action, null, true, store);
         } else {
-            AnimationUtils.playAnimation(target, AnimationSlot.Action, animation, true, store);
+            npc.playAnimation(target, AnimationSlot.Action, animation, true, store);
         }
         Message summary = Message.translation("server.genesis.probe.applied")
                 .param("id", identity.getUuid().toString()).param("head", headId).param("tail", tailId)

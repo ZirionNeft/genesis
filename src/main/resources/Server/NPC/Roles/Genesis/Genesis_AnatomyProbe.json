@@ -26,7 +26,13 @@
         "Radius": 4,
         "MaxHeadingChange": 1,
         "RelativeSpeed": 0.4
-      }
+      },
+      "Actions": [
+        {
+          "Type": "PlayAnimation",
+          "Slot": "Status"
+        }
+      ]
     },
     {
       "Sensor": {
@@ -35,7 +41,14 @@
       },
       "BodyMotion": {
         "Type": "Nothing"
-      }
+      },
+      "Actions": [
+        {
+          "Type": "PlayAnimation",
+          "Slot": "Status",
+          "Animation": "Idle"
+        }
+      ]
     }
   ],
   "StartState": "Idle"

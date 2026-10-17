@@ -227,7 +227,7 @@
                     {
                       "id": "6",
                       "name": "Muzzle--C1",
-                      "position": {"x": 0, "y": -3, "z": -11},
+                      "position": {"x": 0, "y": -1.5, "z": -5.5},
                       "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
                       "shape": {
                         "type": "box",
@@ -279,7 +279,7 @@
                     {
                       "id": "7",
                       "name": "Nose--C2",
-                      "position": {"x": 0, "y": -3, "z": -11},
+                      "position": {"x": 0, "y": -1.5, "z": -5.5},
                       "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
                       "shape": {
                         "type": "box",
@@ -331,7 +331,7 @@
                     {
                       "id": "8",
                       "name": "LEar--C3",
-                      "position": {"x": 0, "y": -3, "z": -11},
+                      "position": {"x": 0, "y": -1.5, "z": -5.5},
                       "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
                       "shape": {
                         "type": "box",
@@ -383,7 +383,7 @@
                     {
                       "id": "9",
                       "name": "LEye--C4",
-                      "position": {"x": 0, "y": -3, "z": -11},
+                      "position": {"x": 0, "y": -1.5, "z": -5.5},
                       "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
                       "shape": {
                         "type": "box",
@@ -435,7 +435,7 @@
                     {
                       "id": "10",
                       "name": "REar--C5",
-                      "position": {"x": 0, "y": -3, "z": -11},
+                      "position": {"x": 0, "y": -1.5, "z": -5.5},
                       "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
                       "shape": {
                         "type": "box",
@@ -487,7 +487,7 @@
                     {
                       "id": "11",
                       "name": "REye--C6",
-                      "position": {"x": 0, "y": -3, "z": -11},
+                      "position": {"x": 0, "y": -1.5, "z": -5.5},
                       "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
                       "shape": {
                         "type": "box",
@@ -804,7 +804,7 @@
                 {
                   "id": "17",
                   "name": "TailTip--C1",
-                  "position": {"x": 0, "y": 0, "z": 25},
+                  "position": {"x": 0, "y": 0, "z": 12.5},
                   "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
                   "shape": {
                     "type": "box",

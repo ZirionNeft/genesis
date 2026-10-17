@@ -183,17 +183,38 @@
                     "offset": {"x": 0, "y": 0, "z": 0},
                     "stretch": {"x": 1, "y": 1, "z": 1},
                     "settings": {
-                      "isPiece": true
+                      "isPiece": false
                     },
                     "textureLayout": {},
                     "unwrapMode": "custom",
                     "visible": true,
                     "doubleSided": false,
                     "shadingMode": "flat"
-                  }
+                  },
+                  "children": [
+                    {
+                      "id": "6",
+                      "name": "HeadSocket",
+                      "position": {"x": 0, "y": 0, "z": 0},
+                      "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
+                      "shape": {
+                        "type": "none",
+                        "offset": {"x": 0, "y": 0, "z": 0},
+                        "stretch": {"x": 1, "y": 1, "z": 1},
+                        "settings": {
+                          "isPiece": true
+                        },
+                        "textureLayout": {},
+                        "unwrapMode": "custom",
+                        "visible": true,
+                        "doubleSided": false,
+                        "shadingMode": "flat"
+                      }
+                    }
+                  ]
                 },
                 {
-                  "id": "6",
+                  "id": "7",
                   "name": "L-FrontLeg",
                   "position": {"x": 8, "y": -11, "z": 1.5},
                   "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
@@ -244,7 +265,7 @@
                   },
                   "children": [
                     {
-                      "id": "7",
+                      "id": "8",
                       "name": "LFrontPaw--C1",
                       "position": {"x": 0, "y": 14, "z": 0},
                       "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
@@ -298,7 +319,7 @@
                   ]
                 },
                 {
-                  "id": "8",
+                  "id": "9",
                   "name": "R-FrontLeg",
                   "position": {"x": -8, "y": -11, "z": 1.5},
                   "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
@@ -349,7 +370,7 @@
                   },
                   "children": [
                     {
-                      "id": "9",
+                      "id": "10",
                       "name": "RFrontPaw--C1",
                       "position": {"x": 0, "y": 14, "z": 0},
                       "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
@@ -405,7 +426,7 @@
               ]
             },
             {
-              "id": "10",
+              "id": "11",
               "name": "Tail",
               "position": {"x": 0, "y": 3, "z": -24},
               "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
@@ -414,17 +435,38 @@
                 "offset": {"x": 0, "y": 0, "z": 0},
                 "stretch": {"x": 1, "y": 1, "z": 1},
                 "settings": {
-                  "isPiece": true
+                  "isPiece": false
                 },
                 "textureLayout": {},
                 "unwrapMode": "custom",
                 "visible": true,
                 "doubleSided": false,
                 "shadingMode": "flat"
-              }
+              },
+              "children": [
+                {
+                  "id": "12",
+                  "name": "TailSocket",
+                  "position": {"x": 0, "y": 0, "z": 0},
+                  "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
+                  "shape": {
+                    "type": "none",
+                    "offset": {"x": 0, "y": 0, "z": 0},
+                    "stretch": {"x": 1, "y": 1, "z": 1},
+                    "settings": {
+                      "isPiece": true
+                    },
+                    "textureLayout": {},
+                    "unwrapMode": "custom",
+                    "visible": true,
+                    "doubleSided": false,
+                    "shadingMode": "flat"
+                  }
+                }
+              ]
             },
             {
-              "id": "11",
+              "id": "13",
               "name": "L-RearLeg",
               "position": {"x": 8, "y": -8, "z": -17},
               "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
@@ -475,7 +517,7 @@
               },
               "children": [
                 {
-                  "id": "12",
+                  "id": "14",
                   "name": "LRearPaw--C1",
                   "position": {"x": 0, "y": 14, "z": 0},
                   "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
@@ -529,7 +571,7 @@
               ]
             },
             {
-              "id": "13",
+              "id": "15",
               "name": "R-RearLeg",
               "position": {"x": -8, "y": -8, "z": -17},
               "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
@@ -580,7 +622,7 @@
               },
               "children": [
                 {
-                  "id": "14",
+                  "id": "16",
                   "name": "RRearPaw--C1",
                   "position": {"x": 0, "y": 14, "z": 0},
                   "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
