@@ -174,6 +174,7 @@ val stagePlugin = tasks.register<Copy>("stagePlugin") {
 }
 
 val hytaleAssetsFile = providers.gradleProperty("hytaleAssets").orNull?.let { file(it) }
+val hytaleBindAddress = providers.gradleProperty("hytaleBind").getOrElse("127.0.0.1:5520")
 
 tasks.register<JavaExec>("runServer") {
     group = "hytale"
@@ -196,6 +197,6 @@ tasks.register<JavaExec>("runServer") {
         if (!assetsFile.isFile) {
             throw GradleException("Hytale Assets.zip does not exist: $assetsFile")
         }
-        args("--assets", assetsFile.absolutePath, "--disable-sentry", "--bind", "127.0.0.1:5520")
+        args("--assets", assetsFile.absolutePath, "--disable-sentry", "--bind", hytaleBindAddress)
     }
 }
