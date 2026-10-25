@@ -13,6 +13,7 @@ import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 import com.hypixel.hytale.server.core.util.TargetUtil;
 import com.hypixel.hytale.server.npc.entities.NPCEntity;
+import dev.ifelse.zirion.genesis.prototype.compatibility.NpcAdmissionProbe;
 
 import javax.annotation.Nonnull;
 import java.util.Objects;
@@ -67,5 +68,7 @@ public final class CompatibilityProbeCommand extends AbstractPlayerCommand {
         context.sendMessage(Message.translation("server.genesis.compat.storage")
                 .param("storage", store.getResourceStorage().getClass().getName()));
         context.sendMessage(Message.translation("server.genesis.compat.unverified"));
+        var blockers = NpcAdmissionProbe.inspect(world, store, target, false);
+        context.sendMessage(Message.translation("server.genesis.compat.admission").param("reasons", blockers.toString()));
     }
 }

@@ -26,7 +26,8 @@ genesis.compat.npc = role={role}, persistent model={model}, reserved={reserved}
 genesis.compat.storage = ECS resource storage: {storage}
 genesis.compat.unverified = Контроллер/владение/допуск Genesis НЕ ПРОВЕРЕНЫ. Это только чтение: геном и кандидат не создаются.
 genesis.roleProbe.description = Консольный тест смены роли явно заданного замороженного NPC
-genesis.roleProbe.action = begin, enter, return, verify, finish, status или load
+genesis.roleProbe.action = begin, enter, return, verify, finish, status, admission или load
+genesis.compat.admission = Причины недопуска дикого NPC: {reasons}. Права игрока и commit не выполняются.
 genesis.roleProbe.sectionX = X существующей секции субъекта (не координата блока)
 genesis.roleProbe.sectionY = Y существующей секции субъекта (не координата блока)
 genesis.roleProbe.sectionZ = Z существующей секции субъекта (не координата блока)

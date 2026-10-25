@@ -26,7 +26,8 @@ genesis.compat.npc = role={role}, persistent model={model}, reserved={reserved}
 genesis.compat.storage = ECS resource storage: {storage}
 genesis.compat.unverified = Controller/ownership/Genesis eligibility UNVERIFIED. Read-only: no genome or candidate is created.
 genesis.roleProbe.description = Console-only role transition experiment on an explicitly configured frozen NPC
-genesis.roleProbe.action = begin, enter, return, verify, finish, status or load
+genesis.roleProbe.action = begin, enter, return, verify, finish, status, admission or load
+genesis.compat.admission = Wild adoption NPC blockers: {reasons}. Player authorization and commit are not performed.
 genesis.roleProbe.sectionX = Existing fixture section X (not a block coordinate)
 genesis.roleProbe.sectionY = Existing fixture section Y (not a block coordinate)
 genesis.roleProbe.sectionZ = Existing fixture section Z (not a block coordinate)

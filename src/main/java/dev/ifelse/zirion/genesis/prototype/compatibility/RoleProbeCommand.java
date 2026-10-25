@@ -74,6 +74,13 @@ public final class RoleProbeCommand extends AbstractWorldCommand {
         var identity = store.getComponent(ref, UUIDComponent.getComponentType());
         var npc = store.getComponent(ref, NPCEntity.getComponentType());
         var dirty = store.getComponent(ref, Dirty.getComponentType());
+        if (command.equals("admission") && identity != null && entityId.equals(identity.getUuid()) && npc != null) {
+            var reasons = NpcAdmissionProbe.inspect(world, store, ref, true);
+            logger.atInfo().log("Genesis admission probe: result=denied_npc_preflight world=%s entity=%s reasons=%s storeThread=%s thread=%s",
+                    worldId, entityId, reasons, store.isInThread(), Thread.currentThread().getName());
+            reply(context, "admission_denied_npc_preflight");
+            return;
+        }
         if (identity == null || !entityId.equals(identity.getUuid()) || npc == null || npc.getRole() == null
                 || npc.isReserved() || dirty == null || store.getComponent(ref, Frozen.getComponentType()) == null) {
             reply(context, "fixture_guard_failed"); return;
@@ -157,7 +164,7 @@ public final class RoleProbeCommand extends AbstractWorldCommand {
         Integer x = sectionX.get(context), y = sectionY.get(context), z = sectionZ.get(context);
         if (x == null || y == null || z == null) { reply(context, "section_coordinates_required"); return; }
         String next = afterLoad.get(context) == null ? "status" : afterLoad.get(context);
-        if (!java.util.Set.of("status", "begin", "enter", "return", "verify", "finish").contains(next)) {
+        if (!java.util.Set.of("status", "begin", "enter", "return", "verify", "finish", "admission").contains(next)) {
             reply(context, "unsupported_after_load_action"); return;
         }
         // Load an existing section through the native API; never generate terrain or force an unload.
