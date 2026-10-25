@@ -1,0 +1,6 @@
+{
+  "$Comment": "Technical role-transition fixture. Inherits Fox unchanged; no Genesis gameplay eligibility or ownership.",
+  "Type": "Variant",
+  "Reference": "Fox",
+  "Modify": {}
+}

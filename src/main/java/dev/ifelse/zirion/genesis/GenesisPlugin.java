@@ -6,6 +6,8 @@ import dev.ifelse.zirion.genesis.config.ConfigurationException;
 import dev.ifelse.zirion.genesis.config.ConfigurationRuntime;
 import dev.ifelse.zirion.genesis.config.RuntimeBootstrap;
 import dev.ifelse.zirion.genesis.prototype.AnatomyProbeCommand;
+import dev.ifelse.zirion.genesis.prototype.CompatibilityProbeCommand;
+import dev.ifelse.zirion.genesis.prototype.compatibility.RoleProbeSetup;
 
 import javax.annotation.Nonnull;
 
@@ -19,9 +21,14 @@ public final class GenesisPlugin extends JavaPlugin {
 
     @Override
     protected void setup() {
+        RoleProbeSetup.install(this);
         if (Boolean.getBoolean("genesis.anatomyProbe")) {
             getCommandRegistry().registerCommand(new AnatomyProbeCommand());
             getLogger().atInfo().log("Genesis stage 0 anatomy probe enabled");
+        }
+        if (Boolean.getBoolean("genesis.compatibilityProbe")) {
+            getCommandRegistry().registerCommand(new CompatibilityProbeCommand(getLogger()));
+            getLogger().atInfo().log("Genesis read-only compatibility probe enabled");
         }
         try {
             runtimeConfiguration = RuntimeBootstrap.load(getClass().getClassLoader(),

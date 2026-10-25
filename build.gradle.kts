@@ -222,6 +222,13 @@ tasks.register<JavaExec>("runServer") {
     // JavaExec uses the classpath, so the server JAR's Enable-Native-Access is not applied.
     jvmArgs("--enable-native-access=ALL-UNNAMED")
     systemProperty("genesis.anatomyProbe", providers.gradleProperty("genesisAnatomyProbe").getOrElse("false"))
+    systemProperty("genesis.compatibilityProbe", providers.gradleProperty("genesisCompatibilityProbe").getOrElse("false"))
+    systemProperty("genesis.compatibilityRoleProbe", providers.gradleProperty("genesisCompatibilityRoleProbe").getOrElse("false"))
+    systemProperty("genesis.compatibilityWorldId", providers.gradleProperty("genesisCompatibilityWorldId").getOrElse(""))
+    systemProperty("genesis.compatibilityEntityId", providers.gradleProperty("genesisCompatibilityEntityId").getOrElse(""))
+    systemProperty("genesis.compatibilityWolfBlackEntityId", providers.gradleProperty("genesisCompatibilityWolfBlackEntityId").getOrElse(""))
+    systemProperty("genesis.compatibilityWolfWhiteEntityId", providers.gradleProperty("genesisCompatibilityWolfWhiteEntityId").getOrElse(""))
+    systemProperty("genesis.compatibilityCreateFixtures", providers.gradleProperty("genesisCompatibilityCreateFixtures").getOrElse("false"))
     workingDir(layout.projectDirectory.dir("run"))
     standardInput = System.`in`
 

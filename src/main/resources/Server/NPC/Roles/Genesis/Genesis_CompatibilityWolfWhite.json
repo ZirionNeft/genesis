@@ -1,0 +1,6 @@
+{
+  "$Comment": "Technical role-transition fixture only; inherits Wolf_White unchanged.",
+  "Type": "Variant",
+  "Reference": "Wolf_White",
+  "Modify": {}
+}

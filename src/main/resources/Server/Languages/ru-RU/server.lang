@@ -17,3 +17,24 @@ genesis.probe.move = Двигаться по небольшому кругу ч�
 genesis.probe.ui = Открыть информационную страницу прототипа
 genesis.probe.uiTitle = Прототип анатомии Genesis
 genesis.probe.uiHint = Нажмите Esc, чтобы вернуться в мир.
+genesis.compat.description = Прочитать технические данные NPC под прицелом без изменения существа
+genesis.compat.thread = Диагностика доступна только в потоке мира.
+genesis.compat.target = Наведите прицел на NPC в пределах 8 метров.
+genesis.compat.identityMissing = У NPC нет подтверждённого UUID/мира; новый идентификатор не создаётся.
+genesis.compat.identity = world={world}, entity={entity}, UUID lookup совпадает={lookup}
+genesis.compat.npc = role={role}, persistent model={model}, reserved={reserved}
+genesis.compat.storage = ECS resource storage: {storage}
+genesis.compat.unverified = Контроллер/владение/допуск Genesis НЕ ПРОВЕРЕНЫ. Это только чтение: геном и кандидат не создаются.
+genesis.roleProbe.description = Консольный тест смены роли явно заданного замороженного NPC
+genesis.roleProbe.action = begin, enter, return, verify, finish, status или load
+genesis.roleProbe.sectionX = X существующей секции субъекта (не координата блока)
+genesis.roleProbe.sectionY = Y существующей секции субъекта (не координата блока)
+genesis.roleProbe.sectionZ = Z существующей секции субъекта (не координата блока)
+genesis.roleProbe.then = Действие в том же callback мира после загрузки (по умолчанию status)
+genesis.roleProbe.result = Тест роли Genesis: {result}. Это технический субъект, не приручение.
+genesis.fixture.description = Создать новых замороженных ванильных волков для диагностики (только консоль)
+genesis.fixture.profile = wolf_black или wolf_white
+genesis.fixture.x = Позиция тестового NPC в блоках, X
+genesis.fixture.y = Позиция тестового NPC в блоках, Y
+genesis.fixture.z = Позиция тестового NPC в блоках, Z
+genesis.fixture.result = Подготовка стенда Genesis: {result}. Только диагностический NPC.

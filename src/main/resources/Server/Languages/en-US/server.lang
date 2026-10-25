@@ -17,3 +17,24 @@ genesis.probe.move = Move in a small circle using the NPC motion controller
 genesis.probe.ui = Open the prototype information page
 genesis.probe.uiTitle = Genesis anatomy prototype
 genesis.probe.uiHint = Press Esc to return to the world.
+genesis.compat.description = Read diagnostics for the targeted NPC without modifying it
+genesis.compat.thread = Diagnostics require the world thread.
+genesis.compat.target = Target an NPC within 8 blocks.
+genesis.compat.identityMissing = NPC/world UUID is unavailable; no new identity will be generated.
+genesis.compat.identity = world={world}, entity={entity}, UUID lookup matches={lookup}
+genesis.compat.npc = role={role}, persistent model={model}, reserved={reserved}
+genesis.compat.storage = ECS resource storage: {storage}
+genesis.compat.unverified = Controller/ownership/Genesis eligibility UNVERIFIED. Read-only: no genome or candidate is created.
+genesis.roleProbe.description = Console-only role transition experiment on an explicitly configured frozen NPC
+genesis.roleProbe.action = begin, enter, return, verify, finish, status or load
+genesis.roleProbe.sectionX = Existing fixture section X (not a block coordinate)
+genesis.roleProbe.sectionY = Existing fixture section Y (not a block coordinate)
+genesis.roleProbe.sectionZ = Existing fixture section Z (not a block coordinate)
+genesis.roleProbe.then = Action in the same world callback after loading (default status)
+genesis.roleProbe.result = Genesis role probe: {result}. This is a technical fixture, not adoption.
+genesis.fixture.description = Prepare new frozen vanilla wolf fixtures for diagnostics (console only)
+genesis.fixture.profile = wolf_black or wolf_white
+genesis.fixture.x = Fixture block position X
+genesis.fixture.y = Fixture block position Y
+genesis.fixture.z = Fixture block position Z
+genesis.fixture.result = Genesis fixture preparation: {result}. Diagnostic NPC only.
