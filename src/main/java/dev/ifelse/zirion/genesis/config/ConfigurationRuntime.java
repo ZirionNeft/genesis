@@ -5,6 +5,7 @@ import dev.ifelse.zirion.genesis.core.content.v2.CatalogBundle;
 import dev.ifelse.zirion.genesis.core.breeding.v2.BreedingContext;
 import dev.ifelse.zirion.genesis.core.wild.WildDistributionPolicy;
 import dev.ifelse.zirion.genesis.core.wild.WildGenerationContext;
+import dev.ifelse.zirion.genesis.core.knowledge.KnowledgeService;
 
 import java.io.InputStream;
 import java.util.Objects;
@@ -28,6 +29,9 @@ public final class ConfigurationRuntime {
         public WildGenerationContext wildContext(WildDistributionPolicy policy) {
             return new WildGenerationContext(revision, config.genetics().wildArcana(), catalogs, policy);
         }
+
+        /** Retained pure policy, not a knowledge store or a source of server permissions. */
+        public KnowledgeService knowledgeService() { return new KnowledgeService(catalogs, config.genesisCode()); }
     }
 
     private final CatalogBundle catalogs;
