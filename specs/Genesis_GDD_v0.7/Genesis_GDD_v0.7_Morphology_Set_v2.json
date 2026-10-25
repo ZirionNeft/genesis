@@ -1,0 +1,75 @@
+{
+  "id": "genesis:morphology",
+  "version": 2,
+  "profile": "symbolic-state-manifest",
+  "ageVariants": [
+    "infant",
+    "juvenile",
+    "adult"
+  ],
+  "veteranUsesAdultRig": true,
+  "families": {
+    "genesis:canids": {
+      "rigId": "genesis:quad_predator",
+      "founderSpecies": [
+        "genesis:wolf",
+        "genesis:fox",
+        "genesis:hyena"
+      ],
+      "familyGenes": []
+    },
+    "genesis:runners": {
+      "rigId": "genesis:quad_runner",
+      "founderSpecies": [
+        "genesis:horse",
+        "genesis:deer",
+        "genesis:antelope"
+      ],
+      "familyGenes": [
+        "HORN_FORM"
+      ]
+    },
+    "genesis:heavies": {
+      "rigId": "genesis:quad_heavy",
+      "founderSpecies": [
+        "genesis:bison",
+        "genesis:boar",
+        "genesis:mosshorn"
+      ],
+      "familyGenes": [
+        "HORN_FORM"
+      ]
+    },
+    "genesis:avians": {
+      "rigId": "genesis:avian_flyer",
+      "founderSpecies": [
+        "genesis:raven",
+        "genesis:owl",
+        "genesis:hawk"
+      ],
+      "familyGenes": [
+        "WING_FORM",
+        "BEAK_FORM"
+      ]
+    }
+  },
+  "slots": [
+    "beak",
+    "body",
+    "coat_density",
+    "cover",
+    "ears",
+    "eyes",
+    "feet",
+    "head",
+    "horns",
+    "limbs",
+    "pattern",
+    "pigment",
+    "tail",
+    "wings"
+  ],
+  "founderSilhouetteSelection": "support of founder copies, one of seven registered historical graph forms per family; weights change physiology, not automatically unique silhouettes",
+  "assetBinding": "(rigId,slot,visualState,age); explicit NONE states represent absence; no silent fallback",
+  "assetIntegrationValidatedInHytale": false
+}

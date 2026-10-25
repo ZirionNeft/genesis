@@ -1,0 +1,1486 @@
+{
+  "rulesetId": "genesis:expression",
+  "rulesetVersion": 2,
+  "geneSchemaId": "genesis:genes",
+  "geneSchemaVersion": 2,
+  "hybridGraphId": "genesis:hybrid_graph",
+  "hybridGraphVersion": 1,
+  "morphologySetId": "genesis:morphology",
+  "morphologySetVersion": 2,
+  "compatibility": "Baseline: geneSchema=2, expressionRules=2, morphologySet=2. No gene/express/morph v1 registry is distributed or supported.",
+  "foundation": {
+    "model": "three diploid HERITAGE genes per family, six equally weighted founder copies",
+    "founderWeights": "count(6 founder copies) / 6; normalized to exactly 1",
+    "baseline": "Weighted average of 12 founding species only; hybrid form baseStats in the content catalog are non-normative planning references.",
+    "historicalForm": "must contain genetic founder support as subset; history form never chooses a baseline",
+    "effectiveSignatureForm": "hybrid graph node whose roots equal inherited founder support, independent from historical form",
+    "sourceOfPureFounders": "all six copies equal the founding species; only explicit breeding may combine them",
+    "phenotypeVisual": "family rig, explicit gene visual states, founder blend metadata; no implicit vanilla rig support"
+  },
+  "families": {
+    "genesis:canids": {
+      "rigId": "genesis:quad_predator",
+      "founders": [
+        "genesis:wolf",
+        "genesis:fox",
+        "genesis:hyena"
+      ],
+      "familyGenes": [],
+      "heritageGenes": [
+        "HERITAGE_1",
+        "HERITAGE_2",
+        "HERITAGE_3"
+      ],
+      "historicalGraphVersion": 1
+    },
+    "genesis:runners": {
+      "rigId": "genesis:quad_runner",
+      "founders": [
+        "genesis:horse",
+        "genesis:deer",
+        "genesis:antelope"
+      ],
+      "familyGenes": [
+        "HORN_FORM"
+      ],
+      "heritageGenes": [
+        "HERITAGE_1",
+        "HERITAGE_2",
+        "HERITAGE_3"
+      ],
+      "historicalGraphVersion": 1
+    },
+    "genesis:heavies": {
+      "rigId": "genesis:quad_heavy",
+      "founders": [
+        "genesis:bison",
+        "genesis:boar",
+        "genesis:mosshorn"
+      ],
+      "familyGenes": [
+        "HORN_FORM"
+      ],
+      "heritageGenes": [
+        "HERITAGE_1",
+        "HERITAGE_2",
+        "HERITAGE_3"
+      ],
+      "historicalGraphVersion": 1
+    },
+    "genesis:avians": {
+      "rigId": "genesis:avian_flyer",
+      "founders": [
+        "genesis:raven",
+        "genesis:owl",
+        "genesis:hawk"
+      ],
+      "familyGenes": [
+        "WING_FORM",
+        "BEAK_FORM"
+      ],
+      "heritageGenes": [
+        "HERITAGE_1",
+        "HERITAGE_2",
+        "HERITAGE_3"
+      ],
+      "historicalGraphVersion": 1
+    }
+  },
+  "genes": {
+    "BODY_FRAME": {
+      "variants": [
+        "normal",
+        "large"
+      ],
+      "pairRules": {
+        "large|large": {
+          "state": "large",
+          "multipliers": {
+            "hp": "0.16",
+            "speedBps": "-0.06"
+          },
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "body": "large"
+          }
+        },
+        "large|normal": {
+          "state": "broad",
+          "multipliers": {
+            "hp": "0.08",
+            "speedBps": "-0.03"
+          },
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "body": "broad"
+          }
+        },
+        "normal|normal": {
+          "state": "normal",
+          "multipliers": {
+            "hp": "0",
+            "speedBps": "0"
+          },
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "body": "normal"
+          }
+        }
+      },
+      "visualSlot": "body",
+      "source": "genesis:content-v1",
+      "version": 2
+    },
+    "HEAD_FORM": {
+      "variants": [
+        "standard",
+        "broad"
+      ],
+      "pairRules": {
+        "broad|broad": {
+          "state": "extra_wide",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "head": "extra_wide"
+          }
+        },
+        "broad|standard": {
+          "state": "wide",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "head": "wide"
+          }
+        },
+        "standard|standard": {
+          "state": "normal",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "head": "normal"
+          }
+        }
+      },
+      "visualSlot": "head",
+      "source": "genesis:content-v1",
+      "version": 2
+    },
+    "EAR_FORM": {
+      "variants": [
+        "standard",
+        "keen"
+      ],
+      "pairRules": {
+        "keen|keen": {
+          "state": "extra_keen",
+          "multipliers": {},
+          "flat": {
+            "senseRadius": 2
+          },
+          "utility": {},
+          "visual": {
+            "ears": "extra_keen"
+          }
+        },
+        "keen|standard": {
+          "state": "keen",
+          "multipliers": {},
+          "flat": {
+            "senseRadius": 1
+          },
+          "utility": {},
+          "visual": {
+            "ears": "keen"
+          }
+        },
+        "standard|standard": {
+          "state": "standard",
+          "multipliers": {},
+          "flat": {
+            "senseRadius": 0
+          },
+          "utility": {},
+          "visual": {
+            "ears": "standard"
+          }
+        }
+      },
+      "visualSlot": "ears",
+      "source": "genesis:content-v1",
+      "version": 2
+    },
+    "TAIL_FORM": {
+      "variants": [
+        "standard",
+        "plumed"
+      ],
+      "pairRules": {
+        "plumed|plumed": {
+          "state": "extra_plumed",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "tail": "extra_plumed"
+          }
+        },
+        "plumed|standard": {
+          "state": "plumed",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "tail": "plumed"
+          }
+        },
+        "standard|standard": {
+          "state": "standard",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "tail": "standard"
+          }
+        }
+      },
+      "visualSlot": "tail",
+      "source": "genesis:content-v1",
+      "version": 2
+    },
+    "LIMB_FORM": {
+      "variants": [
+        "standard",
+        "long"
+      ],
+      "pairRules": {
+        "long|long": {
+          "state": "extra_long",
+          "multipliers": {
+            "speedBps": "0.04",
+            "hp": "-0.04"
+          },
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "limbs": "extra_long"
+          }
+        },
+        "long|standard": {
+          "state": "long",
+          "multipliers": {
+            "speedBps": "0.02",
+            "hp": "-0.02"
+          },
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "limbs": "long"
+          }
+        },
+        "standard|standard": {
+          "state": "normal",
+          "multipliers": {
+            "speedBps": "0",
+            "hp": "0"
+          },
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "limbs": "normal"
+          }
+        }
+      },
+      "visualSlot": "limbs",
+      "source": "genesis:content-v1",
+      "version": 2
+    },
+    "FOOT_FORM": {
+      "variants": [
+        "standard",
+        "surefoot"
+      ],
+      "pairRules": {
+        "standard|standard": {
+          "state": "standard",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "roughTerrainPenaltyScale": "1.00"
+          },
+          "visual": {
+            "feet": "standard"
+          }
+        },
+        "standard|surefoot": {
+          "state": "surefoot",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "roughTerrainPenaltyScale": "0.90"
+          },
+          "visual": {
+            "feet": "surefoot"
+          }
+        },
+        "surefoot|surefoot": {
+          "state": "surefoot",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "roughTerrainPenaltyScale": "0.90"
+          },
+          "visual": {
+            "feet": "surefoot"
+          }
+        }
+      },
+      "visualSlot": "feet",
+      "source": "genesis:content-v1",
+      "version": 2
+    },
+    "COVER_TYPE": {
+      "variants": [
+        "standard",
+        "layered"
+      ],
+      "pairRules": {
+        "layered|layered": {
+          "state": "extra_layered",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "cover": "extra_layered"
+          }
+        },
+        "layered|standard": {
+          "state": "layered",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "cover": "layered"
+          }
+        },
+        "standard|standard": {
+          "state": "standard",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "cover": "standard"
+          }
+        }
+      },
+      "visualSlot": "cover",
+      "source": "genesis:content-v1",
+      "version": 2
+    },
+    "COAT_DENSITY": {
+      "variants": [
+        "normal",
+        "thick"
+      ],
+      "pairRules": {
+        "normal|normal": {
+          "state": "normal",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "coldDamageScale": "1.00",
+            "hotStaminaDrainScale": "1.00"
+          },
+          "visual": {
+            "coat_density": "normal"
+          }
+        },
+        "normal|thick": {
+          "state": "thick",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "coldDamageScale": "0.95",
+            "hotStaminaDrainScale": "1.03"
+          },
+          "visual": {
+            "coat_density": "thick"
+          }
+        },
+        "thick|thick": {
+          "state": "extra_thick",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "coldDamageScale": "0.90",
+            "hotStaminaDrainScale": "1.06"
+          },
+          "visual": {
+            "coat_density": "extra_thick"
+          }
+        }
+      },
+      "visualSlot": "coat_density",
+      "source": "genesis:content-v1",
+      "version": 2
+    },
+    "PIGMENT": {
+      "variants": [
+        "ordinary",
+        "dark"
+      ],
+      "pairRules": {
+        "dark|dark": {
+          "state": "dark",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "pigment": "dark"
+          }
+        },
+        "dark|ordinary": {
+          "state": "dark",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "pigment": "dark"
+          }
+        },
+        "ordinary|ordinary": {
+          "state": "ordinary",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "pigment": "ordinary"
+          }
+        }
+      },
+      "visualSlot": "pigment",
+      "source": "genesis:content-v1",
+      "version": 2
+    },
+    "PATTERN": {
+      "variants": [
+        "plain",
+        "spotted"
+      ],
+      "pairRules": {
+        "plain|plain": {
+          "state": "plain",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "pattern": "plain"
+          }
+        },
+        "plain|spotted": {
+          "state": "plain",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "pattern": "plain"
+          }
+        },
+        "spotted|spotted": {
+          "state": "spotted",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "pattern": "spotted"
+          }
+        }
+      },
+      "visualSlot": "pattern",
+      "source": "genesis:content-v1",
+      "version": 2
+    },
+    "EYE_APPEARANCE": {
+      "variants": [
+        "ordinary",
+        "luminous"
+      ],
+      "pairRules": {
+        "luminous|luminous": {
+          "state": "luminous",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "eyes": "luminous"
+          }
+        },
+        "luminous|ordinary": {
+          "state": "ordinary",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "eyes": "ordinary"
+          }
+        },
+        "ordinary|ordinary": {
+          "state": "ordinary",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "eyes": "ordinary"
+          }
+        }
+      },
+      "visualSlot": "eyes",
+      "source": "genesis:content-v1",
+      "version": 2
+    },
+    "MUSCLE": {
+      "variants": [
+        "normal",
+        "strong"
+      ],
+      "pairRules": {
+        "normal|normal": {
+          "state": "baseline",
+          "multipliers": {
+            "attack": "0"
+          },
+          "flat": {},
+          "utility": {
+            "attackStaminaCostScale": "1.00"
+          },
+          "visual": {}
+        },
+        "normal|strong": {
+          "state": "intermediate",
+          "multipliers": {
+            "attack": "0.05"
+          },
+          "flat": {},
+          "utility": {
+            "attackStaminaCostScale": "1.03"
+          },
+          "visual": {}
+        },
+        "strong|strong": {
+          "state": "enhanced",
+          "multipliers": {
+            "attack": "0.10"
+          },
+          "flat": {},
+          "utility": {
+            "attackStaminaCostScale": "1.06"
+          },
+          "visual": {}
+        }
+      },
+      "visualSlot": null,
+      "source": "genesis:content-v1",
+      "version": 2
+    },
+    "BONE_STRENGTH": {
+      "variants": [
+        "normal",
+        "dense",
+        "brittle"
+      ],
+      "pairRules": {
+        "brittle|brittle": {
+          "state": "brittle",
+          "multipliers": {
+            "speedBps": "0"
+          },
+          "flat": {
+            "armor": -2
+          },
+          "utility": {},
+          "visual": {}
+        },
+        "brittle|dense": {
+          "state": "dense",
+          "multipliers": {
+            "speedBps": "-0.02"
+          },
+          "flat": {
+            "armor": 1
+          },
+          "utility": {},
+          "visual": {}
+        },
+        "brittle|normal": {
+          "state": "normal",
+          "multipliers": {
+            "speedBps": "0"
+          },
+          "flat": {
+            "armor": 0
+          },
+          "utility": {},
+          "visual": {}
+        },
+        "dense|dense": {
+          "state": "dense",
+          "multipliers": {
+            "speedBps": "-0.04"
+          },
+          "flat": {
+            "armor": 2
+          },
+          "utility": {},
+          "visual": {}
+        },
+        "dense|normal": {
+          "state": "dense",
+          "multipliers": {
+            "speedBps": "-0.02"
+          },
+          "flat": {
+            "armor": 1
+          },
+          "utility": {},
+          "visual": {}
+        },
+        "normal|normal": {
+          "state": "normal",
+          "multipliers": {
+            "speedBps": "0"
+          },
+          "flat": {
+            "armor": 0
+          },
+          "utility": {},
+          "visual": {}
+        }
+      },
+      "visualSlot": null,
+      "source": "genesis:content-v1",
+      "version": 2
+    },
+    "ENDURANCE": {
+      "variants": [
+        "normal",
+        "deep"
+      ],
+      "pairRules": {
+        "deep|deep": {
+          "state": "enhanced",
+          "multipliers": {},
+          "flat": {
+            "stamina": 16
+          },
+          "utility": {},
+          "visual": {}
+        },
+        "deep|normal": {
+          "state": "intermediate",
+          "multipliers": {},
+          "flat": {
+            "stamina": 8
+          },
+          "utility": {},
+          "visual": {}
+        },
+        "normal|normal": {
+          "state": "baseline",
+          "multipliers": {},
+          "flat": {
+            "stamina": 0
+          },
+          "utility": {},
+          "visual": {}
+        }
+      },
+      "visualSlot": null,
+      "source": "genesis:content-v1",
+      "version": 2
+    },
+    "METABOLISM": {
+      "variants": [
+        "normal",
+        "efficient",
+        "voracious"
+      ],
+      "pairRules": {
+        "efficient|efficient": {
+          "state": "efficient",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "feedConsumptionScale": "0.90"
+          },
+          "visual": {}
+        },
+        "efficient|normal": {
+          "state": "efficient",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "feedConsumptionScale": "0.90"
+          },
+          "visual": {}
+        },
+        "efficient|voracious": {
+          "state": "voracious",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "feedConsumptionScale": "1.20"
+          },
+          "visual": {}
+        },
+        "normal|normal": {
+          "state": "normal",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "feedConsumptionScale": "1.00"
+          },
+          "visual": {}
+        },
+        "normal|voracious": {
+          "state": "voracious",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "feedConsumptionScale": "1.20"
+          },
+          "visual": {}
+        },
+        "voracious|voracious": {
+          "state": "voracious",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "feedConsumptionScale": "1.20"
+          },
+          "visual": {}
+        }
+      },
+      "visualSlot": null,
+      "source": "genesis:content-v1",
+      "version": 2
+    },
+    "HEALING": {
+      "variants": [
+        "normal",
+        "quick",
+        "sluggish"
+      ],
+      "pairRules": {
+        "normal|normal": {
+          "state": "normal",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "outOfCombatHealingScale": "1.00"
+          },
+          "visual": {}
+        },
+        "normal|quick": {
+          "state": "normal",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "outOfCombatHealingScale": "1.00"
+          },
+          "visual": {}
+        },
+        "normal|sluggish": {
+          "state": "normal",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "outOfCombatHealingScale": "1.00"
+          },
+          "visual": {}
+        },
+        "quick|quick": {
+          "state": "quick",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "outOfCombatHealingScale": "1.15"
+          },
+          "visual": {}
+        },
+        "quick|sluggish": {
+          "state": "normal",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "outOfCombatHealingScale": "1.00"
+          },
+          "visual": {}
+        },
+        "sluggish|sluggish": {
+          "state": "sluggish",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "outOfCombatHealingScale": "0.85"
+          },
+          "visual": {}
+        }
+      },
+      "visualSlot": null,
+      "source": "genesis:content-v1",
+      "version": 2
+    },
+    "DEFENSE": {
+      "variants": [
+        "normal",
+        "hide"
+      ],
+      "pairRules": {
+        "hide|hide": {
+          "state": "enhanced",
+          "multipliers": {
+            "speedBps": "-0.04"
+          },
+          "flat": {
+            "armor": 2
+          },
+          "utility": {},
+          "visual": {}
+        },
+        "hide|normal": {
+          "state": "intermediate",
+          "multipliers": {
+            "speedBps": "-0.02"
+          },
+          "flat": {
+            "armor": 1
+          },
+          "utility": {},
+          "visual": {}
+        },
+        "normal|normal": {
+          "state": "baseline",
+          "multipliers": {
+            "speedBps": "0"
+          },
+          "flat": {
+            "armor": 0
+          },
+          "utility": {},
+          "visual": {}
+        }
+      },
+      "visualSlot": null,
+      "source": "genesis:content-v1",
+      "version": 2
+    },
+    "SENSES": {
+      "variants": [
+        "normal",
+        "alert"
+      ],
+      "pairRules": {
+        "alert|alert": {
+          "state": "enhanced",
+          "multipliers": {},
+          "flat": {
+            "senseRadius": 4
+          },
+          "utility": {},
+          "visual": {}
+        },
+        "alert|normal": {
+          "state": "intermediate",
+          "multipliers": {},
+          "flat": {
+            "senseRadius": 2
+          },
+          "utility": {},
+          "visual": {}
+        },
+        "normal|normal": {
+          "state": "baseline",
+          "multipliers": {},
+          "flat": {
+            "senseRadius": 0
+          },
+          "utility": {},
+          "visual": {}
+        }
+      },
+      "visualSlot": null,
+      "source": "genesis:content-v1",
+      "version": 2
+    },
+    "TEMPER": {
+      "variants": [
+        "cautious",
+        "steady",
+        "nervous"
+      ],
+      "pairRules": {
+        "cautious|cautious": {
+          "state": "cautious",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "fearGainScale": "1.00"
+          },
+          "visual": {}
+        },
+        "cautious|nervous": {
+          "state": "nervous",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "fearGainScale": "1.20"
+          },
+          "visual": {}
+        },
+        "cautious|steady": {
+          "state": "steady",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "fearGainScale": "0.85"
+          },
+          "visual": {}
+        },
+        "nervous|nervous": {
+          "state": "nervous",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "fearGainScale": "1.20"
+          },
+          "visual": {}
+        },
+        "nervous|steady": {
+          "state": "nervous",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "fearGainScale": "1.20"
+          },
+          "visual": {}
+        },
+        "steady|steady": {
+          "state": "steady",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "fearGainScale": "0.85"
+          },
+          "visual": {}
+        }
+      },
+      "visualSlot": null,
+      "source": "genesis:content-v1",
+      "version": 2
+    },
+    "TRAINABILITY": {
+      "variants": [
+        "normal",
+        "curious"
+      ],
+      "pairRules": {
+        "curious|curious": {
+          "state": "curious",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "diverseTrainingXpScale": "1.05"
+          },
+          "visual": {}
+        },
+        "curious|normal": {
+          "state": "curious",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "diverseTrainingXpScale": "1.05"
+          },
+          "visual": {}
+        },
+        "normal|normal": {
+          "state": "normal",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "diverseTrainingXpScale": "1.00"
+          },
+          "visual": {}
+        }
+      },
+      "visualSlot": null,
+      "source": "genesis:content-v1",
+      "version": 2
+    },
+    "RESOURCE_TRAIT": {
+      "variants": [
+        "normal",
+        "gifted"
+      ],
+      "pairRules": {
+        "gifted|gifted": {
+          "state": "gifted",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "extraResourcePerCycles": 4
+          },
+          "visual": {}
+        },
+        "gifted|normal": {
+          "state": "normal",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "extraResourcePerCycles": 0
+          },
+          "visual": {}
+        },
+        "normal|normal": {
+          "state": "normal",
+          "multipliers": {},
+          "flat": {},
+          "utility": {
+            "extraResourcePerCycles": 0
+          },
+          "visual": {}
+        }
+      },
+      "visualSlot": null,
+      "source": "genesis:content-v1",
+      "version": 2
+    },
+    "ARCANA": {
+      "variants": [
+        "quiet",
+        "awake"
+      ],
+      "pairRules": {
+        "awake|awake": {
+          "state": "awake",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {}
+        },
+        "awake|quiet": {
+          "state": "awake",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {}
+        },
+        "quiet|quiet": {
+          "state": "quiet",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {}
+        }
+      },
+      "visualSlot": null,
+      "source": "genesis:content-v1",
+      "version": 2
+    },
+    "ELEMENT": {
+      "variants": [
+        "stone",
+        "ember",
+        "mist",
+        "verdant",
+        "storm"
+      ],
+      "pairRules": {
+        "ember|ember": {
+          "state": "ember",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {}
+        },
+        "ember|mist": {
+          "state": "mist",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {}
+        },
+        "ember|stone": {
+          "state": "stone",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {}
+        },
+        "ember|storm": {
+          "state": "ember",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {}
+        },
+        "ember|verdant": {
+          "state": "ember",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {}
+        },
+        "mist|mist": {
+          "state": "mist",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {}
+        },
+        "mist|stone": {
+          "state": "stone",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {}
+        },
+        "mist|storm": {
+          "state": "mist",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {}
+        },
+        "mist|verdant": {
+          "state": "mist",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {}
+        },
+        "stone|stone": {
+          "state": "stone",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {}
+        },
+        "stone|storm": {
+          "state": "stone",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {}
+        },
+        "stone|verdant": {
+          "state": "stone",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {}
+        },
+        "storm|storm": {
+          "state": "storm",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {}
+        },
+        "storm|verdant": {
+          "state": "verdant",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {}
+        },
+        "verdant|verdant": {
+          "state": "verdant",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {}
+        }
+      },
+      "visualSlot": null,
+      "source": "genesis:content-v1",
+      "version": 2
+    },
+    "HORN_FORM": {
+      "variants": [
+        "none",
+        "short",
+        "long"
+      ],
+      "pairRules": {
+        "long|long": {
+          "state": "long",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "horns": "long"
+          }
+        },
+        "long|none": {
+          "state": "short",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "horns": "short"
+          }
+        },
+        "long|short": {
+          "state": "long",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "horns": "long"
+          }
+        },
+        "none|none": {
+          "state": "none",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "horns": "none"
+          }
+        },
+        "none|short": {
+          "state": "short",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "horns": "short"
+          }
+        },
+        "short|short": {
+          "state": "short",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "horns": "short"
+          }
+        }
+      },
+      "visualSlot": "horns",
+      "families": [
+        "genesis:runners",
+        "genesis:heavies"
+      ],
+      "version": 2
+    },
+    "WING_FORM": {
+      "variants": [
+        "broad",
+        "balanced",
+        "narrow"
+      ],
+      "pairRules": {
+        "balanced|balanced": {
+          "state": "balanced",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "wings": "balanced"
+          }
+        },
+        "balanced|broad": {
+          "state": "balanced",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "wings": "balanced"
+          }
+        },
+        "balanced|narrow": {
+          "state": "narrow",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "wings": "narrow"
+          }
+        },
+        "broad|broad": {
+          "state": "broad",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "wings": "broad"
+          }
+        },
+        "broad|narrow": {
+          "state": "balanced",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "wings": "balanced"
+          }
+        },
+        "narrow|narrow": {
+          "state": "narrow",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "wings": "narrow"
+          }
+        }
+      },
+      "visualSlot": "wings",
+      "families": [
+        "genesis:avians"
+      ],
+      "version": 2
+    },
+    "BEAK_FORM": {
+      "variants": [
+        "short",
+        "standard",
+        "hooked"
+      ],
+      "pairRules": {
+        "hooked|hooked": {
+          "state": "hooked",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "beak": "hooked"
+          }
+        },
+        "hooked|short": {
+          "state": "standard",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "beak": "standard"
+          }
+        },
+        "hooked|standard": {
+          "state": "hooked",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "beak": "hooked"
+          }
+        },
+        "short|short": {
+          "state": "short",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "beak": "short"
+          }
+        },
+        "short|standard": {
+          "state": "standard",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "beak": "standard"
+          }
+        },
+        "standard|standard": {
+          "state": "standard",
+          "multipliers": {},
+          "flat": {},
+          "utility": {},
+          "visual": {
+            "beak": "standard"
+          }
+        }
+      },
+      "visualSlot": "beak",
+      "families": [
+        "genesis:avians"
+      ],
+      "version": 2
+    }
+  },
+  "statPolicy": {
+    "formula": "round_half_up(weightedFounderBase[stat] * clamp(1+sum(percentDelta),0.75,1.35)+sum(flatDelta))",
+    "speedBpsRoundPlaces": 2,
+    "integerStats": [
+      "hp",
+      "attack",
+      "armor",
+      "stamina",
+      "cargoSlots",
+      "senseRadius"
+    ],
+    "statMultiplierMin": "0.75",
+    "statMultiplierMax": "1.35",
+    "minimum": {
+      "hp": "1",
+      "attack": "0",
+      "armor": "0",
+      "speedBps": "0.10",
+      "stamina": "1",
+      "cargoSlots": "0",
+      "senseRadius": "0"
+    },
+    "utilityPolicy": "independent named modifiers from pairRules; defaults 1.00 except extraResourcePerCycles=0; no stacking with role/age/gear in this stage"
+  },
+  "abilityPolicy": {
+    "arcanaGene": "ARCANA",
+    "elementGene": "ELEMENT",
+    "spellMap": {
+      "stone": "stone",
+      "ember": "ember",
+      "mist": "mist",
+      "verdant": "verdant",
+      "storm": "storm"
+    },
+    "innateMaxActive": 1,
+    "unlockedByGenesOnly": false,
+    "unlockGates": "Stage 6 progression/age; this evaluator only gives innate potential"
+  },
+  "morphology": {
+    "ageVariants": [
+      "infant",
+      "juvenile",
+      "adult"
+    ],
+    "veteranUsesAdultRig": true,
+    "assetBindingState": "UNVERIFIED",
+    "required": true,
+    "bindingRule": "one unique (familyRig,slot,state,age) binding per expressed visual token, checked before embodiment",
+    "missing": "MORPHOLOGY_UNAVAILABLE, no substitute, no silent gene change",
+    "vanillaNpcRule": "do not modify raw vanilla NPC; integration depends on explicit Stage 1 adoption and validated model adapter"
+  },
+  "versioning": {
+    "strict": true,
+    "noFallback": true,
+    "pastCodeReproduction": "Exact v2 references and content fingerprints are required. Unsupported gene/express/morph versions fail closed; no v1 migration provider.",
+    "ruleHash": "SHA256 of canonical rules bytes, immutable"
+  },
+  "catalogCompatibility": {
+    "contentCatalogVersion": "genesis:balance-content-v1",
+    "contentCatalogSha256": "f72171c3e9d6970514971f197bdd248ddf87ee35ebea5c523e4393682c14585a",
+    "graphVersion": 1,
+    "hybridGraphSha256": "3790bdd91a0bf53b9a6a020ecafb4c42d81fd9680c1b10968cb20cb10a571166",
+    "hybridBaseStats": "neutral v2 demonstration values, never runtime base stats; the 12 founder baseStats are runtime truth",
+    "signaturePassives": "resolved by genetically supported graph node and only applicable when selected role matches",
+    "mutationCatalog": "same 21 mutation IDs; preexisting variants do not require new mutation events"
+  }
+}

@@ -1,0 +1,994 @@
+{
+  "schemaId": "genesis:hybrid_graph",
+  "graphVersion": 1,
+  "resolver": "union-roots-v1",
+  "extensionPolicy": "explicit-edges-only",
+  "crossFamilyBreeding": false,
+  "sourceAssetValidation": "pending-local-assets-zip-verification",
+  "families": [
+    {
+      "familyId": "genesis:canids",
+      "rigId": "genesis:quad_predator",
+      "baseSpecies": [
+        "genesis:wolf",
+        "genesis:fox",
+        "genesis:hyena"
+      ],
+      "forms": [
+        {
+          "kind": "base",
+          "id": "genesis:wolf",
+          "roots": [
+            "genesis:wolf"
+          ],
+          "name": {
+            "ru": "Волк",
+            "en": "Wolf"
+          },
+          "rigId": "genesis:quad_predator",
+          "vanillaRoleId": null
+        },
+        {
+          "kind": "base",
+          "id": "genesis:fox",
+          "roots": [
+            "genesis:fox"
+          ],
+          "name": {
+            "ru": "Лисица",
+            "en": "Fox"
+          },
+          "rigId": "genesis:quad_predator",
+          "vanillaRoleId": null
+        },
+        {
+          "kind": "base",
+          "id": "genesis:hyena",
+          "roots": [
+            "genesis:hyena"
+          ],
+          "name": {
+            "ru": "Гиена",
+            "en": "Hyena"
+          },
+          "rigId": "genesis:quad_predator",
+          "vanillaRoleId": null
+        },
+        {
+          "kind": "hybrid",
+          "id": "genesis:wolf_fox",
+          "roots": [
+            "genesis:wolf",
+            "genesis:fox"
+          ],
+          "name": {
+            "ru": "Волколис",
+            "en": "Wolfox"
+          },
+          "rigId": "genesis:quad_predator"
+        },
+        {
+          "kind": "hybrid",
+          "id": "genesis:wolf_hyena",
+          "roots": [
+            "genesis:wolf",
+            "genesis:hyena"
+          ],
+          "name": {
+            "ru": "Волкогиена",
+            "en": "Wolfhyena"
+          },
+          "rigId": "genesis:quad_predator"
+        },
+        {
+          "kind": "hybrid",
+          "id": "genesis:fox_hyena",
+          "roots": [
+            "genesis:fox",
+            "genesis:hyena"
+          ],
+          "name": {
+            "ru": "Лисогиена",
+            "en": "Foxhyena"
+          },
+          "rigId": "genesis:quad_predator"
+        },
+        {
+          "kind": "hybrid",
+          "id": "genesis:canid_triad",
+          "roots": [
+            "genesis:wolf",
+            "genesis:fox",
+            "genesis:hyena"
+          ],
+          "name": {
+            "ru": "Трёхклык",
+            "en": "Trifang"
+          },
+          "rigId": "genesis:quad_predator"
+        }
+      ],
+      "allowedPairs": [
+        {
+          "parentA": "genesis:wolf",
+          "parentB": "genesis:wolf",
+          "childForm": "genesis:wolf"
+        },
+        {
+          "parentA": "genesis:wolf",
+          "parentB": "genesis:fox",
+          "childForm": "genesis:wolf_fox"
+        },
+        {
+          "parentA": "genesis:wolf",
+          "parentB": "genesis:hyena",
+          "childForm": "genesis:wolf_hyena"
+        },
+        {
+          "parentA": "genesis:wolf",
+          "parentB": "genesis:wolf_fox",
+          "childForm": "genesis:wolf_fox"
+        },
+        {
+          "parentA": "genesis:wolf",
+          "parentB": "genesis:wolf_hyena",
+          "childForm": "genesis:wolf_hyena"
+        },
+        {
+          "parentA": "genesis:wolf",
+          "parentB": "genesis:fox_hyena",
+          "childForm": "genesis:canid_triad"
+        },
+        {
+          "parentA": "genesis:wolf",
+          "parentB": "genesis:canid_triad",
+          "childForm": "genesis:canid_triad"
+        },
+        {
+          "parentA": "genesis:fox",
+          "parentB": "genesis:fox",
+          "childForm": "genesis:fox"
+        },
+        {
+          "parentA": "genesis:fox",
+          "parentB": "genesis:hyena",
+          "childForm": "genesis:fox_hyena"
+        },
+        {
+          "parentA": "genesis:fox",
+          "parentB": "genesis:wolf_fox",
+          "childForm": "genesis:wolf_fox"
+        },
+        {
+          "parentA": "genesis:fox",
+          "parentB": "genesis:wolf_hyena",
+          "childForm": "genesis:canid_triad"
+        },
+        {
+          "parentA": "genesis:fox",
+          "parentB": "genesis:fox_hyena",
+          "childForm": "genesis:fox_hyena"
+        },
+        {
+          "parentA": "genesis:fox",
+          "parentB": "genesis:canid_triad",
+          "childForm": "genesis:canid_triad"
+        },
+        {
+          "parentA": "genesis:hyena",
+          "parentB": "genesis:hyena",
+          "childForm": "genesis:hyena"
+        },
+        {
+          "parentA": "genesis:hyena",
+          "parentB": "genesis:wolf_fox",
+          "childForm": "genesis:canid_triad"
+        },
+        {
+          "parentA": "genesis:hyena",
+          "parentB": "genesis:wolf_hyena",
+          "childForm": "genesis:wolf_hyena"
+        },
+        {
+          "parentA": "genesis:hyena",
+          "parentB": "genesis:fox_hyena",
+          "childForm": "genesis:fox_hyena"
+        },
+        {
+          "parentA": "genesis:hyena",
+          "parentB": "genesis:canid_triad",
+          "childForm": "genesis:canid_triad"
+        },
+        {
+          "parentA": "genesis:wolf_fox",
+          "parentB": "genesis:wolf_fox",
+          "childForm": "genesis:wolf_fox"
+        },
+        {
+          "parentA": "genesis:wolf_fox",
+          "parentB": "genesis:wolf_hyena",
+          "childForm": "genesis:canid_triad"
+        },
+        {
+          "parentA": "genesis:wolf_fox",
+          "parentB": "genesis:fox_hyena",
+          "childForm": "genesis:canid_triad"
+        },
+        {
+          "parentA": "genesis:wolf_fox",
+          "parentB": "genesis:canid_triad",
+          "childForm": "genesis:canid_triad"
+        },
+        {
+          "parentA": "genesis:wolf_hyena",
+          "parentB": "genesis:wolf_hyena",
+          "childForm": "genesis:wolf_hyena"
+        },
+        {
+          "parentA": "genesis:wolf_hyena",
+          "parentB": "genesis:fox_hyena",
+          "childForm": "genesis:canid_triad"
+        },
+        {
+          "parentA": "genesis:wolf_hyena",
+          "parentB": "genesis:canid_triad",
+          "childForm": "genesis:canid_triad"
+        },
+        {
+          "parentA": "genesis:fox_hyena",
+          "parentB": "genesis:fox_hyena",
+          "childForm": "genesis:fox_hyena"
+        },
+        {
+          "parentA": "genesis:fox_hyena",
+          "parentB": "genesis:canid_triad",
+          "childForm": "genesis:canid_triad"
+        },
+        {
+          "parentA": "genesis:canid_triad",
+          "parentB": "genesis:canid_triad",
+          "childForm": "genesis:canid_triad"
+        }
+      ],
+      "unlistedPairs": "reject"
+    },
+    {
+      "familyId": "genesis:runners",
+      "rigId": "genesis:quad_runner",
+      "baseSpecies": [
+        "genesis:horse",
+        "genesis:deer",
+        "genesis:antelope"
+      ],
+      "forms": [
+        {
+          "kind": "base",
+          "id": "genesis:horse",
+          "roots": [
+            "genesis:horse"
+          ],
+          "name": {
+            "ru": "Конь",
+            "en": "Horse"
+          },
+          "rigId": "genesis:quad_runner",
+          "vanillaRoleId": null
+        },
+        {
+          "kind": "base",
+          "id": "genesis:deer",
+          "roots": [
+            "genesis:deer"
+          ],
+          "name": {
+            "ru": "Олень",
+            "en": "Deer"
+          },
+          "rigId": "genesis:quad_runner",
+          "vanillaRoleId": null
+        },
+        {
+          "kind": "base",
+          "id": "genesis:antelope",
+          "roots": [
+            "genesis:antelope"
+          ],
+          "name": {
+            "ru": "Антилопа",
+            "en": "Antelope"
+          },
+          "rigId": "genesis:quad_runner",
+          "vanillaRoleId": null
+        },
+        {
+          "kind": "hybrid",
+          "id": "genesis:horse_deer",
+          "roots": [
+            "genesis:horse",
+            "genesis:deer"
+          ],
+          "name": {
+            "ru": "Гриворог",
+            "en": "Manehorn"
+          },
+          "rigId": "genesis:quad_runner"
+        },
+        {
+          "kind": "hybrid",
+          "id": "genesis:horse_antelope",
+          "roots": [
+            "genesis:horse",
+            "genesis:antelope"
+          ],
+          "name": {
+            "ru": "Степнорыс",
+            "en": "Stepestrider"
+          },
+          "rigId": "genesis:quad_runner"
+        },
+        {
+          "kind": "hybrid",
+          "id": "genesis:deer_antelope",
+          "roots": [
+            "genesis:deer",
+            "genesis:antelope"
+          ],
+          "name": {
+            "ru": "Ветрокопыт",
+            "en": "Windhoof"
+          },
+          "rigId": "genesis:quad_runner"
+        },
+        {
+          "kind": "hybrid",
+          "id": "genesis:runner_triad",
+          "roots": [
+            "genesis:horse",
+            "genesis:deer",
+            "genesis:antelope"
+          ],
+          "name": {
+            "ru": "Трёхбег",
+            "en": "Tristrider"
+          },
+          "rigId": "genesis:quad_runner"
+        }
+      ],
+      "allowedPairs": [
+        {
+          "parentA": "genesis:horse",
+          "parentB": "genesis:horse",
+          "childForm": "genesis:horse"
+        },
+        {
+          "parentA": "genesis:horse",
+          "parentB": "genesis:deer",
+          "childForm": "genesis:horse_deer"
+        },
+        {
+          "parentA": "genesis:horse",
+          "parentB": "genesis:antelope",
+          "childForm": "genesis:horse_antelope"
+        },
+        {
+          "parentA": "genesis:horse",
+          "parentB": "genesis:horse_deer",
+          "childForm": "genesis:horse_deer"
+        },
+        {
+          "parentA": "genesis:horse",
+          "parentB": "genesis:horse_antelope",
+          "childForm": "genesis:horse_antelope"
+        },
+        {
+          "parentA": "genesis:horse",
+          "parentB": "genesis:deer_antelope",
+          "childForm": "genesis:runner_triad"
+        },
+        {
+          "parentA": "genesis:horse",
+          "parentB": "genesis:runner_triad",
+          "childForm": "genesis:runner_triad"
+        },
+        {
+          "parentA": "genesis:deer",
+          "parentB": "genesis:deer",
+          "childForm": "genesis:deer"
+        },
+        {
+          "parentA": "genesis:deer",
+          "parentB": "genesis:antelope",
+          "childForm": "genesis:deer_antelope"
+        },
+        {
+          "parentA": "genesis:deer",
+          "parentB": "genesis:horse_deer",
+          "childForm": "genesis:horse_deer"
+        },
+        {
+          "parentA": "genesis:deer",
+          "parentB": "genesis:horse_antelope",
+          "childForm": "genesis:runner_triad"
+        },
+        {
+          "parentA": "genesis:deer",
+          "parentB": "genesis:deer_antelope",
+          "childForm": "genesis:deer_antelope"
+        },
+        {
+          "parentA": "genesis:deer",
+          "parentB": "genesis:runner_triad",
+          "childForm": "genesis:runner_triad"
+        },
+        {
+          "parentA": "genesis:antelope",
+          "parentB": "genesis:antelope",
+          "childForm": "genesis:antelope"
+        },
+        {
+          "parentA": "genesis:antelope",
+          "parentB": "genesis:horse_deer",
+          "childForm": "genesis:runner_triad"
+        },
+        {
+          "parentA": "genesis:antelope",
+          "parentB": "genesis:horse_antelope",
+          "childForm": "genesis:horse_antelope"
+        },
+        {
+          "parentA": "genesis:antelope",
+          "parentB": "genesis:deer_antelope",
+          "childForm": "genesis:deer_antelope"
+        },
+        {
+          "parentA": "genesis:antelope",
+          "parentB": "genesis:runner_triad",
+          "childForm": "genesis:runner_triad"
+        },
+        {
+          "parentA": "genesis:horse_deer",
+          "parentB": "genesis:horse_deer",
+          "childForm": "genesis:horse_deer"
+        },
+        {
+          "parentA": "genesis:horse_deer",
+          "parentB": "genesis:horse_antelope",
+          "childForm": "genesis:runner_triad"
+        },
+        {
+          "parentA": "genesis:horse_deer",
+          "parentB": "genesis:deer_antelope",
+          "childForm": "genesis:runner_triad"
+        },
+        {
+          "parentA": "genesis:horse_deer",
+          "parentB": "genesis:runner_triad",
+          "childForm": "genesis:runner_triad"
+        },
+        {
+          "parentA": "genesis:horse_antelope",
+          "parentB": "genesis:horse_antelope",
+          "childForm": "genesis:horse_antelope"
+        },
+        {
+          "parentA": "genesis:horse_antelope",
+          "parentB": "genesis:deer_antelope",
+          "childForm": "genesis:runner_triad"
+        },
+        {
+          "parentA": "genesis:horse_antelope",
+          "parentB": "genesis:runner_triad",
+          "childForm": "genesis:runner_triad"
+        },
+        {
+          "parentA": "genesis:deer_antelope",
+          "parentB": "genesis:deer_antelope",
+          "childForm": "genesis:deer_antelope"
+        },
+        {
+          "parentA": "genesis:deer_antelope",
+          "parentB": "genesis:runner_triad",
+          "childForm": "genesis:runner_triad"
+        },
+        {
+          "parentA": "genesis:runner_triad",
+          "parentB": "genesis:runner_triad",
+          "childForm": "genesis:runner_triad"
+        }
+      ],
+      "unlistedPairs": "reject"
+    },
+    {
+      "familyId": "genesis:heavies",
+      "rigId": "genesis:quad_heavy",
+      "baseSpecies": [
+        "genesis:bison",
+        "genesis:boar",
+        "genesis:mosshorn"
+      ],
+      "forms": [
+        {
+          "kind": "base",
+          "id": "genesis:bison",
+          "roots": [
+            "genesis:bison"
+          ],
+          "name": {
+            "ru": "Бизон",
+            "en": "Bison"
+          },
+          "rigId": "genesis:quad_heavy",
+          "vanillaRoleId": null
+        },
+        {
+          "kind": "base",
+          "id": "genesis:boar",
+          "roots": [
+            "genesis:boar"
+          ],
+          "name": {
+            "ru": "Кабан",
+            "en": "Boar"
+          },
+          "rigId": "genesis:quad_heavy",
+          "vanillaRoleId": null
+        },
+        {
+          "kind": "base",
+          "id": "genesis:mosshorn",
+          "roots": [
+            "genesis:mosshorn"
+          ],
+          "name": {
+            "ru": "Мшисторог",
+            "en": "Mosshorn"
+          },
+          "rigId": "genesis:quad_heavy",
+          "vanillaRoleId": null
+        },
+        {
+          "kind": "hybrid",
+          "id": "genesis:bison_boar",
+          "roots": [
+            "genesis:bison",
+            "genesis:boar"
+          ],
+          "name": {
+            "ru": "Кабанорог",
+            "en": "Tuskbison"
+          },
+          "rigId": "genesis:quad_heavy"
+        },
+        {
+          "kind": "hybrid",
+          "id": "genesis:bison_mosshorn",
+          "roots": [
+            "genesis:bison",
+            "genesis:mosshorn"
+          ],
+          "name": {
+            "ru": "Железноспин",
+            "en": "Ironback"
+          },
+          "rigId": "genesis:quad_heavy"
+        },
+        {
+          "kind": "hybrid",
+          "id": "genesis:boar_mosshorn",
+          "roots": [
+            "genesis:boar",
+            "genesis:mosshorn"
+          ],
+          "name": {
+            "ru": "Мшеклык",
+            "en": "Mosstusk"
+          },
+          "rigId": "genesis:quad_heavy"
+        },
+        {
+          "kind": "hybrid",
+          "id": "genesis:heavy_triad",
+          "roots": [
+            "genesis:bison",
+            "genesis:boar",
+            "genesis:mosshorn"
+          ],
+          "name": {
+            "ru": "Громоспин",
+            "en": "Thunderback"
+          },
+          "rigId": "genesis:quad_heavy"
+        }
+      ],
+      "allowedPairs": [
+        {
+          "parentA": "genesis:bison",
+          "parentB": "genesis:bison",
+          "childForm": "genesis:bison"
+        },
+        {
+          "parentA": "genesis:bison",
+          "parentB": "genesis:boar",
+          "childForm": "genesis:bison_boar"
+        },
+        {
+          "parentA": "genesis:bison",
+          "parentB": "genesis:mosshorn",
+          "childForm": "genesis:bison_mosshorn"
+        },
+        {
+          "parentA": "genesis:bison",
+          "parentB": "genesis:bison_boar",
+          "childForm": "genesis:bison_boar"
+        },
+        {
+          "parentA": "genesis:bison",
+          "parentB": "genesis:bison_mosshorn",
+          "childForm": "genesis:bison_mosshorn"
+        },
+        {
+          "parentA": "genesis:bison",
+          "parentB": "genesis:boar_mosshorn",
+          "childForm": "genesis:heavy_triad"
+        },
+        {
+          "parentA": "genesis:bison",
+          "parentB": "genesis:heavy_triad",
+          "childForm": "genesis:heavy_triad"
+        },
+        {
+          "parentA": "genesis:boar",
+          "parentB": "genesis:boar",
+          "childForm": "genesis:boar"
+        },
+        {
+          "parentA": "genesis:boar",
+          "parentB": "genesis:mosshorn",
+          "childForm": "genesis:boar_mosshorn"
+        },
+        {
+          "parentA": "genesis:boar",
+          "parentB": "genesis:bison_boar",
+          "childForm": "genesis:bison_boar"
+        },
+        {
+          "parentA": "genesis:boar",
+          "parentB": "genesis:bison_mosshorn",
+          "childForm": "genesis:heavy_triad"
+        },
+        {
+          "parentA": "genesis:boar",
+          "parentB": "genesis:boar_mosshorn",
+          "childForm": "genesis:boar_mosshorn"
+        },
+        {
+          "parentA": "genesis:boar",
+          "parentB": "genesis:heavy_triad",
+          "childForm": "genesis:heavy_triad"
+        },
+        {
+          "parentA": "genesis:mosshorn",
+          "parentB": "genesis:mosshorn",
+          "childForm": "genesis:mosshorn"
+        },
+        {
+          "parentA": "genesis:mosshorn",
+          "parentB": "genesis:bison_boar",
+          "childForm": "genesis:heavy_triad"
+        },
+        {
+          "parentA": "genesis:mosshorn",
+          "parentB": "genesis:bison_mosshorn",
+          "childForm": "genesis:bison_mosshorn"
+        },
+        {
+          "parentA": "genesis:mosshorn",
+          "parentB": "genesis:boar_mosshorn",
+          "childForm": "genesis:boar_mosshorn"
+        },
+        {
+          "parentA": "genesis:mosshorn",
+          "parentB": "genesis:heavy_triad",
+          "childForm": "genesis:heavy_triad"
+        },
+        {
+          "parentA": "genesis:bison_boar",
+          "parentB": "genesis:bison_boar",
+          "childForm": "genesis:bison_boar"
+        },
+        {
+          "parentA": "genesis:bison_boar",
+          "parentB": "genesis:bison_mosshorn",
+          "childForm": "genesis:heavy_triad"
+        },
+        {
+          "parentA": "genesis:bison_boar",
+          "parentB": "genesis:boar_mosshorn",
+          "childForm": "genesis:heavy_triad"
+        },
+        {
+          "parentA": "genesis:bison_boar",
+          "parentB": "genesis:heavy_triad",
+          "childForm": "genesis:heavy_triad"
+        },
+        {
+          "parentA": "genesis:bison_mosshorn",
+          "parentB": "genesis:bison_mosshorn",
+          "childForm": "genesis:bison_mosshorn"
+        },
+        {
+          "parentA": "genesis:bison_mosshorn",
+          "parentB": "genesis:boar_mosshorn",
+          "childForm": "genesis:heavy_triad"
+        },
+        {
+          "parentA": "genesis:bison_mosshorn",
+          "parentB": "genesis:heavy_triad",
+          "childForm": "genesis:heavy_triad"
+        },
+        {
+          "parentA": "genesis:boar_mosshorn",
+          "parentB": "genesis:boar_mosshorn",
+          "childForm": "genesis:boar_mosshorn"
+        },
+        {
+          "parentA": "genesis:boar_mosshorn",
+          "parentB": "genesis:heavy_triad",
+          "childForm": "genesis:heavy_triad"
+        },
+        {
+          "parentA": "genesis:heavy_triad",
+          "parentB": "genesis:heavy_triad",
+          "childForm": "genesis:heavy_triad"
+        }
+      ],
+      "unlistedPairs": "reject"
+    },
+    {
+      "familyId": "genesis:avians",
+      "rigId": "genesis:avian_flyer",
+      "baseSpecies": [
+        "genesis:raven",
+        "genesis:owl",
+        "genesis:hawk"
+      ],
+      "forms": [
+        {
+          "kind": "base",
+          "id": "genesis:raven",
+          "roots": [
+            "genesis:raven"
+          ],
+          "name": {
+            "ru": "Ворон",
+            "en": "Raven"
+          },
+          "rigId": "genesis:avian_flyer",
+          "vanillaRoleId": null
+        },
+        {
+          "kind": "base",
+          "id": "genesis:owl",
+          "roots": [
+            "genesis:owl"
+          ],
+          "name": {
+            "ru": "Сова",
+            "en": "Owl"
+          },
+          "rigId": "genesis:avian_flyer",
+          "vanillaRoleId": null
+        },
+        {
+          "kind": "base",
+          "id": "genesis:hawk",
+          "roots": [
+            "genesis:hawk"
+          ],
+          "name": {
+            "ru": "Ястреб",
+            "en": "Hawk"
+          },
+          "rigId": "genesis:avian_flyer",
+          "vanillaRoleId": null
+        },
+        {
+          "kind": "hybrid",
+          "id": "genesis:raven_owl",
+          "roots": [
+            "genesis:raven",
+            "genesis:owl"
+          ],
+          "name": {
+            "ru": "Лунокрыл",
+            "en": "Moonwing"
+          },
+          "rigId": "genesis:avian_flyer"
+        },
+        {
+          "kind": "hybrid",
+          "id": "genesis:raven_hawk",
+          "roots": [
+            "genesis:raven",
+            "genesis:hawk"
+          ],
+          "name": {
+            "ru": "Тенелёт",
+            "en": "Shadowflight"
+          },
+          "rigId": "genesis:avian_flyer"
+        },
+        {
+          "kind": "hybrid",
+          "id": "genesis:owl_hawk",
+          "roots": [
+            "genesis:owl",
+            "genesis:hawk"
+          ],
+          "name": {
+            "ru": "Сумеречник",
+            "en": "Duskwing"
+          },
+          "rigId": "genesis:avian_flyer"
+        },
+        {
+          "kind": "hybrid",
+          "id": "genesis:avian_triad",
+          "roots": [
+            "genesis:raven",
+            "genesis:owl",
+            "genesis:hawk"
+          ],
+          "name": {
+            "ru": "Звездокрыл",
+            "en": "Starwing"
+          },
+          "rigId": "genesis:avian_flyer"
+        }
+      ],
+      "allowedPairs": [
+        {
+          "parentA": "genesis:raven",
+          "parentB": "genesis:raven",
+          "childForm": "genesis:raven"
+        },
+        {
+          "parentA": "genesis:raven",
+          "parentB": "genesis:owl",
+          "childForm": "genesis:raven_owl"
+        },
+        {
+          "parentA": "genesis:raven",
+          "parentB": "genesis:hawk",
+          "childForm": "genesis:raven_hawk"
+        },
+        {
+          "parentA": "genesis:raven",
+          "parentB": "genesis:raven_owl",
+          "childForm": "genesis:raven_owl"
+        },
+        {
+          "parentA": "genesis:raven",
+          "parentB": "genesis:raven_hawk",
+          "childForm": "genesis:raven_hawk"
+        },
+        {
+          "parentA": "genesis:raven",
+          "parentB": "genesis:owl_hawk",
+          "childForm": "genesis:avian_triad"
+        },
+        {
+          "parentA": "genesis:raven",
+          "parentB": "genesis:avian_triad",
+          "childForm": "genesis:avian_triad"
+        },
+        {
+          "parentA": "genesis:owl",
+          "parentB": "genesis:owl",
+          "childForm": "genesis:owl"
+        },
+        {
+          "parentA": "genesis:owl",
+          "parentB": "genesis:hawk",
+          "childForm": "genesis:owl_hawk"
+        },
+        {
+          "parentA": "genesis:owl",
+          "parentB": "genesis:raven_owl",
+          "childForm": "genesis:raven_owl"
+        },
+        {
+          "parentA": "genesis:owl",
+          "parentB": "genesis:raven_hawk",
+          "childForm": "genesis:avian_triad"
+        },
+        {
+          "parentA": "genesis:owl",
+          "parentB": "genesis:owl_hawk",
+          "childForm": "genesis:owl_hawk"
+        },
+        {
+          "parentA": "genesis:owl",
+          "parentB": "genesis:avian_triad",
+          "childForm": "genesis:avian_triad"
+        },
+        {
+          "parentA": "genesis:hawk",
+          "parentB": "genesis:hawk",
+          "childForm": "genesis:hawk"
+        },
+        {
+          "parentA": "genesis:hawk",
+          "parentB": "genesis:raven_owl",
+          "childForm": "genesis:avian_triad"
+        },
+        {
+          "parentA": "genesis:hawk",
+          "parentB": "genesis:raven_hawk",
+          "childForm": "genesis:raven_hawk"
+        },
+        {
+          "parentA": "genesis:hawk",
+          "parentB": "genesis:owl_hawk",
+          "childForm": "genesis:owl_hawk"
+        },
+        {
+          "parentA": "genesis:hawk",
+          "parentB": "genesis:avian_triad",
+          "childForm": "genesis:avian_triad"
+        },
+        {
+          "parentA": "genesis:raven_owl",
+          "parentB": "genesis:raven_owl",
+          "childForm": "genesis:raven_owl"
+        },
+        {
+          "parentA": "genesis:raven_owl",
+          "parentB": "genesis:raven_hawk",
+          "childForm": "genesis:avian_triad"
+        },
+        {
+          "parentA": "genesis:raven_owl",
+          "parentB": "genesis:owl_hawk",
+          "childForm": "genesis:avian_triad"
+        },
+        {
+          "parentA": "genesis:raven_owl",
+          "parentB": "genesis:avian_triad",
+          "childForm": "genesis:avian_triad"
+        },
+        {
+          "parentA": "genesis:raven_hawk",
+          "parentB": "genesis:raven_hawk",
+          "childForm": "genesis:raven_hawk"
+        },
+        {
+          "parentA": "genesis:raven_hawk",
+          "parentB": "genesis:owl_hawk",
+          "childForm": "genesis:avian_triad"
+        },
+        {
+          "parentA": "genesis:raven_hawk",
+          "parentB": "genesis:avian_triad",
+          "childForm": "genesis:avian_triad"
+        },
+        {
+          "parentA": "genesis:owl_hawk",
+          "parentB": "genesis:owl_hawk",
+          "childForm": "genesis:owl_hawk"
+        },
+        {
+          "parentA": "genesis:owl_hawk",
+          "parentB": "genesis:avian_triad",
+          "childForm": "genesis:avian_triad"
+        },
+        {
+          "parentA": "genesis:avian_triad",
+          "parentB": "genesis:avian_triad",
+          "childForm": "genesis:avian_triad"
+        }
+      ],
+      "unlistedPairs": "reject"
+    }
+  ]
+}

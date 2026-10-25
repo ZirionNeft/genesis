@@ -53,6 +53,12 @@ tasks.processResources {
     )
     inputs.properties(metadata)
     filesMatching("manifest.json") { expand(metadata) }
+    from(layout.projectDirectory.dir("specs/Genesis_GDD_v0.7")) {
+        include("Genesis_GDD_v0.7_Gene_Schema_v2.json", "Genesis_GDD_v0.7_Morphology_Set_v2.json",
+            "Genesis_GDD_v0.7_Server_Config.json", "Genesis_v0.7_Stage_02_Initial_Hybrid_Graph_v1.json",
+            "Genesis_v0.7_Stage_08B_Content_Catalog_v1.json", "Genesis_v0.7_Stage_10_Expression_Rules_v2.json")
+        into("genesis/catalogs/v0.7")
+    }
 }
 
 tasks.jar {
@@ -70,6 +76,9 @@ tasks.test {
     inputs.file(pluginJar.flatMap { it.archiveFile })
     systemProperty("genesis.pluginJar", pluginJar.flatMap { it.archiveFile }.get().asFile.absolutePath)
     systemProperty("genesis.hytaleVersion", hytaleVersion)
+    val gddDirectory = layout.projectDirectory.dir("specs/Genesis_GDD_v0.7")
+    inputs.files(fileTree(gddDirectory) { include("*.json") })
+    systemProperty("genesis.gddDirectory", gddDirectory.asFile.absolutePath)
 }
 
 val verifyPluginJar = tasks.register("verifyPluginJar") {
@@ -164,6 +173,25 @@ val verifyPluginJar = tasks.register("verifyPluginJar") {
 
 tasks.check { dependsOn(verifyPluginJar) }
 
+// Optional development audits: Python is not a build or runtime dependency of Genesis.
+// verifyGddCatalogs intentionally fails on inconsistent design sources, including known conflicts.
+val pythonExecutable = providers.gradleProperty("pythonExecutable").getOrElse("python3")
+
+tasks.register<Exec>("testGddCatalogValidator") {
+    group = "verification"
+    description = "Tests the read-only v0.7 design catalog validator (requires Python 3.10+)."
+    workingDir(layout.projectDirectory)
+    commandLine(pythonExecutable, "-B", "-m", "unittest", "discover",
+        "-s", "src/test/python", "-p", "test_gdd_v07_validator.py")
+}
+
+tasks.register<Exec>("verifyGddCatalogs") {
+    group = "verification"
+    description = "Audits the supplied v0.7 design JSON without changing sources (requires Python 3.10+)."
+    workingDir(layout.projectDirectory)
+    commandLine(pythonExecutable, "-B", "tools/validate_gdd_v07.py", "--json")
+}
+
 val stagePlugin = tasks.register<Copy>("stagePlugin") {
     group = "hytale"
     description = "Copies Genesis.jar into the isolated development server's mods directory."
@@ -171,6 +199,12 @@ val stagePlugin = tasks.register<Copy>("stagePlugin") {
     from(pluginJar.flatMap { it.archiveFile })
     into(layout.projectDirectory.dir("run/mods"))
     rename { "Genesis.jar" }
+}
+
+tasks.register("verifyDevelopment") {
+    group = "verification"
+    description = "Runs the build, JAR checks and both GDD audits together; live client/server acceptance is separate."
+    dependsOn("build", "verifyPluginJar", "testGddCatalogValidator", "verifyGddCatalogs")
 }
 
 val hytaleAssetsFile = providers.gradleProperty("hytaleAssets").orNull?.let { file(it) }

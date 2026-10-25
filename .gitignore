@@ -50,3 +50,7 @@ bin/
 /HytaleServer.jar
 /HytaleServer.aot
 *.hprof
+
+### Python development tools ###
+__pycache__/
+*.py[cod]

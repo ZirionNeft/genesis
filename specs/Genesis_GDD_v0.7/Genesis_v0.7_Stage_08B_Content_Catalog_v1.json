@@ -1,0 +1,1828 @@
+{
+  "catalogVersion": "genesis:balance-content-v1",
+  "authority": "design proposal; balance hypotheses pending Hytale integration and playtest",
+  "units": {
+    "hp": "Genesis reference HP (requires Hytale combat adapter)",
+    "attack": "Genesis damage / hit (pre-armor)",
+    "armor": "rating, mitigation=min(0.35,armor*0.02)",
+    "speedBps": "blocks per second, reference movement animation subject to validation",
+    "stamina": "Genesis points",
+    "cargoSlots": "inventory slots subject to cargo rig",
+    "senseRadius": "blocks of server-validated visibility"
+  },
+  "baseSpeciesCount": 12,
+  "forms": [
+    {
+      "familyId": "genesis:canids",
+      "formId": "genesis:wolf",
+      "ru": "Волк",
+      "en": "Wolf",
+      "baseStats": {
+        "hp": 120,
+        "attack": 16,
+        "armor": 7,
+        "speedBps": 5.3,
+        "stamina": 100,
+        "cargoSlots": 4,
+        "senseRadius": 19
+      },
+      "allowedRoles": [
+        "guard",
+        "hunter",
+        "scout"
+      ],
+      "signature": {
+        "ru": "Защитный бросок",
+        "en": "Guard leap"
+      },
+      "originRoots": [
+        "wolf"
+      ],
+      "signaturePassive": {
+        "requiredRole": "guard",
+        "ru": "+2 блока к радиусу перехвата угрозы",
+        "en": "+2 blocks interception radius"
+      },
+      "baseFormula": "immutable original founder species baseStats: sole sources used by expression v2",
+      "statsInterpretation": "founder reference stats: sole physiological baseline source"
+    },
+    {
+      "familyId": "genesis:canids",
+      "formId": "genesis:fox",
+      "ru": "Лисица",
+      "en": "Fox",
+      "baseStats": {
+        "hp": 80,
+        "attack": 11,
+        "armor": 3,
+        "speedBps": 6.0,
+        "stamina": 120,
+        "cargoSlots": 2,
+        "senseRadius": 23
+      },
+      "allowedRoles": [
+        "hunter",
+        "scout",
+        "support"
+      ],
+      "signature": {
+        "ru": "Быстрый обход",
+        "en": "Quick flank"
+      },
+      "originRoots": [
+        "fox"
+      ],
+      "signaturePassive": {
+        "requiredRole": "scout",
+        "ru": "+3% скорость вне боя",
+        "en": "+3% out-of-combat speed"
+      },
+      "baseFormula": "immutable original founder species baseStats: sole sources used by expression v2"
+    },
+    {
+      "familyId": "genesis:canids",
+      "formId": "genesis:hyena",
+      "ru": "Гиена",
+      "en": "Hyena",
+      "baseStats": {
+        "hp": 135,
+        "attack": 18,
+        "armor": 6,
+        "speedBps": 4.8,
+        "stamina": 105,
+        "cargoSlots": 4,
+        "senseRadius": 18
+      },
+      "allowedRoles": [
+        "guard",
+        "hunter",
+        "scout"
+      ],
+      "signature": {
+        "ru": "Цепкая хватка",
+        "en": "Tenacious grip"
+      },
+      "originRoots": [
+        "hyena"
+      ],
+      "signaturePassive": {
+        "requiredRole": "hunter",
+        "ru": "−8% длительность ошеломления",
+        "en": "−8% stagger duration"
+      },
+      "baseFormula": "immutable original founder species baseStats: sole sources used by expression v2"
+    },
+    {
+      "familyId": "genesis:runners",
+      "formId": "genesis:horse",
+      "ru": "Конь",
+      "en": "Horse",
+      "baseStats": {
+        "hp": 155,
+        "attack": 9,
+        "armor": 7,
+        "speedBps": 7.5,
+        "stamina": 140,
+        "cargoSlots": 12,
+        "senseRadius": 16
+      },
+      "allowedRoles": [
+        "mount",
+        "hauler",
+        "scout"
+      ],
+      "signature": {
+        "ru": "Длинный рывок",
+        "en": "Long stride"
+      },
+      "originRoots": [
+        "horse"
+      ],
+      "signaturePassive": {
+        "requiredRole": "mount",
+        "ru": "−8% расхода выносливости при езде",
+        "en": "−8% mounted stamina drain"
+      },
+      "baseFormula": "immutable original founder species baseStats: sole sources used by expression v2"
+    },
+    {
+      "familyId": "genesis:runners",
+      "formId": "genesis:deer",
+      "ru": "Олень",
+      "en": "Deer",
+      "baseStats": {
+        "hp": 115,
+        "attack": 10,
+        "armor": 4,
+        "speedBps": 6.7,
+        "stamina": 130,
+        "cargoSlots": 5,
+        "senseRadius": 22
+      },
+      "allowedRoles": [
+        "mount",
+        "scout",
+        "support"
+      ],
+      "signature": {
+        "ru": "Чуткий слух",
+        "en": "Acute hearing"
+      },
+      "originRoots": [
+        "deer"
+      ],
+      "signaturePassive": {
+        "requiredRole": "scout",
+        "ru": "+2 блока обнаружения после 2 с без движения",
+        "en": "+2 sense range after 2s stillness"
+      },
+      "baseFormula": "immutable original founder species baseStats: sole sources used by expression v2"
+    },
+    {
+      "familyId": "genesis:runners",
+      "formId": "genesis:antelope",
+      "ru": "Антилопа",
+      "en": "Antelope",
+      "baseStats": {
+        "hp": 95,
+        "attack": 9,
+        "armor": 3,
+        "speedBps": 8.0,
+        "stamina": 125,
+        "cargoSlots": 3,
+        "senseRadius": 21
+      },
+      "allowedRoles": [
+        "mount",
+        "scout"
+      ],
+      "signature": {
+        "ru": "Манёвренный прыжок",
+        "en": "Agile leap"
+      },
+      "originRoots": [
+        "antelope"
+      ],
+      "signaturePassive": {
+        "requiredRole": "mount",
+        "ru": "+5% высота прыжка",
+        "en": "+5% jump height"
+      },
+      "baseFormula": "immutable original founder species baseStats: sole sources used by expression v2"
+    },
+    {
+      "familyId": "genesis:heavies",
+      "formId": "genesis:bison",
+      "ru": "Бизон",
+      "en": "Bison",
+      "baseStats": {
+        "hp": 220,
+        "attack": 20,
+        "armor": 12,
+        "speedBps": 4.1,
+        "stamina": 110,
+        "cargoSlots": 20,
+        "senseRadius": 14
+      },
+      "allowedRoles": [
+        "guard",
+        "hauler",
+        "producer"
+      ],
+      "signature": {
+        "ru": "Защитный напор",
+        "en": "Shielding charge"
+      },
+      "originRoots": [
+        "bison"
+      ],
+      "signaturePassive": {
+        "requiredRole": "guard",
+        "ru": "−5% урона от первой атаки при перехвате",
+        "en": "−5% first intercepted hit damage"
+      },
+      "baseFormula": "immutable original founder species baseStats: sole sources used by expression v2"
+    },
+    {
+      "familyId": "genesis:heavies",
+      "formId": "genesis:boar",
+      "ru": "Кабан",
+      "en": "Boar",
+      "baseStats": {
+        "hp": 165,
+        "attack": 18,
+        "armor": 9,
+        "speedBps": 4.8,
+        "stamina": 120,
+        "cargoSlots": 12,
+        "senseRadius": 17
+      },
+      "allowedRoles": [
+        "guard",
+        "hunter",
+        "hauler"
+      ],
+      "signature": {
+        "ru": "Рывок с разворотом",
+        "en": "Pivot charge"
+      },
+      "originRoots": [
+        "boar"
+      ],
+      "signaturePassive": {
+        "requiredRole": "hunter",
+        "ru": "+4% скорость при преследовании цели",
+        "en": "+4% speed while pursuing target"
+      },
+      "baseFormula": "immutable original founder species baseStats: sole sources used by expression v2"
+    },
+    {
+      "familyId": "genesis:heavies",
+      "formId": "genesis:mosshorn",
+      "ru": "Мшисторог",
+      "en": "Mosshorn",
+      "baseStats": {
+        "hp": 245,
+        "attack": 16,
+        "armor": 15,
+        "speedBps": 3.5,
+        "stamina": 100,
+        "cargoSlots": 24,
+        "senseRadius": 15
+      },
+      "allowedRoles": [
+        "guard",
+        "hauler",
+        "producer",
+        "support"
+      ],
+      "signature": {
+        "ru": "Тяжёлая стойка",
+        "en": "Heavy stance"
+      },
+      "originRoots": [
+        "mosshorn"
+      ],
+      "signaturePassive": {
+        "requiredRole": "hauler",
+        "ru": "+2 слота груза в подходящем rig",
+        "en": "+2 cargo slots on suitable rig"
+      },
+      "baseFormula": "immutable original founder species baseStats: sole sources used by expression v2"
+    },
+    {
+      "familyId": "genesis:avians",
+      "formId": "genesis:raven",
+      "ru": "Ворон",
+      "en": "Raven",
+      "baseStats": {
+        "hp": 65,
+        "attack": 8,
+        "armor": 2,
+        "speedBps": 7.0,
+        "stamina": 120,
+        "cargoSlots": 1,
+        "senseRadius": 26
+      },
+      "allowedRoles": [
+        "scout",
+        "support"
+      ],
+      "signature": {
+        "ru": "Метка предмета",
+        "en": "Object mark"
+      },
+      "originRoots": [
+        "raven"
+      ],
+      "signaturePassive": {
+        "requiredRole": "scout",
+        "ru": "+2 блока дистанции маркировки",
+        "en": "+2 blocks mark distance"
+      },
+      "baseFormula": "immutable original founder species baseStats: sole sources used by expression v2"
+    },
+    {
+      "familyId": "genesis:avians",
+      "formId": "genesis:owl",
+      "ru": "Сова",
+      "en": "Owl",
+      "baseStats": {
+        "hp": 75,
+        "attack": 10,
+        "armor": 3,
+        "speedBps": 6.3,
+        "stamina": 105,
+        "cargoSlots": 1,
+        "senseRadius": 28
+      },
+      "allowedRoles": [
+        "scout",
+        "support"
+      ],
+      "signature": {
+        "ru": "Тихий поиск",
+        "en": "Silent search"
+      },
+      "originRoots": [
+        "owl"
+      ],
+      "signaturePassive": {
+        "requiredRole": "scout",
+        "ru": "+3 блока ночного обнаружения",
+        "en": "+3 blocks nighttime detection"
+      },
+      "baseFormula": "immutable original founder species baseStats: sole sources used by expression v2"
+    },
+    {
+      "familyId": "genesis:avians",
+      "formId": "genesis:hawk",
+      "ru": "Ястреб",
+      "en": "Hawk",
+      "baseStats": {
+        "hp": 70,
+        "attack": 12,
+        "armor": 2,
+        "speedBps": 8.1,
+        "stamina": 110,
+        "cargoSlots": 1,
+        "senseRadius": 24
+      },
+      "allowedRoles": [
+        "hunter",
+        "scout"
+      ],
+      "signature": {
+        "ru": "Разведывательный пикир",
+        "en": "Scout dive"
+      },
+      "originRoots": [
+        "hawk"
+      ],
+      "signaturePassive": {
+        "requiredRole": "scout",
+        "ru": "+3% скорость полёта вне боя",
+        "en": "+3% out-of-combat flight speed"
+      },
+      "baseFormula": "immutable original founder species baseStats: sole sources used by expression v2"
+    },
+    {
+      "familyId": "genesis:canids",
+      "formId": "genesis:wolf_fox",
+      "ru": "Волколис",
+      "en": "Wolfox",
+      "baseStats": {
+        "hp": 100,
+        "attack": 14,
+        "armor": 5,
+        "speedBps": 5.65,
+        "stamina": 110,
+        "cargoSlots": 3,
+        "senseRadius": 21
+      },
+      "allowedRoles": [
+        "hunter",
+        "scout",
+        "guard"
+      ],
+      "signature": {
+        "ru": "Запутывающий след",
+        "en": "Confusing trail"
+      },
+      "originRoots": [
+        "wolf",
+        "fox"
+      ],
+      "baseFormula": "neutral v2 preview only: founding species average weighted by six HERITAGE copies; not fixed by historical formId",
+      "signaturePassive": {
+        "requiredRole": "scout",
+        "ru": "+2 блока поиска во время движения",
+        "en": "+2 sense range while moving"
+      },
+      "statsInterpretation": "worked example for canonical equal founder mix, not the base stat input for a descendant"
+    },
+    {
+      "familyId": "genesis:canids",
+      "formId": "genesis:wolf_hyena",
+      "ru": "Волкогиена",
+      "en": "Wolfhyena",
+      "baseStats": {
+        "hp": 128,
+        "attack": 17,
+        "armor": 7,
+        "speedBps": 5.05,
+        "stamina": 103,
+        "cargoSlots": 4,
+        "senseRadius": 19
+      },
+      "allowedRoles": [
+        "guard",
+        "hunter",
+        "scout"
+      ],
+      "signature": {
+        "ru": "Сдвоенный натиск",
+        "en": "Double onslaught"
+      },
+      "originRoots": [
+        "wolf",
+        "hyena"
+      ],
+      "baseFormula": "neutral v2 preview only: founding species average weighted by six HERITAGE copies; not fixed by historical formId",
+      "signaturePassive": {
+        "requiredRole": "guard",
+        "ru": "+5% снижение урона на 3 с после перехвата (CD 30 с)",
+        "en": "+5% damage reduction for 3s after intercept (30s CD)"
+      },
+      "statsInterpretation": "worked example for canonical equal founder mix, not the base stat input for a descendant"
+    },
+    {
+      "familyId": "genesis:canids",
+      "formId": "genesis:fox_hyena",
+      "ru": "Лисогиена",
+      "en": "Foxhyena",
+      "baseStats": {
+        "hp": 108,
+        "attack": 15,
+        "armor": 5,
+        "speedBps": 5.4,
+        "stamina": 113,
+        "cargoSlots": 3,
+        "senseRadius": 21
+      },
+      "allowedRoles": [
+        "hunter",
+        "scout"
+      ],
+      "signature": {
+        "ru": "Резкая смена цели",
+        "en": "Sudden retarget"
+      },
+      "originRoots": [
+        "fox",
+        "hyena"
+      ],
+      "baseFormula": "neutral v2 preview only: founding species average weighted by six HERITAGE copies; not fixed by historical formId",
+      "signaturePassive": {
+        "requiredRole": "hunter",
+        "ru": "−10% задержка смены цели",
+        "en": "−10% retarget delay"
+      },
+      "statsInterpretation": "worked example for canonical equal founder mix, not the base stat input for a descendant"
+    },
+    {
+      "familyId": "genesis:canids",
+      "formId": "genesis:canid_triad",
+      "ru": "Трёхклык",
+      "en": "Trifang",
+      "baseStats": {
+        "hp": 112,
+        "attack": 15,
+        "armor": 5,
+        "speedBps": 5.37,
+        "stamina": 108,
+        "cargoSlots": 3,
+        "senseRadius": 20
+      },
+      "allowedRoles": [
+        "guard",
+        "hunter",
+        "scout"
+      ],
+      "signature": {
+        "ru": "Гибкий захват",
+        "en": "Adaptive pounce"
+      },
+      "originRoots": [
+        "wolf",
+        "fox",
+        "hyena"
+      ],
+      "baseFormula": "neutral v2 preview only: founding species average weighted by six HERITAGE copies; not fixed by historical formId",
+      "signaturePassive": {
+        "requiredRole": "scout",
+        "ru": "+1 блок радиуса поиска и −2% расход выносливости",
+        "en": "+1 sense and −2% stamina drain"
+      },
+      "statsInterpretation": "worked example for canonical equal founder mix, not the base stat input for a descendant"
+    },
+    {
+      "familyId": "genesis:runners",
+      "formId": "genesis:horse_deer",
+      "ru": "Гриворог",
+      "en": "Manehorn",
+      "baseStats": {
+        "hp": 135,
+        "attack": 10,
+        "armor": 6,
+        "speedBps": 7.1,
+        "stamina": 135,
+        "cargoSlots": 9,
+        "senseRadius": 19
+      },
+      "allowedRoles": [
+        "mount",
+        "scout",
+        "hauler"
+      ],
+      "signature": {
+        "ru": "Ровная поступь",
+        "en": "Steady pace"
+      },
+      "originRoots": [
+        "horse",
+        "deer"
+      ],
+      "baseFormula": "neutral v2 preview only: founding species average weighted by six HERITAGE copies; not fixed by historical formId",
+      "signaturePassive": {
+        "requiredRole": "mount",
+        "ru": "−5% расхода выносливости на неровной местности",
+        "en": "−5% rough-terrain stamina drain"
+      },
+      "statsInterpretation": "worked example for canonical equal founder mix, not the base stat input for a descendant"
+    },
+    {
+      "familyId": "genesis:runners",
+      "formId": "genesis:horse_antelope",
+      "ru": "Степнорыс",
+      "en": "Stepestrider",
+      "baseStats": {
+        "hp": 125,
+        "attack": 9,
+        "armor": 5,
+        "speedBps": 7.75,
+        "stamina": 133,
+        "cargoSlots": 8,
+        "senseRadius": 19
+      },
+      "allowedRoles": [
+        "mount",
+        "scout"
+      ],
+      "signature": {
+        "ru": "Степной галоп",
+        "en": "Steppe gallop"
+      },
+      "originRoots": [
+        "horse",
+        "antelope"
+      ],
+      "baseFormula": "neutral v2 preview only: founding species average weighted by six HERITAGE copies; not fixed by historical formId",
+      "signaturePassive": {
+        "requiredRole": "mount",
+        "ru": "+3% скорость на ровной дороге",
+        "en": "+3% speed on level terrain"
+      },
+      "statsInterpretation": "worked example for canonical equal founder mix, not the base stat input for a descendant"
+    },
+    {
+      "familyId": "genesis:runners",
+      "formId": "genesis:deer_antelope",
+      "ru": "Ветрокопыт",
+      "en": "Windhoof",
+      "baseStats": {
+        "hp": 105,
+        "attack": 10,
+        "armor": 4,
+        "speedBps": 7.35,
+        "stamina": 128,
+        "cargoSlots": 4,
+        "senseRadius": 22
+      },
+      "allowedRoles": [
+        "mount",
+        "scout"
+      ],
+      "signature": {
+        "ru": "Длинный прыжок",
+        "en": "Long leap"
+      },
+      "originRoots": [
+        "deer",
+        "antelope"
+      ],
+      "baseFormula": "neutral v2 preview only: founding species average weighted by six HERITAGE copies; not fixed by historical formId",
+      "signaturePassive": {
+        "requiredRole": "scout",
+        "ru": "+1 блок радиуса и +3% высота прыжка",
+        "en": "+1 sense and +3% jump height"
+      },
+      "statsInterpretation": "worked example for canonical equal founder mix, not the base stat input for a descendant"
+    },
+    {
+      "familyId": "genesis:runners",
+      "formId": "genesis:runner_triad",
+      "ru": "Трёхбег",
+      "en": "Tristrider",
+      "baseStats": {
+        "hp": 122,
+        "attack": 9,
+        "armor": 5,
+        "speedBps": 7.4,
+        "stamina": 132,
+        "cargoSlots": 7,
+        "senseRadius": 20
+      },
+      "allowedRoles": [
+        "mount",
+        "scout",
+        "hauler"
+      ],
+      "signature": {
+        "ru": "Плавный темп",
+        "en": "Fluid pace"
+      },
+      "originRoots": [
+        "horse",
+        "deer",
+        "antelope"
+      ],
+      "baseFormula": "neutral v2 preview only: founding species average weighted by six HERITAGE copies; not fixed by historical formId",
+      "signaturePassive": {
+        "requiredRole": "mount",
+        "ru": "−4% расхода выносливости и +1 блок обзора",
+        "en": "−4% mounted stamina drain and +1 sense"
+      },
+      "statsInterpretation": "worked example for canonical equal founder mix, not the base stat input for a descendant"
+    },
+    {
+      "familyId": "genesis:heavies",
+      "formId": "genesis:bison_boar",
+      "ru": "Кабанорог",
+      "en": "Tuskbison",
+      "baseStats": {
+        "hp": 193,
+        "attack": 19,
+        "armor": 11,
+        "speedBps": 4.45,
+        "stamina": 115,
+        "cargoSlots": 16,
+        "senseRadius": 16
+      },
+      "allowedRoles": [
+        "guard",
+        "hauler",
+        "hunter"
+      ],
+      "signature": {
+        "ru": "Пробивной толчок",
+        "en": "Piercing shove"
+      },
+      "originRoots": [
+        "bison",
+        "boar"
+      ],
+      "baseFormula": "neutral v2 preview only: founding species average weighted by six HERITAGE copies; not fixed by historical formId",
+      "signaturePassive": {
+        "requiredRole": "guard",
+        "ru": "+5% сопротивление отбрасыванию",
+        "en": "+5% knockback resistance"
+      },
+      "statsInterpretation": "worked example for canonical equal founder mix, not the base stat input for a descendant"
+    },
+    {
+      "familyId": "genesis:heavies",
+      "formId": "genesis:bison_mosshorn",
+      "ru": "Железноспин",
+      "en": "Ironback",
+      "baseStats": {
+        "hp": 233,
+        "attack": 18,
+        "armor": 14,
+        "speedBps": 3.8,
+        "stamina": 105,
+        "cargoSlots": 22,
+        "senseRadius": 15
+      },
+      "allowedRoles": [
+        "guard",
+        "hauler",
+        "producer"
+      ],
+      "signature": {
+        "ru": "Костяной щит",
+        "en": "Bony shield"
+      },
+      "originRoots": [
+        "bison",
+        "mosshorn"
+      ],
+      "baseFormula": "neutral v2 preview only: founding species average weighted by six HERITAGE copies; not fixed by historical formId",
+      "signaturePassive": {
+        "requiredRole": "hauler",
+        "ru": "+1 слот груза и −3% расход при полном грузе",
+        "en": "+1 cargo slot and −3% full-load stamina cost"
+      },
+      "statsInterpretation": "worked example for canonical equal founder mix, not the base stat input for a descendant"
+    },
+    {
+      "familyId": "genesis:heavies",
+      "formId": "genesis:boar_mosshorn",
+      "ru": "Мшеклык",
+      "en": "Mosstusk",
+      "baseStats": {
+        "hp": 205,
+        "attack": 17,
+        "armor": 12,
+        "speedBps": 4.15,
+        "stamina": 110,
+        "cargoSlots": 18,
+        "senseRadius": 16
+      },
+      "allowedRoles": [
+        "guard",
+        "hauler",
+        "producer"
+      ],
+      "signature": {
+        "ru": "Уверенная опора",
+        "en": "Stable footing"
+      },
+      "originRoots": [
+        "boar",
+        "mosshorn"
+      ],
+      "baseFormula": "neutral v2 preview only: founding species average weighted by six HERITAGE copies; not fixed by historical formId",
+      "signaturePassive": {
+        "requiredRole": "producer",
+        "ru": "+5% скорость активного цикла производства",
+        "en": "+5% active production-cycle speed"
+      },
+      "statsInterpretation": "worked example for canonical equal founder mix, not the base stat input for a descendant"
+    },
+    {
+      "familyId": "genesis:heavies",
+      "formId": "genesis:heavy_triad",
+      "ru": "Громоспин",
+      "en": "Thunderback",
+      "baseStats": {
+        "hp": 210,
+        "attack": 18,
+        "armor": 12,
+        "speedBps": 4.13,
+        "stamina": 110,
+        "cargoSlots": 19,
+        "senseRadius": 15
+      },
+      "allowedRoles": [
+        "guard",
+        "hauler",
+        "producer"
+      ],
+      "signature": {
+        "ru": "Устойчивый натиск",
+        "en": "Anchored charge"
+      },
+      "originRoots": [
+        "bison",
+        "boar",
+        "mosshorn"
+      ],
+      "baseFormula": "neutral v2 preview only: founding species average weighted by six HERITAGE copies; not fixed by historical formId",
+      "signaturePassive": {
+        "requiredRole": "hauler",
+        "ru": "+1 слот груза и +3% сопротивление отбрасыванию",
+        "en": "+1 cargo slot and +3% knockback resistance"
+      },
+      "statsInterpretation": "worked example for canonical equal founder mix, not the base stat input for a descendant"
+    },
+    {
+      "familyId": "genesis:avians",
+      "formId": "genesis:raven_owl",
+      "ru": "Лунокрыл",
+      "en": "Moonwing",
+      "baseStats": {
+        "hp": 70,
+        "attack": 9,
+        "armor": 3,
+        "speedBps": 6.65,
+        "stamina": 113,
+        "cargoSlots": 1,
+        "senseRadius": 27
+      },
+      "allowedRoles": [
+        "scout",
+        "support"
+      ],
+      "signature": {
+        "ru": "Сумеречная метка",
+        "en": "Twilight mark"
+      },
+      "originRoots": [
+        "raven",
+        "owl"
+      ],
+      "baseFormula": "neutral v2 preview only: founding species average weighted by six HERITAGE copies; not fixed by historical formId",
+      "signaturePassive": {
+        "requiredRole": "scout",
+        "ru": "+2 блока радиуса в сумерках",
+        "en": "+2 sense radius at dusk"
+      },
+      "statsInterpretation": "worked example for canonical equal founder mix, not the base stat input for a descendant"
+    },
+    {
+      "familyId": "genesis:avians",
+      "formId": "genesis:raven_hawk",
+      "ru": "Тенелёт",
+      "en": "Shadowflight",
+      "baseStats": {
+        "hp": 68,
+        "attack": 10,
+        "armor": 2,
+        "speedBps": 7.55,
+        "stamina": 115,
+        "cargoSlots": 1,
+        "senseRadius": 25
+      },
+      "allowedRoles": [
+        "scout",
+        "hunter"
+      ],
+      "signature": {
+        "ru": "Крутой разворот",
+        "en": "Sharp turn"
+      },
+      "originRoots": [
+        "raven",
+        "hawk"
+      ],
+      "baseFormula": "neutral v2 preview only: founding species average weighted by six HERITAGE copies; not fixed by historical formId",
+      "signaturePassive": {
+        "requiredRole": "scout",
+        "ru": "+4% скорость разведывательного полёта",
+        "en": "+4% scouting-flight speed"
+      },
+      "statsInterpretation": "worked example for canonical equal founder mix, not the base stat input for a descendant"
+    },
+    {
+      "familyId": "genesis:avians",
+      "formId": "genesis:owl_hawk",
+      "ru": "Сумеречник",
+      "en": "Duskwing",
+      "baseStats": {
+        "hp": 73,
+        "attack": 11,
+        "armor": 3,
+        "speedBps": 7.2,
+        "stamina": 108,
+        "cargoSlots": 1,
+        "senseRadius": 26
+      },
+      "allowedRoles": [
+        "scout",
+        "hunter",
+        "support"
+      ],
+      "signature": {
+        "ru": "Тихий разгон",
+        "en": "Silent acceleration"
+      },
+      "originRoots": [
+        "owl",
+        "hawk"
+      ],
+      "baseFormula": "neutral v2 preview only: founding species average weighted by six HERITAGE copies; not fixed by historical formId",
+      "signaturePassive": {
+        "requiredRole": "hunter",
+        "ru": "−8% время подготовки пикирования",
+        "en": "−8% dive preparation time"
+      },
+      "statsInterpretation": "worked example for canonical equal founder mix, not the base stat input for a descendant"
+    },
+    {
+      "familyId": "genesis:avians",
+      "formId": "genesis:avian_triad",
+      "ru": "Звездокрыл",
+      "en": "Starwing",
+      "baseStats": {
+        "hp": 70,
+        "attack": 10,
+        "armor": 2,
+        "speedBps": 7.13,
+        "stamina": 112,
+        "cargoSlots": 1,
+        "senseRadius": 26
+      },
+      "allowedRoles": [
+        "scout",
+        "support"
+      ],
+      "signature": {
+        "ru": "Дальний обзор",
+        "en": "Far sight"
+      },
+      "originRoots": [
+        "raven",
+        "owl",
+        "hawk"
+      ],
+      "baseFormula": "neutral v2 preview only: founding species average weighted by six HERITAGE copies; not fixed by historical formId",
+      "signaturePassive": {
+        "requiredRole": "scout",
+        "ru": "+2 блока ночной разведки и −2% расход полёта",
+        "en": "+2 nighttime scouting radius, −2% flight stamina cost"
+      },
+      "statsInterpretation": "worked example for canonical equal founder mix, not the base stat input for a descendant"
+    }
+  ],
+  "genes": [
+    {
+      "id": "BODY_FRAME",
+      "defaultVariant": "normal",
+      "specialVariant": "large",
+      "expression": "intermediate",
+      "ru": "Корпус: +0/+8/+16% HP, −0/3/6% скорости",
+      "en": "Body: +0/+8/+16% HP, −0/3/6% speed"
+    },
+    {
+      "id": "HEAD_FORM",
+      "defaultVariant": "standard",
+      "specialVariant": "broad",
+      "expression": "intermediate",
+      "ru": "Ширина головы: 3 визуальных состояния; без урона",
+      "en": "Head shape: 3 visual states; no damage bonus"
+    },
+    {
+      "id": "EAR_FORM",
+      "defaultVariant": "standard",
+      "specialVariant": "keen",
+      "expression": "intermediate",
+      "ru": "Размер ушей: 3 состояния; +0/+1/+2 к радиусу чувств",
+      "en": "Ear size: 3 states; +0/+1/+2 sense radius"
+    },
+    {
+      "id": "TAIL_FORM",
+      "defaultVariant": "standard",
+      "specialVariant": "plumed",
+      "expression": "intermediate",
+      "ru": "Форма хвоста: 3 состояния, косметика",
+      "en": "Tail shape: 3 states, cosmetic"
+    },
+    {
+      "id": "LIMB_FORM",
+      "defaultVariant": "standard",
+      "specialVariant": "long",
+      "expression": "intermediate",
+      "ru": "Длина ног: +0/2/4% скорости, −0/2/4% HP",
+      "en": "Leg length: +0/2/4% speed, −0/2/4% HP"
+    },
+    {
+      "id": "FOOT_FORM",
+      "defaultVariant": "standard",
+      "specialVariant": "surefoot",
+      "expression": "dominant",
+      "ru": "Устойчивая опора: −10% штрафа скорости на неровной местности",
+      "en": "Surefoot: −10% rough-terrain speed penalty"
+    },
+    {
+      "id": "COVER_TYPE",
+      "defaultVariant": "standard",
+      "specialVariant": "layered",
+      "expression": "intermediate",
+      "ru": "Тип покрова: 3 визуальных состояния",
+      "en": "Cover: 3 visual states"
+    },
+    {
+      "id": "COAT_DENSITY",
+      "defaultVariant": "normal",
+      "specialVariant": "thick",
+      "expression": "intermediate",
+      "ru": "Плотность покрова: −0/5/10% урона от холода, +0/3/6% расход выносливости в жару",
+      "en": "Coat density: −0/5/10% cold damage, +0/3/6% heat stamina cost"
+    },
+    {
+      "id": "PIGMENT",
+      "defaultVariant": "ordinary",
+      "specialVariant": "dark",
+      "expression": "dominant",
+      "ru": "Цвет: базовый/тёмный; визуальное отличие",
+      "en": "Color: base/dark; visual difference"
+    },
+    {
+      "id": "PATTERN",
+      "defaultVariant": "plain",
+      "specialVariant": "spotted",
+      "expression": "recessive",
+      "ru": "Узор: пятнистый только при двух копиях",
+      "en": "Pattern: spotted only with two copies"
+    },
+    {
+      "id": "EYE_APPEARANCE",
+      "defaultVariant": "ordinary",
+      "specialVariant": "luminous",
+      "expression": "recessive",
+      "ru": "Глаза: свечение при двух копиях; косметика",
+      "en": "Eyes: glow with two copies; cosmetic"
+    },
+    {
+      "id": "MUSCLE",
+      "defaultVariant": "normal",
+      "specialVariant": "strong",
+      "expression": "intermediate",
+      "ru": "Сила: +0/5/10% атаки, −0/3/6% выносливости на удары",
+      "en": "Strength: +0/5/10% attack, −0/3/6% attack stamina efficiency"
+    },
+    {
+      "id": "BONE_STRENGTH",
+      "defaultVariant": "normal",
+      "specialVariant": "dense",
+      "expression": "intermediate",
+      "ru": "Кости: +0/1/2 броня, −0/2/4% скорость",
+      "en": "Bones: +0/1/2 armor, −0/2/4% speed"
+    },
+    {
+      "id": "ENDURANCE",
+      "defaultVariant": "normal",
+      "specialVariant": "deep",
+      "expression": "intermediate",
+      "ru": "Выносливость: +0/8/16 ед.",
+      "en": "Endurance: +0/8/16 stamina"
+    },
+    {
+      "id": "METABOLISM",
+      "defaultVariant": "normal",
+      "specialVariant": "efficient",
+      "expression": "dominant",
+      "ru": "Метаболизм: −10% расхода обычного корма; не влияет на рост",
+      "en": "Metabolism: −10% ordinary feed use; no growth bonus"
+    },
+    {
+      "id": "HEALING",
+      "defaultVariant": "normal",
+      "specialVariant": "quick",
+      "expression": "recessive",
+      "ru": "Восстановление: +15% вне боя при двух копиях",
+      "en": "Recovery: +15% out-of-combat healing for two copies"
+    },
+    {
+      "id": "DEFENSE",
+      "defaultVariant": "normal",
+      "specialVariant": "hide",
+      "expression": "intermediate",
+      "ru": "Защита: +0/1/2 броня, −0/2/4% скорость",
+      "en": "Defense: +0/1/2 armor, −0/2/4% speed"
+    },
+    {
+      "id": "SENSES",
+      "defaultVariant": "normal",
+      "specialVariant": "alert",
+      "expression": "intermediate",
+      "ru": "Чувства: +0/2/4 блока обзор",
+      "en": "Senses: +0/2/4 blocks sight radius"
+    },
+    {
+      "id": "TEMPER",
+      "defaultVariant": "cautious",
+      "specialVariant": "steady",
+      "expression": "dominant",
+      "ru": "Характер: более спокойная реакция приручения; не отказывает в командах",
+      "en": "Temper: calmer taming reactions; no random command refusals"
+    },
+    {
+      "id": "TRAINABILITY",
+      "defaultVariant": "normal",
+      "specialVariant": "curious",
+      "expression": "dominant",
+      "ru": "Обучаемость: +5% XP за разнообразные тренировки, не влияет на базовую XP-кривую",
+      "en": "Trainability: +5% diverse training XP; base XP curve unchanged"
+    },
+    {
+      "id": "RESOURCE_TRAIT",
+      "defaultVariant": "normal",
+      "specialVariant": "gifted",
+      "expression": "recessive",
+      "ru": "Продуктивность: +1 обычный материал за каждый 4-й цикл подходящей роли",
+      "en": "Production: +1 common item on every 4th eligible role cycle"
+    },
+    {
+      "id": "ARCANA",
+      "defaultVariant": "quiet",
+      "specialVariant": "awake",
+      "expression": "dominant",
+      "ru": "Пробуждение: одна врождённая активная магическая способность по ELEMENT",
+      "en": "Awakening: one innate active spell from ELEMENT"
+    },
+    {
+      "id": "ELEMENT",
+      "defaultVariant": "stone",
+      "specialVariant": "ember",
+      "expression": "dominant",
+      "ru": "Стихия: stone/ember как начальные варианты; общий каталог также mist,verdant,storm",
+      "en": "Element: stone/ember initial variants; global catalog also mist,verdant,storm"
+    }
+  ],
+  "additionalGenes": {
+    "runners": [
+      "HORN_FORM"
+    ],
+    "heavies": [
+      "HORN_FORM"
+    ],
+    "avians": [
+      "WING_FORM",
+      "BEAK_FORM"
+    ]
+  },
+  "elementVariants": [
+    "stone",
+    "ember",
+    "mist",
+    "verdant",
+    "storm"
+  ],
+  "elementExpressionPriority": [
+    "stone",
+    "mist",
+    "ember",
+    "verdant",
+    "storm"
+  ],
+  "roles": {
+    "guard": {
+      "ru": "Страж",
+      "en": "Guardian",
+      "base": [
+        "Перехватывает угрозу на 10 блоков; не провоцирует нейтральных",
+        "Intercepts a threat within 10 blocks; never aggros neutrals"
+      ],
+      "tiers": [
+        [
+          12,
+          "Заслон: −20% урона союзнику на 5 с, CD 35 с",
+          "Shield: −20% ally damage for 5s, 35s CD"
+        ],
+        [
+          20,
+          "Удержание: замедление цели на 25% на 3 с, CD 40 с",
+          "Hold: 25% slow for 3s, 40s CD"
+        ],
+        [
+          28,
+          "Охранный круг: радиус 5 блоков, −10% входящего урона группе на 6 с, CD 70 с",
+          "Guard ring: 5-block radius, −10% group damage for 6s, 70s CD"
+        ]
+      ]
+    },
+    "hunter": {
+      "ru": "Охотник",
+      "en": "Hunter",
+      "base": [
+        "Прицельная атака по команде, без автоматической охоты на нейтральных",
+        "Targeted commanded attack; no automatic neutral hunting"
+      ],
+      "tiers": [
+        [
+          12,
+          "Выверенный удар: +15% к одному попаданию, CD 20 с",
+          "Precise strike: +15% for one hit, 20s CD"
+        ],
+        [
+          20,
+          "Преследование: +15% скорость на 5 с, CD 35 с",
+          "Pursuit: +15% speed for 5s, 35s CD"
+        ],
+        [
+          28,
+          "Согласованная атака: +10% урона игрока по отмеченной цели на 5 с, CD 75 с",
+          "Coordinated strike: +10% player damage to marked target for 5s, 75s CD"
+        ]
+      ]
+    },
+    "mount": {
+      "ru": "Маунт",
+      "en": "Mount",
+      "base": [
+        "Везёт одного всадника на совместимой взрослой модели, требуется седло",
+        "Carries one rider on an eligible adult rig; requires saddle"
+      ],
+      "tiers": [
+        [
+          12,
+          "Мягкий ход: −20% расхода выносливости при езде",
+          "Smooth ride: −20% travel stamina drain"
+        ],
+        [
+          20,
+          "Рывок: +20% скорость на 4 с, CD 40 с",
+          "Sprint: +20% speed for 4s, 40s CD"
+        ],
+        [
+          28,
+          "Переход: −30% штрафа скорости на сложной местности",
+          "Traverse: −30% terrain speed penalty"
+        ]
+      ]
+    },
+    "hauler": {
+      "ru": "Носильщик",
+      "en": "Hauler",
+      "base": [
+        "Доступен грузовой инвентарь, количество слотов зависит от тела",
+        "Cargo inventory based on body capacity"
+      ],
+      "tiers": [
+        [
+          12,
+          "Укладка: +2 слота (если позволяет rig)",
+          "Packing: +2 slots if rig allows"
+        ],
+        [
+          20,
+          "Ровная ноша: −20% затрат выносливости при полном грузе",
+          "Balanced load: −20% full-load stamina drain"
+        ],
+        [
+          28,
+          "Караван: −15% время маршрута при сопровождении вне боя",
+          "Caravan: −15% route time out of combat"
+        ]
+      ]
+    },
+    "scout": {
+      "ru": "Разведчик",
+      "en": "Scout",
+      "base": [
+        "Отмечает доступные движку видимые цели в пределах senseRadius",
+        "Marks engine-visible targets within senseRadius"
+      ],
+      "tiers": [
+        [
+          12,
+          "Внимание: +4 блока к радиусу разведки",
+          "Attention: +4 blocks scouting range"
+        ],
+        [
+          20,
+          "След: показывает последнее место замеченной цели на 10 с, CD 30 с",
+          "Trail: shows last seen target location for 10s, 30s CD"
+        ],
+        [
+          28,
+          "Обзор: временно +8 блоков радиуса на 8 с, CD 90 с",
+          "Overview: +8 radius for 8s, 90s CD"
+        ]
+      ]
+    },
+    "producer": {
+      "ru": "Производитель",
+      "en": "Producer",
+      "base": [
+        "Даёт 1 подходящий виду обычный материал за 20 мин активного ухода, не более 6 в сутки",
+        "Produces 1 species-appropriate common resource per 20 min of active care, max 6/day"
+      ],
+      "tiers": [
+        [
+          12,
+          "Бережный уход: цикл 18 мин",
+          "Gentle care: 18-min cycle"
+        ],
+        [
+          20,
+          "Сбор: +1 обычный материал к каждому третьему завершённому циклу",
+          "Harvest: +1 common resource on every third completed cycle"
+        ],
+        [
+          28,
+          "Уют: сохраняет цикл при перерыве до 15 мин",
+          "Comfort: preserves cycle across a pause up to 15min"
+        ]
+      ]
+    },
+    "support": {
+      "ru": "Поддержка",
+      "en": "Support",
+      "base": [
+        "Помощь: +5% восстановления выносливости союзника в радиусе 6 блоков",
+        "Assistance: +5% ally stamina recovery within 6 blocks"
+      ],
+      "tiers": [
+        [
+          12,
+          "Ободрение: +15 единиц выносливости союзнику, CD 35 с",
+          "Encourage: +15 ally stamina, 35s CD"
+        ],
+        [
+          20,
+          "Поддержка: −10% входящего урона одному союзнику на 5 с, CD 45 с",
+          "Assist: −10% incoming damage to one ally for 5s, 45s CD"
+        ],
+        [
+          28,
+          "Слаженность: на 8 с +10% восстановление выносливости группе в 6 блоках, CD 75 с",
+          "Harmony: 8s +10% group stamina regen within 6 blocks, 75s CD"
+        ]
+      ]
+    }
+  },
+  "magicSpells": {
+    "ember": {
+      "ru": "Искровой всплеск",
+      "en": "Ember burst",
+      "effectRu": "6 магического урона одной цели в пределах 8 блоков",
+      "effectEn": "6 magic damage to one target within 8 blocks",
+      "cooldownSeconds": 20,
+      "staminaCost": 20
+    },
+    "mist": {
+      "ru": "Туманная завеса",
+      "en": "Mist veil",
+      "effectRu": "Снижает радиус обнаружения небоевых NPC на 30% на 5 с; не скрывает от игроков",
+      "effectEn": "Reduces noncombat NPC detection radius by 30% for 5s; never hides from players",
+      "cooldownSeconds": 35,
+      "staminaCost": 25
+    },
+    "verdant": {
+      "ru": "Зелёный импульс",
+      "en": "Verdant pulse",
+      "effectRu": "Восстанавливает 16 HP одному союзнику, без воскрешения и превышения максимума",
+      "effectEn": "Restores 16 HP to one ally; cannot revive or exceed max HP",
+      "cooldownSeconds": 40,
+      "staminaCost": 30
+    },
+    "storm": {
+      "ru": "Грозовая метка",
+      "en": "Storm mark",
+      "effectRu": "5 магического урона и замедление на 15% в течение 2 с",
+      "effectEn": "5 magic damage and 15% slow for 2s",
+      "cooldownSeconds": 35,
+      "staminaCost": 25
+    },
+    "stone": {
+      "ru": "Каменный покров",
+      "en": "Stone mantle",
+      "effectRu": "−15% входящего урона владельцу на 6 с; не суммируется с такой же аурой",
+      "effectEn": "−15% damage taken by owner for 6s; does not stack with identical aura",
+      "cooldownSeconds": 45,
+      "staminaCost": 30
+    }
+  },
+  "extraVariantRules": {
+    "HEALING": {
+      "sluggish": {
+        "normal/sluggish": "normal recovery",
+        "quick/sluggish": "normal recovery",
+        "sluggish/sluggish": "-15% healing speed"
+      }
+    },
+    "METABOLISM": {
+      "voracious": {
+        "normal/voracious": "+20% food use",
+        "efficient/voracious": "+20% food use",
+        "voracious/voracious": "+20% food use"
+      }
+    },
+    "BONE_STRENGTH": {
+      "brittle": {
+        "normal/brittle": "normal armor",
+        "dense/brittle": "+1 armor",
+        "brittle/brittle": "-2 armor"
+      }
+    },
+    "TEMPER": {
+      "nervous": {
+        "cautious/nervous": "+20% fear gained",
+        "steady/nervous": "+20% fear gained",
+        "nervous/nervous": "+20% fear gained"
+      }
+    }
+  },
+  "mutationVariantSelection": {
+    "method": "uniform over eligible mutation IDs within the rolled category, ordered by stable mutation ID; if none eligible, no mutation",
+    "version": "genesis:mutation-selection-v1"
+  },
+  "mutations": [
+    {
+      "id": "dark_coat",
+      "category": "cosmetic",
+      "geneId": "PIGMENT",
+      "resultingVariant": "dark",
+      "ru": "Тёмная шерсть",
+      "en": "Dark coat",
+      "visibility": "expressedOnly",
+      "drawOnEligibleChildOnly": true
+    },
+    {
+      "id": "spotted_cover",
+      "category": "cosmetic",
+      "geneId": "PATTERN",
+      "resultingVariant": "spotted",
+      "ru": "Пятнистый рисунок",
+      "en": "Spotted pattern",
+      "visibility": "expressedOnly",
+      "drawOnEligibleChildOnly": true
+    },
+    {
+      "id": "glowing_eyes",
+      "category": "cosmetic",
+      "geneId": "EYE_APPEARANCE",
+      "resultingVariant": "luminous",
+      "ru": "Светящиеся глаза",
+      "en": "Glowing eyes",
+      "visibility": "expressedOnly",
+      "drawOnEligibleChildOnly": true
+    },
+    {
+      "id": "plumed_tail",
+      "category": "cosmetic",
+      "geneId": "TAIL_FORM",
+      "resultingVariant": "plumed",
+      "ru": "Пушистый хвост",
+      "en": "Plumed tail",
+      "visibility": "expressedOnly",
+      "drawOnEligibleChildOnly": true
+    },
+    {
+      "id": "keen_ears",
+      "category": "cosmetic",
+      "geneId": "EAR_FORM",
+      "resultingVariant": "keen",
+      "ru": "Острые уши",
+      "en": "Keen ears",
+      "visibility": "expressedOnly",
+      "drawOnEligibleChildOnly": true
+    },
+    {
+      "id": "layered_cover",
+      "category": "cosmetic",
+      "geneId": "COVER_TYPE",
+      "resultingVariant": "layered",
+      "ru": "Слоистый покров",
+      "en": "Layered cover",
+      "visibility": "expressedOnly",
+      "drawOnEligibleChildOnly": true
+    },
+    {
+      "id": "strong_muscles",
+      "category": "physiological",
+      "geneId": "MUSCLE",
+      "resultingVariant": "strong",
+      "ru": "Сильные мышцы",
+      "en": "Strong muscles",
+      "visibility": "trait-dependent",
+      "drawOnEligibleChildOnly": true
+    },
+    {
+      "id": "dense_bones",
+      "category": "physiological",
+      "geneId": "BONE_STRENGTH",
+      "resultingVariant": "dense",
+      "ru": "Плотные кости",
+      "en": "Dense bones",
+      "visibility": "trait-dependent",
+      "drawOnEligibleChildOnly": true
+    },
+    {
+      "id": "deep_stamina",
+      "category": "physiological",
+      "geneId": "ENDURANCE",
+      "resultingVariant": "deep",
+      "ru": "Большая выносливость",
+      "en": "Deep stamina",
+      "visibility": "trait-dependent",
+      "drawOnEligibleChildOnly": true
+    },
+    {
+      "id": "quick_recovery",
+      "category": "physiological",
+      "geneId": "HEALING",
+      "resultingVariant": "quick",
+      "ru": "Быстрое восстановление",
+      "en": "Quick recovery",
+      "visibility": "trait-dependent",
+      "drawOnEligibleChildOnly": true
+    },
+    {
+      "id": "thick_cover",
+      "category": "physiological",
+      "geneId": "COAT_DENSITY",
+      "resultingVariant": "thick",
+      "ru": "Тёплый покров",
+      "en": "Thick cover",
+      "visibility": "trait-dependent",
+      "drawOnEligibleChildOnly": true
+    },
+    {
+      "id": "efficient_metabolism",
+      "category": "physiological",
+      "geneId": "METABOLISM",
+      "resultingVariant": "efficient",
+      "ru": "Экономный обмен",
+      "en": "Efficient metabolism",
+      "visibility": "trait-dependent",
+      "drawOnEligibleChildOnly": true
+    },
+    {
+      "id": "alert_senses",
+      "category": "behavioral",
+      "geneId": "SENSES",
+      "resultingVariant": "alert",
+      "ru": "Острые чувства",
+      "en": "Alert senses",
+      "visibility": "trait-dependent",
+      "drawOnEligibleChildOnly": true
+    },
+    {
+      "id": "steady_temper",
+      "category": "behavioral",
+      "geneId": "TEMPER",
+      "resultingVariant": "steady",
+      "ru": "Спокойный характер",
+      "en": "Steady temperament",
+      "visibility": "trait-dependent",
+      "drawOnEligibleChildOnly": true
+    },
+    {
+      "id": "curiosity",
+      "category": "behavioral",
+      "geneId": "TRAINABILITY",
+      "resultingVariant": "curious",
+      "ru": "Любознательность",
+      "en": "Curiosity",
+      "visibility": "trait-dependent",
+      "drawOnEligibleChildOnly": true
+    },
+    {
+      "id": "productive",
+      "category": "behavioral",
+      "geneId": "RESOURCE_TRAIT",
+      "resultingVariant": "gifted",
+      "ru": "Плодовитый промысел",
+      "en": "Gifted production",
+      "visibility": "trait-dependent",
+      "drawOnEligibleChildOnly": true
+    },
+    {
+      "id": "arcane_awakening",
+      "category": "magical",
+      "geneId": "ARCANA",
+      "resultingVariant": "awake",
+      "ru": "Магическое пробуждение",
+      "en": "Arcane awakening",
+      "visibility": "trait-dependent",
+      "drawOnEligibleChildOnly": true
+    },
+    {
+      "id": "sluggish_recovery",
+      "category": "physiological",
+      "geneId": "HEALING",
+      "resultingVariant": "sluggish",
+      "ru": "Медленное восстановление",
+      "en": "Slow recovery",
+      "visibility": "trait-dependent",
+      "drawOnEligibleChildOnly": true
+    },
+    {
+      "id": "voracious_metabolism",
+      "category": "physiological",
+      "geneId": "METABOLISM",
+      "resultingVariant": "voracious",
+      "ru": "Повышенный аппетит",
+      "en": "Voracious metabolism",
+      "visibility": "trait-dependent",
+      "drawOnEligibleChildOnly": true
+    },
+    {
+      "id": "brittle_bones",
+      "category": "physiological",
+      "geneId": "BONE_STRENGTH",
+      "resultingVariant": "brittle",
+      "ru": "Хрупкие кости",
+      "en": "Brittle bones",
+      "visibility": "trait-dependent",
+      "drawOnEligibleChildOnly": true
+    },
+    {
+      "id": "nervous_temper",
+      "category": "behavioral",
+      "geneId": "TEMPER",
+      "resultingVariant": "nervous",
+      "ru": "Пугливый характер",
+      "en": "Nervous temperament",
+      "visibility": "trait-dependent",
+      "drawOnEligibleChildOnly": true
+    }
+  ],
+  "mutationRules": {
+    "eligibleOnly": true,
+    "maxMutationEventsPerChild": 1,
+    "categoryProbabilityByTier": {
+      "base": {
+        "cosmetic": 0.05,
+        "physiological": 0.045,
+        "behavioral": 0.025,
+        "magical": 0.06
+      },
+      "discovery": {
+        "cosmetic": 0.05,
+        "physiological": 0.045,
+        "behavioral": 0.025,
+        "magical": 0.12
+      },
+      "mastery": {
+        "cosmetic": 0.05,
+        "physiological": 0.045,
+        "behavioral": 0.025,
+        "magical": 0.22
+      }
+    },
+    "guarantee": {
+      "tier": "mastery",
+      "maxEligibleSuccessesWithoutFirstMagicalMutation": 7,
+      "oncePerPlayerFamily": true,
+      "condition": "post-inheritance ARCANA quiet/quiet, focused mastery breeding, first discovery not yet awarded"
+    },
+    "inheritanceAffectedByMinigame": false
+  },
+  "geneticStatMultipliersCap": {
+    "min": 0.75,
+    "max": 1.35
+  },
+  "rolesMaxActiveLearned": 2,
+  "maxInnateActive": 1,
+  "familyGeneDefinitions": {
+    "HORN_FORM": {
+      "families": [
+        "runners",
+        "heavies"
+      ],
+      "variants": [
+        "none",
+        "short",
+        "long"
+      ],
+      "expression": "intermediate visual",
+      "descriptionRu": "Рога none/short/long; допустимы только с поддерживаемыми креплениями",
+      "descriptionEn": "Horns none/short/long; only for rigs with supported sockets"
+    },
+    "WING_FORM": {
+      "families": [
+        "avians"
+      ],
+      "variants": [
+        "broad",
+        "balanced",
+        "narrow"
+      ],
+      "expression": "intermediate visual",
+      "descriptionRu": "Широкие/обычные/узкие крылья; 3 видимых состояния",
+      "descriptionEn": "Broad/balanced/narrow wings; 3 distinguishable states"
+    },
+    "BEAK_FORM": {
+      "families": [
+        "avians"
+      ],
+      "variants": [
+        "short",
+        "standard",
+        "hooked"
+      ],
+      "expression": "intermediate visual",
+      "descriptionRu": "Короткий/обычный/крючковатый клюв; 3 состояния",
+      "descriptionEn": "Short/standard/hooked beak; 3 distinct states"
+    }
+  },
+  "trainingMissions": [
+    {
+      "id": "genesis:guided_first_trail",
+      "ru": "Найти след настоящего дикого животного",
+      "en": "Discover a trail of a real wild animal",
+      "xp": 50,
+      "expectedActiveMinutes": 5,
+      "firstCompletionOnly": true
+    },
+    {
+      "id": "genesis:route_landmarks",
+      "ru": "Провести питомца через три разные отметки",
+      "en": "Guide companion through three distinct landmarks",
+      "xp": 65,
+      "expectedActiveMinutes": 6,
+      "firstCompletionOnly": true
+    },
+    {
+      "id": "genesis:varied_obstacles",
+      "ru": "Пройти три разных типа препятствий",
+      "en": "Complete three distinct obstacle types",
+      "xp": 75,
+      "expectedActiveMinutes": 6,
+      "firstCompletionOnly": true
+    },
+    {
+      "id": "genesis:real_retrieval",
+      "ru": "Доставить полезный предмет из отмеченного места",
+      "en": "Retrieve a useful item from a marked location",
+      "xp": 50,
+      "expectedActiveMinutes": 4,
+      "firstCompletionOnly": true
+    },
+    {
+      "id": "genesis:safe_response",
+      "ru": "Выполнить защитную команду в безопасном учебном событии",
+      "en": "Complete defensive command in a safe training scenario",
+      "xp": 60,
+      "expectedActiveMinutes": 5,
+      "firstCompletionOnly": true
+    },
+    {
+      "id": "genesis:field_recon",
+      "ru": "Обнаружить и обозначить два разных типа объектов",
+      "en": "Discover and mark two different object categories",
+      "xp": 85,
+      "expectedActiveMinutes": 8,
+      "firstCompletionOnly": true
+    },
+    {
+      "id": "genesis:practical_delivery",
+      "ru": "Перенести полезный груз между разрешёнными точками",
+      "en": "Transport real cargo between authorized points",
+      "xp": 70,
+      "expectedActiveMinutes": 6,
+      "firstCompletionOnly": true
+    },
+    {
+      "id": "genesis:role_introduction",
+      "ru": "Завершить первую тематическую задачу выбранной роли",
+      "en": "Complete first task for chosen role",
+      "xp": 80,
+      "expectedActiveMinutes": 7,
+      "firstCompletionOnly": true
+    }
+  ],
+  "wildAffinityHypotheses": {
+    "ordinaryCandidateArcanaAwakeProbability": 0.03,
+    "affinityTaggedCandidateArcanaAwakeProbability": 0.12,
+    "status": "assumption, not measured availability of vanilla NPCs; seed distribution pinned per candidate"
+  },
+  "onboarding": {
+    "questCount": 8,
+    "skippable": true,
+    "optional": true,
+    "noFreePetOrSpark": true,
+    "hideUnmetUnsupportedSteps": true
+  },
+  "lifeSparks": {
+    "initialCradleCapacity": 16,
+    "upgradedCradleCapacity": 48,
+    "dispersalRefundRate": 0,
+    "unknownTraitsDefault": "KEEP",
+    "noveltyResearchCredit": "one per distinct discovered expressed trait per player/family/ruleset; never per discarded duplicate"
+  },
+  "research": {
+    "tier0": "base",
+    "tier1": {
+      "requires": [
+        "analyze 2 different wild individual genotype profiles in family",
+        "complete 1 distinct research route"
+      ],
+      "unlock": "discovery"
+    },
+    "tier2": {
+      "requires": [
+        "record 1 pair hybrid family form",
+        "complete 2 different advanced family exploration challenges",
+        "perform 1 genetic comparison"
+      ],
+      "unlock": "mastery"
+    },
+    "guaranteeScope": "first magic mutation, per player AND family, only qualifying births under focused mastery, paid no materials"
+  }
+}

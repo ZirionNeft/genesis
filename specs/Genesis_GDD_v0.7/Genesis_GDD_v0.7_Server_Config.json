@@ -1,0 +1,235 @@
+{
+  "genesisCode": {
+    "visibility": "after_analysis",
+    "ownerExportEnabled": true,
+    "publicPassportEnabled": true,
+    "playerSpawnFromCodeEnabled": false,
+    "adminSpawnEnabled": true,
+    "importMode": "exact",
+    "missingExtensions": "reject",
+    "limits": {
+      "maxCodeChars": 12000,
+      "maxPayloadBytes": 8192,
+      "maxGenes": 128,
+      "maxExtensions": 16
+    }
+  },
+  "storage": {
+    "provider": "auto",
+    "requiredConsistency": "strong",
+    "failIfUnavailable": true,
+    "allowExperimental": false,
+    "native": {
+      "resourceId": "genesis:state",
+      "verifyDurability": true
+    },
+    "sqlite": {
+      "file": "genesis.db",
+      "journalMode": "WAL",
+      "synchronous": "FULL"
+    },
+    "postgresql": {
+      "connectionSecretRef": "GENESIS_DATABASE_URL",
+      "schema": "genesis"
+    },
+    "backup": {
+      "requiredBeforeMigration": true
+    },
+    "migration": {
+      "autoMigrateBetweenProviders": false
+    }
+  },
+  "taming": {
+    "enabled": true,
+    "minigameEnabled": true,
+    "initialTrust": 20,
+    "initialFear": 15,
+    "trustThreshold": 100,
+    "criticalFearThreshold": 80,
+    "failureFearThreshold": 100,
+    "maxContactRounds": 6,
+    "retainedTrustOnInterrupt": 0.6,
+    "quickTamingEnabled": true,
+    "quickTamingUnlocksAfterSpeciesTamings": 3,
+    "reactionTimerEnabled": false
+  },
+  "breeding": {
+    "enabled": true,
+    "manualMinigameEnabled": true,
+    "autoBreedingEnabled": true,
+    "autoUnlockAfterFamilySuccesses": 3,
+    "baseSameFormSuccess": 0.9,
+    "baseSameFamilySuccess": 0.7,
+    "maxSuccessProbability": 0.95,
+    "environmentMinMultiplier": 0.8,
+    "environmentMaxMultiplier": 1.1,
+    "manualScoreBonusThreshold": 80,
+    "manualCooldownReduction": 0.1,
+    "baseCooldownMinutes": 10,
+    "minCooldownMinutes": 5,
+    "disconnectGraceSeconds": 120,
+    "maxActiveSessionMinutes": 30,
+    "sparksPerSuccess": 1,
+    "startRequiresReservedSparkSlot": true
+  },
+  "lifeSparks": {
+    "initialCradleCapacity": 16,
+    "upgradedCradleCapacity": 48,
+    "dispersalRefundRate": 0,
+    "keepUnknownByDefault": true,
+    "autoDispersalEnabled": false,
+    "unknownTraitsDefault": "KEEP",
+    "noveltyResearchCredit": "one per distinct discovered expressed trait per player/family/ruleset; never per discarded duplicate"
+  },
+  "growth": {
+    "enabled": true,
+    "infantDurationMinutes": 15,
+    "juvenileDurationMinutes": 45,
+    "maxGrowthSpeedBonus": 0.25,
+    "welfareSpeedFloor": 0.9,
+    "allowOfflineGrowth": true,
+    "maxOfflineProgressMinutes": 240,
+    "offlineStages": "all",
+    "allowNeglectDeath": false
+  },
+  "nursery": {
+    "careMinigameEnabled": true,
+    "uniqueCareMilestones": true,
+    "allowAutomaticCare": true
+  },
+  "experience": {
+    "enabled": true,
+    "maxLevel": 30,
+    "xpMultiplier": 1.0,
+    "repetitiveActionWindowMinutes": 20,
+    "noveltyMultipliers": [
+      1.0,
+      0.4,
+      0.1,
+      0.0
+    ],
+    "allowAutomaticTraining": false
+  },
+  "progression": {
+    "allowRetraining": true,
+    "roleSkillSlots": 2,
+    "veteranEnabled": true,
+    "veteranMinLevel": 25,
+    "veteranMinBond": 75,
+    "mentorXpBonusMax": 0.1
+  },
+  "companionLifecycle": {
+    "deathPolicy": "instant",
+    "maxRevives": null,
+    "onReviveLimitReached": "final_dead",
+    "inventoryOnFatal": "retain",
+    "ownerDeathBehavior": "dismiss_alive",
+    "dismiss": {
+      "enabled": true,
+      "allowInCombat": true,
+      "combatChannelSeconds": 4,
+      "combatCooldownSeconds": 15,
+      "requireDismount": true
+    },
+    "summon": {
+      "enabled": true,
+      "cooldownSeconds": 5,
+      "safeSearchRadiusBlocks": 8,
+      "crossWorldTransfer": false,
+      "allowInCombat": false,
+      "combatExitGraceSeconds": 10
+    },
+    "revival": {
+      "allowedTargets": "both",
+      "spawnAtStation": false,
+      "stationHealthFraction": 0.6,
+      "instantHealthFraction": 1.0,
+      "stationStaminaFraction": 0.5,
+      "instantStaminaFraction": 1.0,
+      "instantRecovery": {
+        "temporaryStatMultiplier": 1.0,
+        "penaltyDurationSeconds": 0,
+        "abilityLockSeconds": 0
+      },
+      "stationRecovery": {
+        "temporaryStatMultiplier": 0.9,
+        "penaltyDurationSeconds": 180,
+        "abilityLockSeconds": 30
+      },
+      "invulnerabilitySeconds": 3,
+      "preserveXp": true,
+      "preserveSkills": true,
+      "preserveBond": true
+    }
+  },
+  "genetics": {
+    "mutation": {
+      "probabilityByTier": {
+        "base": {
+          "cosmetic": 0.05,
+          "physiological": 0.045,
+          "behavioral": 0.025,
+          "magical": 0.06
+        },
+        "discovery": {
+          "cosmetic": 0.05,
+          "physiological": 0.045,
+          "behavioral": 0.025,
+          "magical": 0.12
+        },
+        "mastery": {
+          "cosmetic": 0.05,
+          "physiological": 0.045,
+          "behavioral": 0.025,
+          "magical": 0.22
+        }
+      },
+      "arcaneFocus": {
+        "enabled": true,
+        "firstDiscoveryGuaranteeEligibleSuccessfulBirths": 7,
+        "guaranteeOncePerPlayerFamily": true,
+        "requiresMastery": true
+      }
+    },
+    "wildArcana": {
+      "ordinaryCandidateRate": 0.03,
+      "affinityCandidateRate": 0.12,
+      "distributionVersion": "genesis:wild-arcana-v1"
+    },
+    "registries": {
+      "geneSchema": {
+        "id": "genesis:genes",
+        "version": 2,
+        "sha256": "0a6069fe8b4e3f013cc22edba2bd4326ff1ad0524bbcb935a2748f00b33dd570"
+      },
+      "hybridGraph": {
+        "id": "genesis:hybrid_graph",
+        "version": 1,
+        "sha256": "3790bdd91a0bf53b9a6a020ecafb4c42d81fd9680c1b10968cb20cb10a571166"
+      },
+      "expressionRules": {
+        "id": "genesis:expression",
+        "version": 2,
+        "sha256": "68f05abe8ec991f1229a93d662abfc50104f5d4070a31bb94a0c15f5850b06d7"
+      },
+      "morphologySet": {
+        "id": "genesis:morphology",
+        "version": 2,
+        "sha256": "e93a74f0bbe6b11838a7fae2cc6853975557f0feb83a4e897ed1fa4958b25133"
+      }
+    }
+  },
+  "guide": {
+    "enabled": true,
+    "defaultTutorialOff": false,
+    "skippable": true,
+    "resumable": true,
+    "reactionTimerRequired": false
+  },
+  "balance": {
+    "geneticStatMultiplierMin": 0.75,
+    "geneticStatMultiplierMax": 1.35,
+    "learnedRoleAbilitySlots": 2,
+    "maxInnateActiveSpells": 1
+  }
+}

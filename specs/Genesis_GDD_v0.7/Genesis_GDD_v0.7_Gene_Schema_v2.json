@@ -1,0 +1,203 @@
+{
+  "id": "genesis:genes",
+  "version": 2,
+  "serialization": "GEN1: namespaced lowercase gene/variant IDs; HERITAGE variants are namespaced founding species IDs",
+  "geneCountByFamily": {
+    "genesis:canids": 26,
+    "genesis:runners": 27,
+    "genesis:heavies": 27,
+    "genesis:avians": 28
+  },
+  "coreGenes": {
+    "BODY_FRAME": {
+      "variants": [
+        "normal",
+        "large"
+      ]
+    },
+    "HEAD_FORM": {
+      "variants": [
+        "standard",
+        "broad"
+      ]
+    },
+    "EAR_FORM": {
+      "variants": [
+        "standard",
+        "keen"
+      ]
+    },
+    "TAIL_FORM": {
+      "variants": [
+        "standard",
+        "plumed"
+      ]
+    },
+    "LIMB_FORM": {
+      "variants": [
+        "standard",
+        "long"
+      ]
+    },
+    "FOOT_FORM": {
+      "variants": [
+        "standard",
+        "surefoot"
+      ]
+    },
+    "COVER_TYPE": {
+      "variants": [
+        "standard",
+        "layered"
+      ]
+    },
+    "COAT_DENSITY": {
+      "variants": [
+        "normal",
+        "thick"
+      ]
+    },
+    "PIGMENT": {
+      "variants": [
+        "ordinary",
+        "dark"
+      ]
+    },
+    "PATTERN": {
+      "variants": [
+        "plain",
+        "spotted"
+      ]
+    },
+    "EYE_APPEARANCE": {
+      "variants": [
+        "ordinary",
+        "luminous"
+      ]
+    },
+    "MUSCLE": {
+      "variants": [
+        "normal",
+        "strong"
+      ]
+    },
+    "BONE_STRENGTH": {
+      "variants": [
+        "normal",
+        "dense",
+        "brittle"
+      ]
+    },
+    "ENDURANCE": {
+      "variants": [
+        "normal",
+        "deep"
+      ]
+    },
+    "METABOLISM": {
+      "variants": [
+        "normal",
+        "efficient",
+        "voracious"
+      ]
+    },
+    "HEALING": {
+      "variants": [
+        "normal",
+        "quick",
+        "sluggish"
+      ]
+    },
+    "DEFENSE": {
+      "variants": [
+        "normal",
+        "hide"
+      ]
+    },
+    "SENSES": {
+      "variants": [
+        "normal",
+        "alert"
+      ]
+    },
+    "TEMPER": {
+      "variants": [
+        "cautious",
+        "steady",
+        "nervous"
+      ]
+    },
+    "TRAINABILITY": {
+      "variants": [
+        "normal",
+        "curious"
+      ]
+    },
+    "RESOURCE_TRAIT": {
+      "variants": [
+        "normal",
+        "gifted"
+      ]
+    },
+    "ARCANA": {
+      "variants": [
+        "quiet",
+        "awake"
+      ]
+    },
+    "ELEMENT": {
+      "variants": [
+        "stone",
+        "ember",
+        "mist",
+        "verdant",
+        "storm"
+      ]
+    }
+  },
+  "familyGenes": {
+    "genesis:canids": [],
+    "genesis:runners": [
+      "HORN_FORM"
+    ],
+    "genesis:heavies": [
+      "HORN_FORM"
+    ],
+    "genesis:avians": [
+      "WING_FORM",
+      "BEAK_FORM"
+    ]
+  },
+  "familyFounders": {
+    "genesis:canids": [
+      "genesis:wolf",
+      "genesis:fox",
+      "genesis:hyena"
+    ],
+    "genesis:runners": [
+      "genesis:horse",
+      "genesis:deer",
+      "genesis:antelope"
+    ],
+    "genesis:heavies": [
+      "genesis:bison",
+      "genesis:boar",
+      "genesis:mosshorn"
+    ],
+    "genesis:avians": [
+      "genesis:raven",
+      "genesis:owl",
+      "genesis:hawk"
+    ]
+  },
+  "heritageGenes": [
+    "HERITAGE_1",
+    "HERITAGE_2",
+    "HERITAGE_3"
+  ],
+  "heritageMutationAllowed": false,
+  "wireMapping": {
+    "geneId": "genesis:<GENE_NAME_LOWERCASE>",
+    "variantId": "genesis:<VARIANT_ID>"
+  }
+}
