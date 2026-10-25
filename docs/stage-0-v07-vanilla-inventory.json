@@ -1,0 +1,2622 @@
+{
+  "auditedOn": "2026-10-25",
+  "serverVersion": "0.7.2",
+  "serverJarSha256": "23f71f03763422ce7c04df191db49cd0e7d87d43b12baad75c43fdc202410aff",
+  "archiveBytes": 3942760463,
+  "scope": "Static file inventory; not role loading, animation playback, rig compatibility, ownership or adoption acceptance",
+  "species": [
+    {
+      "founderId": "genesis:wolf",
+      "candidateRoles": [
+        {
+          "roleId": "Wolf_Black",
+          "path": "Server/NPC/Roles/Creature/Mammal/Wolf_Black.json",
+          "sha256": "6d3f4e98dac9d6c480b441338cb2ba0043a4cc3af9eb7331ec8501802c0fdf42",
+          "type": "Variant",
+          "reference": "Template_Predator",
+          "appearance": "Wolf_Black",
+          "directTameRoleChange": null,
+          "model": {
+            "id": "Wolf_Black",
+            "path": "Server/Models/Beast/Wolf_Black.json",
+            "sha256": "17579d9d6f56aeeeb2fdece8e290535f6a689d1df34116c7a027f99349c7dafc",
+            "parent": null,
+            "inheritanceResolved": false,
+            "resources": {
+              "Model": {
+                "path": "Common/NPC/Beast/Wolf/Models/Model.blockymodel",
+                "exists": true,
+                "sha256": "3b72bd5e64f2030b0e18912c700d57a62feead380ab7e4dd6e665b160ad5a723"
+              },
+              "Texture": {
+                "path": "Common/NPC/Beast/Wolf/Models/Model_Textures/Black.png",
+                "exists": true,
+                "sha256": "8a7430dde246b47375cd04c692b020f3e60137c19156ba9370cb91cff659291c"
+              }
+            },
+            "declaredAnimationSets": {
+              "Alerted": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Death": {
+                "declaredFiles": 3,
+                "allDeclaredFilesExist": true
+              },
+              "Fall": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidWalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Fly": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FlyBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FlyFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FlyIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Greet": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Howl": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Hurt": {
+                "declaredFiles": 5,
+                "allDeclaredFilesExist": true
+              },
+              "Idle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Jump": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Laydown": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Run": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Sit": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Sleep": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SniffAir": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Spawn": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Swim": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDive": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDiveBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDiveFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimFloat": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimJump": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimSink": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Threaten": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Track": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Wake": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Walk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "WalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              }
+            }
+          },
+          "genesisEligibility": "UNVERIFIED"
+        },
+        {
+          "roleId": "Wolf_White",
+          "path": "Server/NPC/Roles/Creature/Mammal/Wolf_White.json",
+          "sha256": "05f16879a61c2f7d91ed92efed41417298001062a8ab7ffb1ac8d85816452660",
+          "type": "Variant",
+          "reference": "Wolf_Black",
+          "appearance": "Wolf_White",
+          "directTameRoleChange": null,
+          "model": {
+            "id": "Wolf_White",
+            "path": "Server/Models/Beast/Wolf_White.json",
+            "sha256": "3ecbda6e348a68d8e188cc450797d0fdc68ba8f8adf1a6af89853f9ac1184209",
+            "parent": "Wolf_Black",
+            "inheritanceResolved": false,
+            "resources": {
+              "Model": {
+                "path": null,
+                "exists": null,
+                "sha256": null
+              },
+              "Texture": {
+                "path": "Common/NPC/Beast/Wolf/Models/Model_Textures/White.png",
+                "exists": true,
+                "sha256": "0ce7937b4d78f6884c87cb54444e5ea5d4b347bf9e5dc4af4330cd2ed95ce915"
+              }
+            },
+            "declaredAnimationSets": {}
+          },
+          "genesisEligibility": "UNVERIFIED"
+        }
+      ],
+      "rigCompatibility": "UNVERIFIED",
+      "initialGenesisAge": "UNDECIDED",
+      "controllerAndOwnership": "UNVERIFIED",
+      "adoption": "UNVERIFIED"
+    },
+    {
+      "founderId": "genesis:fox",
+      "candidateRoles": [
+        {
+          "roleId": "Fox",
+          "path": "Server/NPC/Roles/Creature/Mammal/Fox.json",
+          "sha256": "e7e3118471eae6573ab8ca63be13febc43ac6ae808097a9571a0d52c07125d30",
+          "type": "Variant",
+          "reference": "Template_Predator",
+          "appearance": "Fox",
+          "directTameRoleChange": null,
+          "model": {
+            "id": "Fox",
+            "path": "Server/Models/Beast/Fox.json",
+            "sha256": "a402de4d4bdd49e759a55d1cbedb395498a313be243a3b7707e713d9fc365631",
+            "parent": null,
+            "inheritanceResolved": false,
+            "resources": {
+              "Model": {
+                "path": "Common/NPC/Beast/Fox/Models/Model.blockymodel",
+                "exists": true,
+                "sha256": "6e181225fcec9d31b6a6cf4df3d2a06e7ad761708126c43dab2952addac70225"
+              },
+              "Texture": {
+                "path": "Common/NPC/Beast/Fox/Models/Texture.png",
+                "exists": true,
+                "sha256": "53a7b6edd9028b706dfe0aebeddd3219236b5d5a5bec33858411f21048f5e1d5"
+              }
+            },
+            "declaredAnimationSets": {
+              "Alerted": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Crouch": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "CrouchWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "CrouchWalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Death": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Dig": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Fall": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidWalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Fly": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FlyBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FlyFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FlyIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Howl": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Hurt": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Idle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Jump": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Laydown": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Run": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Sleep": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Spawn": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Swim": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDive": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDiveBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDiveFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimFloat": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimJump": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimSink": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Threaten": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "TiltHead": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Wake": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Walk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "WalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              }
+            }
+          },
+          "genesisEligibility": "UNVERIFIED"
+        }
+      ],
+      "rigCompatibility": "UNVERIFIED",
+      "initialGenesisAge": "UNDECIDED",
+      "controllerAndOwnership": "UNVERIFIED",
+      "adoption": "UNVERIFIED"
+    },
+    {
+      "founderId": "genesis:hyena",
+      "candidateRoles": [
+        {
+          "roleId": "Hyena",
+          "path": "Server/NPC/Roles/Creature/Mammal/Hyena.json",
+          "sha256": "54add9cc8a732908e6ab9e5d87162add013d125baf598d588a20a8dbf93c4e02",
+          "type": "Variant",
+          "reference": "Template_Predator",
+          "appearance": "Hyena",
+          "directTameRoleChange": null,
+          "model": {
+            "id": "Hyena",
+            "path": "Server/Models/Beast/Hyena.json",
+            "sha256": "64f09cbfd1f4dbad4317f8fd1a604afb9b5323dc185d4d4f80f780afe60cbc72",
+            "parent": "Wolf_Black",
+            "inheritanceResolved": false,
+            "resources": {
+              "Model": {
+                "path": "Common/NPC/Beast/Hyena/Models/Model.blockymodel",
+                "exists": true,
+                "sha256": "7817286df8d2d464807ae58146d5453bc312fa5ff8860561bf45774efb7e0d6e"
+              },
+              "Texture": {
+                "path": "Common/NPC/Beast/Hyena/Models/Texture.png",
+                "exists": true,
+                "sha256": "4b713ed446bb3bac210f3eb5c233cf4f109a5123b58c4a68a1072c555683d787"
+              }
+            },
+            "declaredAnimationSets": {
+              "Alerted": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Crouch": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "CrouchWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "CrouchWalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Death": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Fall": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidWalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Fly": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FlyBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FlyFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FlyIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Hurt": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Idle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Jump": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Laydown": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Run": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Sleep": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Spawn": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Swim": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDive": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDiveBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDiveFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimFloat": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimJump": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimSink": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Wake": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Walk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "WalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              }
+            }
+          },
+          "genesisEligibility": "UNVERIFIED"
+        }
+      ],
+      "rigCompatibility": "UNVERIFIED",
+      "initialGenesisAge": "UNDECIDED",
+      "controllerAndOwnership": "UNVERIFIED",
+      "adoption": "UNVERIFIED"
+    },
+    {
+      "founderId": "genesis:horse",
+      "candidateRoles": [
+        {
+          "roleId": "Horse",
+          "path": "Server/NPC/Roles/Creature/Livestock/Horse.json",
+          "sha256": "a9b921914a6a3a80faf8425fa46212dfadd9b1d8e733041d2fa19bdd1ed20411",
+          "type": "Variant",
+          "reference": "Template_Animal_Neutral",
+          "appearance": "Horse",
+          "directTameRoleChange": "Tamed_Horse",
+          "model": {
+            "id": "Horse",
+            "path": "Server/Models/Livestock/Horse.json",
+            "sha256": "c3d5e7d3da1675adc45994b16085eaf1159b959cb1289ef46a8ded0218b21a44",
+            "parent": null,
+            "inheritanceResolved": false,
+            "resources": {
+              "Model": {
+                "path": "Common/NPC/Livestock/Horse/Models/Model.blockymodel",
+                "exists": true,
+                "sha256": "fd2899f63c8c14fd30a1768185157ac2c911c791d0b9b416fc17ccbb67ed573c"
+              },
+              "Texture": {
+                "path": "Common/NPC/Livestock/Horse/Models/Texture.png",
+                "exists": true,
+                "sha256": "7332a26566f1412dbcdef1828c35e0c2af167a358825ab6762de87284ac58e9e"
+              }
+            },
+            "declaredAnimationSets": {
+              "Alerted": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Crouch": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "CrouchWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "CrouchWalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Curious": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Death": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Eat": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Fall": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidWalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Fly": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FlyBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FlyFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FlyIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "GreetAnimation": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Hurt": {
+                "declaredFiles": 2,
+                "allDeclaredFilesExist": true
+              },
+              "Idle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Jump": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Laydown": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "LookAround": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Neigh": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Run": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Sleep": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Spawn": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Swim": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDive": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDiveBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDiveFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimFloat": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimJump": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimSink": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Wake": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Walk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "WalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              }
+            }
+          },
+          "genesisEligibility": "UNVERIFIED"
+        }
+      ],
+      "rigCompatibility": "UNVERIFIED",
+      "initialGenesisAge": "UNDECIDED",
+      "controllerAndOwnership": "UNVERIFIED",
+      "adoption": "UNVERIFIED"
+    },
+    {
+      "founderId": "genesis:deer",
+      "candidateRoles": [
+        {
+          "roleId": "Deer_Doe",
+          "path": "Server/NPC/Roles/Creature/Mammal/Deer_Doe.json",
+          "sha256": "3bdaae6ba78aa8e8a8f16047a597d01bcedb2d652e164faa7358c366ddaab6fb",
+          "type": "Variant",
+          "reference": "Template_Animal_Neutral",
+          "appearance": "Deer_Doe",
+          "directTameRoleChange": null,
+          "model": {
+            "id": "Deer_Doe",
+            "path": "Server/Models/Wildlife/Deer_Doe.json",
+            "sha256": "3a7a2fd22e93b5188c4bcd28d0e15df8fe4fe86f2433db3583c832ae4b3e0e09",
+            "parent": null,
+            "inheritanceResolved": false,
+            "resources": {
+              "Model": {
+                "path": "Common/NPC/Wildlife/Deer/Models/Model.blockymodel",
+                "exists": true,
+                "sha256": "2252396661232ff0a1a3e78be6fbf28606a94e4aa065cbe14ae1e12e298d6d0c"
+              },
+              "Texture": {
+                "path": "Common/NPC/Wildlife/Deer/Models/Texture.png",
+                "exists": true,
+                "sha256": "6407db4b59ca8071e631f723f1fdfb58f6580744a35182cfb488554d42511578"
+              }
+            },
+            "declaredAnimationSets": {
+              "Alerted": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Bleat": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Crouch": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "CrouchWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "CrouchWalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Curious": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Death": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Eat": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Fall": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidWalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Fly": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FlyBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FlyFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FlyIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "GreetAnimation": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Hurt": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Idle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Jump": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpSprint": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Laydown": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Run": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "RunBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Sleep": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Spawn": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Sprint": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "StepRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "StepSprint": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "StepWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Swim": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDive": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDiveBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDiveFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimFloat": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimJump": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimSink": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Wake": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Walk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "WalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              }
+            }
+          },
+          "genesisEligibility": "UNVERIFIED"
+        },
+        {
+          "roleId": "Deer_Stag",
+          "path": "Server/NPC/Roles/Creature/Mammal/Deer_Stag.json",
+          "sha256": "79dd12fbb1521e31b950e87fd8c9b33493d3b084f6a8f896643171c41527e97c",
+          "type": "Variant",
+          "reference": "Template_Animal_Neutral",
+          "appearance": "Model_Deer_Stag",
+          "directTameRoleChange": null,
+          "model": {
+            "id": "Model_Deer_Stag",
+            "path": "Server/Models/Wildlife/Model_Deer_Stag.json",
+            "sha256": "c824423fc191bcd9e2d2cfe6610ec0b821ba51748e2c72da0893fe95b019d56d",
+            "parent": "Deer_Doe",
+            "inheritanceResolved": false,
+            "resources": {
+              "Model": {
+                "path": "Common/NPC/Wildlife/Deer/Models/Model.blockymodel",
+                "exists": true,
+                "sha256": "2252396661232ff0a1a3e78be6fbf28606a94e4aa065cbe14ae1e12e298d6d0c"
+              },
+              "Texture": {
+                "path": "Common/NPC/Wildlife/Deer/Models/Texture.png",
+                "exists": true,
+                "sha256": "6407db4b59ca8071e631f723f1fdfb58f6580744a35182cfb488554d42511578"
+              }
+            },
+            "declaredAnimationSets": {
+              "Alerted": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Death": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Hurt": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Run": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Sleep": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              }
+            }
+          },
+          "genesisEligibility": "UNVERIFIED"
+        }
+      ],
+      "rigCompatibility": "UNVERIFIED",
+      "initialGenesisAge": "UNDECIDED",
+      "controllerAndOwnership": "UNVERIFIED",
+      "adoption": "UNVERIFIED"
+    },
+    {
+      "founderId": "genesis:antelope",
+      "candidateRoles": [
+        {
+          "roleId": "Antelope",
+          "path": "Server/NPC/Roles/Creature/Mammal/Antelope.json",
+          "sha256": "b0f5a8e4ffbf5e8e264baaf6f4c3996937594852d8c5fb20b21d7e7fdf9bfa01",
+          "type": "Variant",
+          "reference": "Template_Animal_Neutral",
+          "appearance": "Antelope",
+          "directTameRoleChange": null,
+          "model": {
+            "id": "Antelope",
+            "path": "Server/Models/Wildlife/Antelope.json",
+            "sha256": "77289f375bcf2ac1ff740db31596cf153ffd7ecabb2339f3f39ea8422ae4e174",
+            "parent": null,
+            "inheritanceResolved": false,
+            "resources": {
+              "Model": {
+                "path": "Common/NPC/Wildlife/Antelope/Models/Model.blockymodel",
+                "exists": true,
+                "sha256": "08a9d219a75a98c97eb406d081f03a8553851f2409c0c7b99d4f3600532ba22e"
+              },
+              "Texture": {
+                "path": "Common/NPC/Wildlife/Antelope/Models/Texture.png",
+                "exists": true,
+                "sha256": "7deb08cc90cdf54fdd5fe265f4a6d62a6273d42adf19d6f884c4609545e2e253"
+              }
+            },
+            "declaredAnimationSets": {
+              "Alerted": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Crouch": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "CrouchWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "CrouchWalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Curious": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Death": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Eat": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Fall": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidWalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Fly": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FlyBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FlyFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FlyIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "GreetAnimation": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Hurt": {
+                "declaredFiles": 2,
+                "allDeclaredFilesExist": true
+              },
+              "Idle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "IdlePassive": {
+                "declaredFiles": 2,
+                "allDeclaredFilesExist": true
+              },
+              "Jump": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Laydown": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Run": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Sleep": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Spawn": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Swim": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDive": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDiveBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDiveFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimFloat": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimJump": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimSink": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Wake": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Walk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "WalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              }
+            }
+          },
+          "genesisEligibility": "UNVERIFIED"
+        }
+      ],
+      "rigCompatibility": "UNVERIFIED",
+      "initialGenesisAge": "UNDECIDED",
+      "controllerAndOwnership": "UNVERIFIED",
+      "adoption": "UNVERIFIED"
+    },
+    {
+      "founderId": "genesis:bison",
+      "candidateRoles": [
+        {
+          "roleId": "Bison",
+          "path": "Server/NPC/Roles/Creature/Livestock/Bison.json",
+          "sha256": "7a264ea1cdfd404dcb43697567acde569310fb51e2ce31c7a447cd0693a57c73",
+          "type": "Variant",
+          "reference": "Template_Animal_Neutral",
+          "appearance": "Bison",
+          "directTameRoleChange": "Tamed_Bison",
+          "model": {
+            "id": "Bison",
+            "path": "Server/Models/Livestock/Bison.json",
+            "sha256": "2332fe20addf3cf70aefffd2cc559c73cd566f95c715be370817ddccb666ac8d",
+            "parent": null,
+            "inheritanceResolved": false,
+            "resources": {
+              "Model": {
+                "path": "Common/NPC/Livestock/Bison/Models/Model.blockymodel",
+                "exists": true,
+                "sha256": "880f501ce184ab90468ebfc37f25d9a272f3f42f2ef8107e620368e847ce4ce9"
+              },
+              "Texture": {
+                "path": "Common/NPC/Livestock/Bison/Models/Texture.png",
+                "exists": true,
+                "sha256": "9ffebdc57370a36bf27e63731fb0e2d6136aaa878368e3f7860722c9d2e8af92"
+              }
+            },
+            "declaredAnimationSets": {
+              "Alerted": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Crouch": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "CrouchWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "CrouchWalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Curious": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Death": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Eat": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Fall": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Fly": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "GreetAnimation": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Hurt": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Idle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Jump": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpSprint": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Laydown": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Run": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "RunBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Sleep": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Spawn": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Sprint": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "StepRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "StepSprint": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "StepWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Wake": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Walk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "WalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              }
+            }
+          },
+          "genesisEligibility": "UNVERIFIED"
+        }
+      ],
+      "rigCompatibility": "UNVERIFIED",
+      "initialGenesisAge": "UNDECIDED",
+      "controllerAndOwnership": "UNVERIFIED",
+      "adoption": "UNVERIFIED"
+    },
+    {
+      "founderId": "genesis:boar",
+      "candidateRoles": [
+        {
+          "roleId": "Boar",
+          "path": "Server/NPC/Roles/Creature/Livestock/Boar.json",
+          "sha256": "49b0c8ae90a4373e764264a8fef7bc6339e99d375305053be3384611b25afe3c",
+          "type": "Variant",
+          "reference": "Template_Animal_Neutral",
+          "appearance": "Boar",
+          "directTameRoleChange": "Tamed_Boar",
+          "model": {
+            "id": "Boar",
+            "path": "Server/Models/Livestock/Boar.json",
+            "sha256": "5e1f8799aad9bd608da0ae2b2a1fb46a61da290f19150b8773f837b123f9ab36",
+            "parent": null,
+            "inheritanceResolved": false,
+            "resources": {
+              "Model": {
+                "path": "Common/NPC/Livestock/Boar/Models/Model.blockymodel",
+                "exists": true,
+                "sha256": "9f44bbb170705e210e7e34674ad35eb0eb018861c0108afdcc70348ff6377ff0"
+              },
+              "Texture": {
+                "path": "Common/NPC/Livestock/Boar/Models/Texture.png",
+                "exists": true,
+                "sha256": "7fc6cf86db3cf40b3adb32b9022247d7fc97c109176f4b9fd860642db32c146b"
+              }
+            },
+            "declaredAnimationSets": {
+              "Alerted": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Crouch": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "CrouchWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "CrouchWalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Curious": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Death": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Eat": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Fall": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Flee": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Fly": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FlyBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FlyFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FlyIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "GreetAnimation": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Hurt": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Idle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "IdlePassive": {
+                "declaredFiles": 9,
+                "allDeclaredFilesExist": true
+              },
+              "Jump": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpSprint": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Laydown": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Run": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "RunBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Sleep": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Spawn": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Sprint": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "StepRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "StepSprint": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "StepWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Swim": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDive": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDiveBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDiveFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimFloat": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimJump": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimSink": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Wake": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Walk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "WalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "WalkPassive": {
+                "declaredFiles": 7,
+                "allDeclaredFilesExist": true
+              }
+            }
+          },
+          "genesisEligibility": "UNVERIFIED"
+        }
+      ],
+      "rigCompatibility": "UNVERIFIED",
+      "initialGenesisAge": "UNDECIDED",
+      "controllerAndOwnership": "UNVERIFIED",
+      "adoption": "UNVERIFIED"
+    },
+    {
+      "founderId": "genesis:mosshorn",
+      "candidateRoles": [
+        {
+          "roleId": "Mosshorn",
+          "path": "Server/NPC/Roles/Creature/Mammal/Mosshorn.json",
+          "sha256": "877951fc6ee3d0123a8e17ce0eb04fb4dd951b8572509de7ea55bade67ed82d4",
+          "type": "Variant",
+          "reference": "Template_Animal_Neutral",
+          "appearance": "Mosshorn",
+          "directTameRoleChange": "Tamed_Mosshorn",
+          "model": {
+            "id": "Mosshorn",
+            "path": "Server/Models/Wildlife/Mosshorn.json",
+            "sha256": "5777d5e8c3644a06030f6fd7a62c768e419ec0421cf507e85c2c6cffc369d83d",
+            "parent": null,
+            "inheritanceResolved": false,
+            "resources": {
+              "Model": {
+                "path": "Common/NPC/Wildlife/Mosshorn/Models/Model.blockymodel",
+                "exists": true,
+                "sha256": "10e94e1ccffd2be63a187d26f6d6d773782b8dd7d8a4ea8e27a1b232ee1eaf80"
+              },
+              "Texture": {
+                "path": "Common/NPC/Wildlife/Mosshorn/Models/Texture.png",
+                "exists": true,
+                "sha256": "32462361de3e857eb416eea0599cec0b0165527a985219c83c694ce4a84f24c9"
+              }
+            },
+            "declaredAnimationSets": {
+              "Alerted": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Crouch": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "CrouchWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "CrouchWalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Curious": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Death": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Eat": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "EatBite": {
+                "declaredFiles": 2,
+                "allDeclaredFilesExist": true
+              },
+              "EatChew": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "EatSwallow": {
+                "declaredFiles": 2,
+                "allDeclaredFilesExist": true
+              },
+              "Fall": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidWalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Fly": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FlyBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FlyFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FlyIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "GreetAnimation": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Hurt": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Idle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Jump": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Laydown": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Run": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "ShakeHead": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Sleep": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Swim": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDive": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDiveBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDiveFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimFloat": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimJump": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimSink": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Wake": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Walk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "WalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              }
+            }
+          },
+          "genesisEligibility": "UNVERIFIED"
+        },
+        {
+          "roleId": "Mosshorn_Plain",
+          "path": "Server/NPC/Roles/Creature/Mammal/Mosshorn_Plain.json",
+          "sha256": "f730dcc735aa90bb4d32cdc6cff65bf1a5f55249ed9dc738ebd7286b1bcb78a7",
+          "type": "Variant",
+          "reference": "Template_Animal_Neutral",
+          "appearance": "Mosshorn_Plain",
+          "directTameRoleChange": "Tamed_Mosshorn_Plain",
+          "model": {
+            "id": "Mosshorn_Plain",
+            "path": "Server/Models/Wildlife/Mosshorn_Plain.json",
+            "sha256": "665c10439789c3f08b0a77463d4e4634f3534968e46198a9473852af56d1bf44",
+            "parent": "Mosshorn",
+            "inheritanceResolved": false,
+            "resources": {
+              "Model": {
+                "path": "Common/NPC/Wildlife/Mosshorn/Models/Model.blockymodel",
+                "exists": true,
+                "sha256": "10e94e1ccffd2be63a187d26f6d6d773782b8dd7d8a4ea8e27a1b232ee1eaf80"
+              },
+              "Texture": {
+                "path": "Common/NPC/Wildlife/Mosshorn/Models/Plain_Texture.png",
+                "exists": true,
+                "sha256": "41e12ccea9382f2039a8b2adc0c4d2cca60fc9bb86e3ee96a1440c24f096e320"
+              }
+            },
+            "declaredAnimationSets": {}
+          },
+          "genesisEligibility": "UNVERIFIED"
+        }
+      ],
+      "rigCompatibility": "UNVERIFIED",
+      "initialGenesisAge": "UNDECIDED",
+      "controllerAndOwnership": "UNVERIFIED",
+      "adoption": "UNVERIFIED"
+    },
+    {
+      "founderId": "genesis:raven",
+      "candidateRoles": [
+        {
+          "roleId": "Raven",
+          "path": "Server/NPC/Roles/Avian/Aerial/Raven.json",
+          "sha256": "ff3a2613dc0508dfeec96f1c3d83c0f86e158156d2327a116cd6e862341c3dbf",
+          "type": "Variant",
+          "reference": "Template_Birds_Passive",
+          "appearance": "Raven",
+          "directTameRoleChange": null,
+          "model": {
+            "id": "Raven",
+            "path": "Server/Models/Flying_Wildlife/Raven.json",
+            "sha256": "c6090baf224901cb814fffc7ebd615dfc221aec9077cb72681b12b28bed2f8e9",
+            "parent": null,
+            "inheritanceResolved": false,
+            "resources": {
+              "Model": {
+                "path": "Common/NPC/Flying_Wildlife/Raven/Models/Model.blockymodel",
+                "exists": true,
+                "sha256": "d1a56fd9126895bd3239a77a4a6a0266c953cfa28cc8bca8d1748cd5595a57a9"
+              },
+              "Texture": {
+                "path": "Common/NPC/Flying_Wildlife/Raven/Models/Texture.png",
+                "exists": true,
+                "sha256": "cf7cc2dfef2740bec8d793e2dcce141803c36f6dc3d175dd85b4d372bb09074b"
+              }
+            },
+            "declaredAnimationSets": {
+              "Alerted": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Crouch": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "CrouchWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "CrouchWalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Death": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "DeathDrown": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "DeathFly": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "DeathFlyImpact": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "DeathSwim": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Fall": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidWalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Fly": {
+                "declaredFiles": 2,
+                "allDeclaredFilesExist": true
+              },
+              "FlyBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FlyFast": {
+                "declaredFiles": 2,
+                "allDeclaredFilesExist": true
+              },
+              "FlyIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Hurt": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "HurtDrown": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "HurtFly": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "HurtSwim": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Idle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "IdlePassive": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Jump": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpSprint": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Laydown": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Run": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "RunBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Sleep": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Spawn": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Sprint": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "StepRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "StepSprint": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "StepWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Swim": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDive": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDiveBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDiveFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimFloat": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimJump": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimSink": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Wake": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Walk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "WalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              }
+            }
+          },
+          "genesisEligibility": "UNVERIFIED"
+        }
+      ],
+      "rigCompatibility": "UNVERIFIED",
+      "initialGenesisAge": "UNDECIDED",
+      "controllerAndOwnership": "UNVERIFIED",
+      "adoption": "UNVERIFIED"
+    },
+    {
+      "founderId": "genesis:owl",
+      "candidateRoles": [
+        {
+          "roleId": "Owl_Brown",
+          "path": "Server/NPC/Roles/Avian/Aerial/Owl_Brown.json",
+          "sha256": "b5c1cd92258fefd97f743d1314e1296a4e4c973ff8a895312eaa6ce48bcc9271",
+          "type": "Variant",
+          "reference": "Template_Birds_Passive",
+          "appearance": "Owl_Brown",
+          "directTameRoleChange": null,
+          "model": {
+            "id": "Owl_Brown",
+            "path": "Server/Models/Flying_Critter/Owl_Brown.json",
+            "sha256": "49a18319a7bc3f238b3b2401ea691e5886c8f52856243f2656161e707e2a5c55",
+            "parent": "Sparrow",
+            "inheritanceResolved": false,
+            "resources": {
+              "Model": {
+                "path": "Common/NPC/Flying_Critter/Owl/Models/Model.blockymodel",
+                "exists": true,
+                "sha256": "c752058affab051a4fc7182a4203de8cd039916825af59c8e3fe11d0ff29483c"
+              },
+              "Texture": {
+                "path": "Common/NPC/Flying_Critter/Owl/Models/Model_Brown.png",
+                "exists": true,
+                "sha256": "b6904f9e884279691c2f8e2005474cafc7b2a4b3cb981c90dde42edaa0bee248"
+              }
+            },
+            "declaredAnimationSets": {
+              "Alerted": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Crouch": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "CrouchWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "CrouchWalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Death": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "DeathDrown": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "DeathFly": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "DeathFlyImpact": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "DeathSwim": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Eat": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidWalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Hurt": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "HurtDrown": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "HurtFly": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "HurtSwim": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Idle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "IdlePassive": {
+                "declaredFiles": 3,
+                "allDeclaredFilesExist": true
+              },
+              "Laydown": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Run": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "RunBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Sleep": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Spawn": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Sprint": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "StepRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "StepSprint": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "StepWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Swim": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDive": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDiveBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDiveFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimFloat": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimSink": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Wake": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Walk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "WalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              }
+            }
+          },
+          "genesisEligibility": "UNVERIFIED"
+        },
+        {
+          "roleId": "Owl_Snow",
+          "path": "Server/NPC/Roles/Avian/Aerial/Owl_Snow.json",
+          "sha256": "ef51177b2b67e5a3b34a4e642041279bfeb06a087db73edd707c3ef515c6def1",
+          "type": "Variant",
+          "reference": "Template_Birds_Passive",
+          "appearance": "Owl_Snow",
+          "directTameRoleChange": null,
+          "model": {
+            "id": "Owl_Snow",
+            "path": "Server/Models/Flying_Critter/Owl_Snow.json",
+            "sha256": "22da18b0bd15d10c64adec036c27a8119e7f0229fa602990655e66798b2db138",
+            "parent": "Owl_Brown",
+            "inheritanceResolved": false,
+            "resources": {
+              "Model": {
+                "path": null,
+                "exists": null,
+                "sha256": null
+              },
+              "Texture": {
+                "path": "Common/NPC/Flying_Critter/Owl/Models/Model_Snow.png",
+                "exists": true,
+                "sha256": "813d3422be24f623de3e6bd8cfb632a007a78db00d0a84df6bff719e75878ac5"
+              }
+            },
+            "declaredAnimationSets": {}
+          },
+          "genesisEligibility": "UNVERIFIED"
+        }
+      ],
+      "rigCompatibility": "UNVERIFIED",
+      "initialGenesisAge": "UNDECIDED",
+      "controllerAndOwnership": "UNVERIFIED",
+      "adoption": "UNVERIFIED"
+    },
+    {
+      "founderId": "genesis:hawk",
+      "candidateRoles": [
+        {
+          "roleId": "Hawk",
+          "path": "Server/NPC/Roles/Avian/Raptor/Hawk.json",
+          "sha256": "9ce150a3ce66bb8858ae489b2240e46de059ab7014a1f479a38db5afa804f6b0",
+          "type": "Variant",
+          "reference": "Template_Birds_Passive",
+          "appearance": "Hawk",
+          "directTameRoleChange": null,
+          "model": {
+            "id": "Hawk",
+            "path": "Server/Models/Flying_Wildlife/Hawk.json",
+            "sha256": "5bb4ad87a905fb5fe1ff296d6ff16c301991e1327007eacd5bfc385664a500ae",
+            "parent": null,
+            "inheritanceResolved": false,
+            "resources": {
+              "Model": {
+                "path": "Common/NPC/Flying_Wildlife/Hawk/Models/Model.blockymodel",
+                "exists": true,
+                "sha256": "560903f51d17ff8a90b75e25a01306ed7fcb662d37f751b74c4576b9963091c9"
+              },
+              "Texture": {
+                "path": "Common/NPC/Flying_Wildlife/Hawk/Models/Texture.png",
+                "exists": true,
+                "sha256": "1602556abb97e95b40368bb17c73b0195d01bf64cf865b44028079892c6657f4"
+              }
+            },
+            "declaredAnimationSets": {
+              "Alerted": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Crouch": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "CrouchWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "CrouchWalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Death": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "DeathDrown": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "DeathFly": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "DeathFlyImpact": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "DeathSwim": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Eat": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Fall": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FluidWalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Fly": {
+                "declaredFiles": 2,
+                "allDeclaredFilesExist": true
+              },
+              "FlyBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "FlyFast": {
+                "declaredFiles": 2,
+                "allDeclaredFilesExist": true
+              },
+              "FlyIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Hurt": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "HurtDrown": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "HurtFly": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "HurtSwim": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Idle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "IdlePassive": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Jump": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpSprint": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "JumpWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Laydown": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Run": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "RunBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Sleep": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Spawn": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Sprint": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "StepRun": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "StepSprint": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "StepWalk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Swim": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDive": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDiveBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimDiveFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimFast": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimFloat": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimIdle": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimJump": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "SwimSink": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Wake": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "Walk": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              },
+              "WalkBackward": {
+                "declaredFiles": 1,
+                "allDeclaredFilesExist": true
+              }
+            }
+          },
+          "genesisEligibility": "UNVERIFIED"
+        }
+      ],
+      "rigCompatibility": "UNVERIFIED",
+      "initialGenesisAge": "UNDECIDED",
+      "controllerAndOwnership": "UNVERIFIED",
+      "adoption": "UNVERIFIED"
+    }
+  ]
+}

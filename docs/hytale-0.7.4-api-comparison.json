@@ -1,0 +1,501 @@
+{
+  "oldVersion": "0.7.2",
+  "newVersion": "0.7.4",
+  "newJarSha256": "23fad4c8d42b73b4139540bbae26ca0b8a43388f1e07e7b423d616e81834fa79",
+  "classes": [
+    {
+      "class": "com/hypixel/hytale/codec/ExtraInfo.class",
+      "same": true,
+      "oldSha256": "f9f2288301b9a5b76a88be17f5b911371a368094a55194df68fc2cb3e683fabf",
+      "newSha256": "f9f2288301b9a5b76a88be17f5b911371a368094a55194df68fc2cb3e683fabf"
+    },
+    {
+      "class": "com/hypixel/hytale/codec/util/RawJsonReader.class",
+      "same": true,
+      "oldSha256": "fd47f1a9f6fbd4533d43e41efe9e158644215577c49c5fc7543622455ee19420",
+      "newSha256": "fd47f1a9f6fbd4533d43e41efe9e158644215577c49c5fc7543622455ee19420"
+    },
+    {
+      "class": "com/hypixel/hytale/common/plugin/PluginManifest.class",
+      "same": true,
+      "oldSha256": "d625f65d8b450c6878ec5aa9baa4e5ef7159aee22a263bb476ab0e664f0cb79b",
+      "newSha256": "d625f65d8b450c6878ec5aa9baa4e5ef7159aee22a263bb476ab0e664f0cb79b"
+    },
+    {
+      "class": "com/hypixel/hytale/common/semver/Semver.class",
+      "same": true,
+      "oldSha256": "3bda1af78fab44b4a303290568b107984fc2e0a8a37cce56506b1fd5991f1be7",
+      "newSha256": "3bda1af78fab44b4a303290568b107984fc2e0a8a37cce56506b1fd5991f1be7"
+    },
+    {
+      "class": "com/hypixel/hytale/component/Holder$1.class",
+      "same": true,
+      "oldSha256": "4fe9c058f863c1bf7d7171af9310509cdd81b81a96593b2240834377aea894af",
+      "newSha256": "4fe9c058f863c1bf7d7171af9310509cdd81b81a96593b2240834377aea894af"
+    },
+    {
+      "class": "com/hypixel/hytale/component/Holder.class",
+      "same": true,
+      "oldSha256": "2375c44d0453d21d522c175a3ae4da14a008a92a1a28c066d3f7bf071a1ffe24",
+      "newSha256": "2375c44d0453d21d522c175a3ae4da14a008a92a1a28c066d3f7bf071a1ffe24"
+    },
+    {
+      "class": "com/hypixel/hytale/component/IResourceStorage.class",
+      "same": true,
+      "oldSha256": "cb04f45ba7abce86af98a1bae40e2f9607c101d3c78b324232b001d93adb2963",
+      "newSha256": "cb04f45ba7abce86af98a1bae40e2f9607c101d3c78b324232b001d93adb2963"
+    },
+    {
+      "class": "com/hypixel/hytale/component/Ref.class",
+      "same": true,
+      "oldSha256": "cea38c853d4ff6c0c0bbd762dc1a6ce7e8a684a7b37ecffac0dd8f6da8414ca7",
+      "newSha256": "cea38c853d4ff6c0c0bbd762dc1a6ce7e8a684a7b37ecffac0dd8f6da8414ca7"
+    },
+    {
+      "class": "com/hypixel/hytale/component/Store$1.class",
+      "same": true,
+      "oldSha256": "89287b447b7d14f777e987f2dcb89361c62acea585c995a6f646a4c82c1535e4",
+      "newSha256": "89287b447b7d14f777e987f2dcb89361c62acea585c995a6f646a4c82c1535e4"
+    },
+    {
+      "class": "com/hypixel/hytale/component/Store$ArchetypeTables.class",
+      "same": true,
+      "oldSha256": "e90ee520f7a567942c10843c55d0caf4a1ba94c57d3cedcd6a22cc440b511d08",
+      "newSha256": "e90ee520f7a567942c10843c55d0caf4a1ba94c57d3cedcd6a22cc440b511d08"
+    },
+    {
+      "class": "com/hypixel/hytale/component/Store$ProcessingCounter.class",
+      "same": true,
+      "oldSha256": "097bf6169b11e18c480cfadd24f6e6e5018b8c343dffea5a52a380db69f54539",
+      "newSha256": "097bf6169b11e18c480cfadd24f6e6e5018b8c343dffea5a52a380db69f54539"
+    },
+    {
+      "class": "com/hypixel/hytale/component/Store.class",
+      "same": true,
+      "oldSha256": "2d1ffdfdf143f1f004612f12d7b4a3382c4ed4dacea9d1d3d073ceca531085c4",
+      "newSha256": "2d1ffdfdf143f1f004612f12d7b4a3382c4ed4dacea9d1d3d073ceca531085c4"
+    },
+    {
+      "class": "com/hypixel/hytale/protocol/AnimationSlot.class",
+      "same": true,
+      "oldSha256": "2eaf28fd0d7a025b3f08966e697645b4042734e6f2c7335c32b05c9e7aff99fd",
+      "newSha256": "2eaf28fd0d7a025b3f08966e697645b4042734e6f2c7335c32b05c9e7aff99fd"
+    },
+    {
+      "class": "com/hypixel/hytale/protocol/Model.class",
+      "same": true,
+      "oldSha256": "de6fe9eaccf990a0dc60efabb990fc805249730235019c48c68d420183e3a4be",
+      "newSha256": "de6fe9eaccf990a0dc60efabb990fc805249730235019c48c68d420183e3a4be"
+    },
+    {
+      "class": "com/hypixel/hytale/protocol/ModelAttachment.class",
+      "same": true,
+      "oldSha256": "b27f7479ca4ce529e7822f2bea6fb9d3c9fbce80abbcda898ff5b96c63b60d5d",
+      "newSha256": "b27f7479ca4ce529e7822f2bea6fb9d3c9fbce80abbcda898ff5b96c63b60d5d"
+    },
+    {
+      "class": "com/hypixel/hytale/protocol/packets/interface_/CustomPageLifetime.class",
+      "same": true,
+      "oldSha256": "0d6a1f6d03e841c4846740878476ac3ccee3ad20ff7058097dd1f13039129cd1",
+      "newSha256": "0d6a1f6d03e841c4846740878476ac3ccee3ad20ff7058097dd1f13039129cd1"
+    },
+    {
+      "class": "com/hypixel/hytale/protocol/packets/world/WorldConfig.class",
+      "same": true,
+      "oldSha256": "6f53f6c0d98491ab2fcd365e676c53f0f069077b2df13b6b058fbd5550fa31cb",
+      "newSha256": "6f53f6c0d98491ab2fcd365e676c53f0f069077b2df13b6b058fbd5550fa31cb"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/Message.class",
+      "same": true,
+      "oldSha256": "62f361a89d6ea19989b7b48c5648933f74a3f3cae33bdb2fab38f6e1c3df2ab8",
+      "newSha256": "62f361a89d6ea19989b7b48c5648933f74a3f3cae33bdb2fab38f6e1c3df2ab8"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/asset/type/gameplay/WorldConfig.class",
+      "same": true,
+      "oldSha256": "01ed2a3fcd80d11ba7dd70f4d526d9592a486ee6a1c99d38a7d4911cfbc3704e",
+      "newSha256": "01ed2a3fcd80d11ba7dd70f4d526d9592a486ee6a1c99d38a7d4911cfbc3704e"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/asset/type/model/config/Model$ModelReference.class",
+      "same": true,
+      "oldSha256": "61ff299980315bba15ea45428c4db437fdfdb5c152c5f82416d102ca96749149",
+      "newSha256": "61ff299980315bba15ea45428c4db437fdfdb5c152c5f82416d102ca96749149"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/asset/type/model/config/Model.class",
+      "same": true,
+      "oldSha256": "41a38783e2594c49cb2c659e0b16878f034560f0527a45baad3df7755bbe49b0",
+      "newSha256": "41a38783e2594c49cb2c659e0b16878f034560f0527a45baad3df7755bbe49b0"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/asset/type/model/config/ModelAsset$1.class",
+      "same": true,
+      "oldSha256": "7d717ee6ced34894c5fe5001a7259f2dbd431180a9fd758a1ae2c5d99412ef30",
+      "newSha256": "7d717ee6ced34894c5fe5001a7259f2dbd431180a9fd758a1ae2c5d99412ef30"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/asset/type/model/config/ModelAsset$Animation.class",
+      "same": true,
+      "oldSha256": "5a0431cc826db84c6f898756ff31e3a2d3c0c2b100594c120a000ec6ad265714",
+      "newSha256": "5a0431cc826db84c6f898756ff31e3a2d3c0c2b100594c120a000ec6ad265714"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/asset/type/model/config/ModelAsset$AnimationSet.class",
+      "same": true,
+      "oldSha256": "f3d48f298312846947105cf3d098a4e94e6d2fc11794c387e26b4bfa3b4af426",
+      "newSha256": "f3d48f298312846947105cf3d098a4e94e6d2fc11794c387e26b4bfa3b4af426"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/asset/type/model/config/ModelAsset.class",
+      "same": true,
+      "oldSha256": "3dfcce27f11918f5930985d39d283ea2492b47df709547a338304548605afd00",
+      "newSha256": "3dfcce27f11918f5930985d39d283ea2492b47df709547a338304548605afd00"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/asset/type/model/config/ModelAttachment.class",
+      "same": true,
+      "oldSha256": "bc179eed5dc245d09243b52419611f70afb66570bdde5a12633dd996e4183aca",
+      "newSha256": "bc179eed5dc245d09243b52419611f70afb66570bdde5a12633dd996e4183aca"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/command/system/CommandContext.class",
+      "same": true,
+      "oldSha256": "5ae8862cc667c427046d96afc32a61207dd3b3fece0fd8ec25c016a73ca8e529",
+      "newSha256": "5ae8862cc667c427046d96afc32a61207dd3b3fece0fd8ec25c016a73ca8e529"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/command/system/arguments/system/FlagArg.class",
+      "same": true,
+      "oldSha256": "dacce51a96a3077529556c4a77e52ffa7defaf40793077ace1b5a191906cd581",
+      "newSha256": "dacce51a96a3077529556c4a77e52ffa7defaf40793077ace1b5a191906cd581"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/command/system/arguments/system/RequiredArg.class",
+      "same": true,
+      "oldSha256": "0e2c51c45966235155eeb2ef9b613f73fab47a350c33d174d995d7c659831d12",
+      "newSha256": "0e2c51c45966235155eeb2ef9b613f73fab47a350c33d174d995d7c659831d12"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/command/system/arguments/types/ArgTypes.class",
+      "same": true,
+      "oldSha256": "0055b4e3d3f4700e5ecf6f723f3ae68504b8ce45d7e4ad705ad5403c82062684",
+      "newSha256": "0055b4e3d3f4700e5ecf6f723f3ae68504b8ce45d7e4ad705ad5403c82062684"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/command/system/basecommands/AbstractPlayerCommand.class",
+      "same": true,
+      "oldSha256": "ab5fbd15169f448d001371eba38b2f769fa0bee8517666d52f5c8ef0a4383265",
+      "newSha256": "ab5fbd15169f448d001371eba38b2f769fa0bee8517666d52f5c8ef0a4383265"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/entity/AnimationUtils.class",
+      "same": true,
+      "oldSha256": "42f900b9587ce68a653a620ffa1d51c87561c52e7437fa231c88d5bcc666b87b",
+      "newSha256": "42f900b9587ce68a653a620ffa1d51c87561c52e7437fa231c88d5bcc666b87b"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/entity/Dirty.class",
+      "same": true,
+      "oldSha256": "77cae49c6cb16afd20dc3c1c75abf0d82451a1f75ed216f67ca6feeca975d70f",
+      "newSha256": "77cae49c6cb16afd20dc3c1c75abf0d82451a1f75ed216f67ca6feeca975d70f"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/entity/UUIDComponent.class",
+      "same": true,
+      "oldSha256": "63760c4fac43013433412057a7c4ab184669d7b5c7e2bb818126e61e4124481c",
+      "newSha256": "63760c4fac43013433412057a7c4ab184669d7b5c7e2bb818126e61e4124481c"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/entity/entities/Player.class",
+      "same": true,
+      "oldSha256": "a5ed312e3bc6c821a08b546a566b853010a8c25c0ea2eec1731b5acdec0ae353",
+      "newSha256": "a5ed312e3bc6c821a08b546a566b853010a8c25c0ea2eec1731b5acdec0ae353"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/entity/entities/player/pages/BasicCustomUIPage.class",
+      "same": true,
+      "oldSha256": "9e2ef02e97821ba2e0be052245073b87bd12b8ed36558344f281bd26101a8f07",
+      "newSha256": "9e2ef02e97821ba2e0be052245073b87bd12b8ed36558344f281bd26101a8f07"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/event/events/player/PlayerInteractEvent.class",
+      "same": true,
+      "oldSha256": "e90376dc221b8bfa0f0303b552caaa608822739a5bb35a748460d74c9db86857",
+      "newSha256": "e90376dc221b8bfa0f0303b552caaa608822739a5bb35a748460d74c9db86857"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/modules/entity/EntityModule$1.class",
+      "same": true,
+      "oldSha256": "aeace5a2fb8d87e23366898bc251726a38e466f353ee71682929c23fc1f81bb6",
+      "newSha256": "aeace5a2fb8d87e23366898bc251726a38e466f353ee71682929c23fc1f81bb6"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/modules/entity/EntityModule$LegacyEntityHolderSystem.class",
+      "same": true,
+      "oldSha256": "c2379d53f6ded9f46ccdec11a1f8172db17e0bc78cecb0e5eae1ab1f05a7655d",
+      "newSha256": "c2379d53f6ded9f46ccdec11a1f8172db17e0bc78cecb0e5eae1ab1f05a7655d"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/modules/entity/EntityModule$LegacyEntityRefSystem.class",
+      "same": true,
+      "oldSha256": "763ca8f736278c00be3d2d7a5f3fea81b2dcd96243d4f854c5b735724c7441f8",
+      "newSha256": "763ca8f736278c00be3d2d7a5f3fea81b2dcd96243d4f854c5b735724c7441f8"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/modules/entity/EntityModule$LegacyUUIDSystem.class",
+      "same": true,
+      "oldSha256": "c14fc07cf0e38e897a53e7b73d6a390244deda7014b55c659e8dd6321fd71c12",
+      "newSha256": "c14fc07cf0e38e897a53e7b73d6a390244deda7014b55c659e8dd6321fd71c12"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/modules/entity/EntityModule$LegacyUUIDUpdateSystem.class",
+      "same": true,
+      "oldSha256": "6553ac97d9ed17353247fb2bf02e453d6c44e0d211e98da761497ff16a5de476",
+      "newSha256": "6553ac97d9ed17353247fb2bf02e453d6c44e0d211e98da761497ff16a5de476"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/modules/entity/EntityModule$MigrationSystem.class",
+      "same": true,
+      "oldSha256": "a3a71bf33a8335ce66aa061c832f582ddaa74429cd4da01569cff3a85a6504c2",
+      "newSha256": "a3a71bf33a8335ce66aa061c832f582ddaa74429cd4da01569cff3a85a6504c2"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/modules/entity/EntityModule$Type.class",
+      "same": true,
+      "oldSha256": "5c93525f8740b5b5b7bba2f0a9a7c643ebbf29db509e9117033e581f6e3ebf07",
+      "newSha256": "5c93525f8740b5b5b7bba2f0a9a7c643ebbf29db509e9117033e581f6e3ebf07"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/modules/entity/EntityModule.class",
+      "same": true,
+      "oldSha256": "082684c7152d1636bc33dbb6575aa557ef5cf856a783ff95992683a20bec366c",
+      "newSha256": "082684c7152d1636bc33dbb6575aa557ef5cf856a783ff95992683a20bec366c"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/modules/entity/component/ModelComponent.class",
+      "same": true,
+      "oldSha256": "5677375a817f4a3aa08d27dde852de0402b994e6a203d79b00dd5aa9124c615b",
+      "newSha256": "5677375a817f4a3aa08d27dde852de0402b994e6a203d79b00dd5aa9124c615b"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/modules/entity/component/PersistentModel.class",
+      "same": true,
+      "oldSha256": "c9388033f578b63a03979af5d1b98b4d567ae40c86a52fcbb22006550029b214",
+      "newSha256": "c9388033f578b63a03979af5d1b98b4d567ae40c86a52fcbb22006550029b214"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/plugin/JavaPlugin.class",
+      "same": true,
+      "oldSha256": "f09bb7bcafc37257389def900cdfa3892629991f8a1bd7638386d222fad93276",
+      "newSha256": "f09bb7bcafc37257389def900cdfa3892629991f8a1bd7638386d222fad93276"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/plugin/JavaPluginInit.class",
+      "same": true,
+      "oldSha256": "d98c75a1ef1c11cea225ae5d8073c00deb0b03e9618bbb0bd222c88756d385f4",
+      "newSha256": "d98c75a1ef1c11cea225ae5d8073c00deb0b03e9618bbb0bd222c88756d385f4"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/ui/builder/UICommandBuilder.class",
+      "same": true,
+      "oldSha256": "470b5ab528558b489fd1f971423f7e271c8df8d533822abf3a1fa62d2d9428e6",
+      "newSha256": "470b5ab528558b489fd1f971423f7e271c8df8d533822abf3a1fa62d2d9428e6"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/universe/PlayerRef.class",
+      "same": true,
+      "oldSha256": "2e5d837499228ce704aaab565c84ade659a5317929f512ff72a5bd8cf61d078b",
+      "newSha256": "2e5d837499228ce704aaab565c84ade659a5317929f512ff72a5bd8cf61d078b"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/universe/world/World.class",
+      "same": true,
+      "oldSha256": "708ed2ebb7af27d1a58cb004ba74b3e5d9c72c219ac7b1075a16051ab3217bd5",
+      "newSha256": "708ed2ebb7af27d1a58cb004ba74b3e5d9c72c219ac7b1075a16051ab3217bd5"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/universe/world/WorldConfig$ChunkConfig.class",
+      "same": true,
+      "oldSha256": "c59355158143c7fdaad5bbe95ecadf75ad3b6ba0da07a896197bc99030cd9bbb",
+      "newSha256": "c59355158143c7fdaad5bbe95ecadf75ad3b6ba0da07a896197bc99030cd9bbb"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/universe/world/WorldConfig.class",
+      "same": true,
+      "oldSha256": "4fb73bd1feb7295b8dccc9fcdec5fa46856a5758f63b2b9e8c45b1e6aeb8cd0a",
+      "newSha256": "4fb73bd1feb7295b8dccc9fcdec5fa46856a5758f63b2b9e8c45b1e6aeb8cd0a"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/universe/world/storage/EntityStore$NetworkIdSystem.class",
+      "same": true,
+      "oldSha256": "5b31c5920738fdb6b20baab516c0494197207b77e7ad4600bf01c0ced9953197",
+      "newSha256": "5b31c5920738fdb6b20baab516c0494197207b77e7ad4600bf01c0ced9953197"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/universe/world/storage/EntityStore$UUIDSystem.class",
+      "same": true,
+      "oldSha256": "f4342813c05b612a2360cdf2717c64e7bb9447570a2fe22935c319e75c83e9fe",
+      "newSha256": "f4342813c05b612a2360cdf2717c64e7bb9447570a2fe22935c319e75c83e9fe"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/universe/world/storage/EntityStore.class",
+      "same": true,
+      "oldSha256": "2b872b75996253a378893be29754fdda7676b381bda54afa07a879b0af98fd96",
+      "newSha256": "2b872b75996253a378893be29754fdda7676b381bda54afa07a879b0af98fd96"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/universe/world/storage/resources/DiskResourceStorageProvider$DiskResourceStorage.class",
+      "same": true,
+      "oldSha256": "cdfe965c16084d21f8baf35028f6aae041864ad9cd0f4e445fa5cad86a0531c0",
+      "newSha256": "cdfe965c16084d21f8baf35028f6aae041864ad9cd0f4e445fa5cad86a0531c0"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/universe/world/storage/resources/DiskResourceStorageProvider.class",
+      "same": true,
+      "oldSha256": "a539781d86d5ffd8b22e0bd694d314516a7568c21437a019963190d6f451ff59",
+      "newSha256": "a539781d86d5ffd8b22e0bd694d314516a7568c21437a019963190d6f451ff59"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/util/BsonUtil.class",
+      "same": true,
+      "oldSha256": "f7cbf212ba987e92afbc8a4538443e22f45e58d97f35de760a6365cc8803f790",
+      "newSha256": "f7cbf212ba987e92afbc8a4538443e22f45e58d97f35de760a6365cc8803f790"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/util/TargetUtil$TargetBuffer.class",
+      "same": true,
+      "oldSha256": "4478d708b36af62a39f32b396aac9412a6b69fe2861d201de018c5b87c32abe2",
+      "newSha256": "4478d708b36af62a39f32b396aac9412a6b69fe2861d201de018c5b87c32abe2"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/util/TargetUtil$TargetBufferLocation.class",
+      "same": true,
+      "oldSha256": "9a3c233edf533b60af562de306dbae64a33cfae6875ea9de75224e4a23d52c34",
+      "newSha256": "9a3c233edf533b60af562de306dbae64a33cfae6875ea9de75224e4a23d52c34"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/util/TargetUtil.class",
+      "same": true,
+      "oldSha256": "890f2f088a038eaaec41a26823e8d10acdcd187c3ec3114be1bcfcf2cccf95a6",
+      "newSha256": "890f2f088a038eaaec41a26823e8d10acdcd187c3ec3114be1bcfcf2cccf95a6"
+    },
+    {
+      "class": "com/hypixel/hytale/server/core/util/io/FileUtil.class",
+      "same": true,
+      "oldSha256": "028f97cbad990f57e98ea31ca6379fb737d2ae4b2ac50348555bb673ea85f722",
+      "newSha256": "028f97cbad990f57e98ea31ca6379fb737d2ae4b2ac50348555bb673ea85f722"
+    },
+    {
+      "class": "com/hypixel/hytale/server/npc/NPCPlugin$NPCConfig.class",
+      "same": true,
+      "oldSha256": "a10b719864a62052d7afb4d14472fffd3ec0df3253d8a3d736a8fc40c48a069a",
+      "newSha256": "a10b719864a62052d7afb4d14472fffd3ec0df3253d8a3d736a8fc40c48a069a"
+    },
+    {
+      "class": "com/hypixel/hytale/server/npc/NPCPlugin$NPCEntityRegenerateStatsSystem.class",
+      "same": true,
+      "oldSha256": "5f1db9786cc1843a7ee9623f2da566c94c056a42ff907834597284af3b4f9b56",
+      "newSha256": "5f1db9786cc1843a7ee9623f2da566c94c056a42ff907834597284af3b4f9b56"
+    },
+    {
+      "class": "com/hypixel/hytale/server/npc/NPCPlugin.class",
+      "same": true,
+      "oldSha256": "bbf81fc3cdc6e3b80e2c14d28693d76286e277c71337c3947422a0369fef5bbf",
+      "newSha256": "bbf81fc3cdc6e3b80e2c14d28693d76286e277c71337c3947422a0369fef5bbf"
+    },
+    {
+      "class": "com/hypixel/hytale/server/npc/corecomponents/audiovisual/ActionModelAttachment.class",
+      "same": true,
+      "oldSha256": "ba413754c7453d231a3763adabc3b10e7b780ee06452c0afd768ff91eb111dcd",
+      "newSha256": "ba413754c7453d231a3763adabc3b10e7b780ee06452c0afd768ff91eb111dcd"
+    },
+    {
+      "class": "com/hypixel/hytale/server/npc/corecomponents/statemachine/builders/BuilderSensorState.class",
+      "same": true,
+      "oldSha256": "fad4a703299a8f7e26bc3334f3b744e195922272b7174798122b05783d731901",
+      "newSha256": "fad4a703299a8f7e26bc3334f3b744e195922272b7174798122b05783d731901"
+    },
+    {
+      "class": "com/hypixel/hytale/server/npc/entities/NPCEntity.class",
+      "same": true,
+      "oldSha256": "f82db11aa82a3d570e801279b6279b3dd93c00a4637baaa71ddd9b4ed120c1b9",
+      "newSha256": "f82db11aa82a3d570e801279b6279b3dd93c00a4637baaa71ddd9b4ed120c1b9"
+    },
+    {
+      "class": "com/hypixel/hytale/server/npc/role/Role$AvoidanceMode.class",
+      "same": true,
+      "oldSha256": "f9c6eec32e8ee47b9613f6d9f0b63cc6032405ea010e331519c684445d4b488b",
+      "newSha256": "f9c6eec32e8ee47b9613f6d9f0b63cc6032405ea010e331519c684445d4b488b"
+    },
+    {
+      "class": "com/hypixel/hytale/server/npc/role/Role$MemoriesUnlockMethod.class",
+      "same": true,
+      "oldSha256": "efd18c963a6f0d844aef8009b23829ddbce95887aca46a4fbf912b1486e3b706",
+      "newSha256": "efd18c963a6f0d844aef8009b23829ddbce95887aca46a4fbf912b1486e3b706"
+    },
+    {
+      "class": "com/hypixel/hytale/server/npc/role/Role$SeparationMode.class",
+      "same": true,
+      "oldSha256": "d9f7a10a363e651528f18d1307ece66fa6952b436d932d68caff30811b824c8e",
+      "newSha256": "d9f7a10a363e651528f18d1307ece66fa6952b436d932d68caff30811b824c8e"
+    },
+    {
+      "class": "com/hypixel/hytale/server/npc/role/Role.class",
+      "same": true,
+      "oldSha256": "c9f6f5d7d9a8c30014874183c0cc7cb9e66b3ac50d6915b933962703830ab01d",
+      "newSha256": "c9f6f5d7d9a8c30014874183c0cc7cb9e66b3ac50d6915b933962703830ab01d"
+    },
+    {
+      "class": "com/hypixel/hytale/server/npc/role/support/StateSupport.class",
+      "same": true,
+      "oldSha256": "f327b0b256c903fba02ac965c2f99a3514ef2539b4a76b6125dfa8d9cdce11a2",
+      "newSha256": "f327b0b256c903fba02ac965c2f99a3514ef2539b4a76b6125dfa8d9cdce11a2"
+    },
+    {
+      "class": "com/hypixel/hytale/server/npc/systems/RoleChangeSystem$RoleChangeQueue.class",
+      "same": true,
+      "oldSha256": "95baf0e17c8776ed37c6e569bd8413accdebd6da079cf10e3bfe4192b8b7fcbd",
+      "newSha256": "95baf0e17c8776ed37c6e569bd8413accdebd6da079cf10e3bfe4192b8b7fcbd"
+    },
+    {
+      "class": "com/hypixel/hytale/server/npc/systems/RoleChangeSystem$RoleChangeRequest.class",
+      "same": true,
+      "oldSha256": "6ebd83ebe6d063b36d2287f42680ec494e2911af1446e27eb929a61e65cca316",
+      "newSha256": "6ebd83ebe6d063b36d2287f42680ec494e2911af1446e27eb929a61e65cca316"
+    },
+    {
+      "class": "com/hypixel/hytale/server/npc/systems/RoleChangeSystem.class",
+      "same": true,
+      "oldSha256": "51957f451f9a1161ef9364cc3218a99a9d0a88acd32bef302e55920450ccf979",
+      "newSha256": "51957f451f9a1161ef9364cc3218a99a9d0a88acd32bef302e55920450ccf979"
+    },
+    {
+      "class": "org/bouncycastle/asn1/x509/Holder.class",
+      "same": true,
+      "oldSha256": "19f913d13b85bb3d63b38916dfa3cae0aeee9e680e41d89c5bee0b477f3ddd2c",
+      "newSha256": "19f913d13b85bb3d63b38916dfa3cae0aeee9e680e41d89c5bee0b477f3ddd2c"
+    },
+    {
+      "class": "org/bouncycastle/util/Store.class",
+      "same": true,
+      "oldSha256": "4a95b7381cb6e10c979557f07abaf9e4680646d9edd95c349931fea1c2587458",
+      "newSha256": "4a95b7381cb6e10c979557f07abaf9e4680646d9edd95c349931fea1c2587458"
+    },
+    {
+      "class": "org/bson/internal/BsonUtil$1.class",
+      "same": true,
+      "oldSha256": "083fca2b444bd2691d6ced7889095667636004d927709a2b1e5ac76e30571d14",
+      "newSha256": "083fca2b444bd2691d6ced7889095667636004d927709a2b1e5ac76e30571d14"
+    },
+    {
+      "class": "org/bson/internal/BsonUtil.class",
+      "same": true,
+      "oldSha256": "1571ef98c29846658f39b0f299cedb180a22b44358d96fbdcbcf60a78ddcd6b3",
+      "newSha256": "1571ef98c29846658f39b0f299cedb180a22b44358d96fbdcbcf60a78ddcd6b3"
+    }
+  ],
+  "comparedOn": "2026-10-25",
+  "scope": "Classes selected by current Java source/test Hytale imports plus the targeted 0A/anatomy class list and its nested classes; not a complete API or protocol comparison"
+}
