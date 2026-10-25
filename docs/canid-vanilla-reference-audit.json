@@ -1,0 +1,221 @@
+{
+  "auditedOn": "2026-10-18",
+  "source": "Installed release/game/latest/Assets.zip",
+  "archiveBytes": 3942760463,
+  "archiveModifiedUtc": "2026-10-15T00:46:28.581419+00:00",
+  "associatedServerVersion": "0.7.2",
+  "note": "Static reference audit; not a rendered animation or runtime compatibility test.",
+  "animals": {
+    "Wolf": {
+      "modelPath": "Common/NPC/Beast/Wolf/Models/Model.blockymodel",
+      "modelSha256": "3b72bd5e64f2030b0e18912c700d57a62feead380ab7e4dd6e665b160ad5a723",
+      "nodes": 47,
+      "shapes": {
+        "box": 28,
+        "none": 4,
+        "quad": 15
+      },
+      "textures": [
+        {
+          "path": "Common/NPC/Beast/Wolf/Models/Model_Textures/Black.png",
+          "width": 256,
+          "height": 160,
+          "crc32": "8858165b"
+        },
+        {
+          "path": "Common/NPC/Beast/Wolf/Models/Model_Textures/Grey_Trork.png",
+          "width": 256,
+          "height": 160,
+          "crc32": "ed33821b"
+        },
+        {
+          "path": "Common/NPC/Beast/Wolf/Models/Model_Textures/White.png",
+          "width": 256,
+          "height": 160,
+          "crc32": "11a09153"
+        }
+      ],
+      "animations": {
+        "Idle": {
+          "path": "Common/NPC/Beast/Wolf/Animations/Default/Idle.blockyanim",
+          "sha256": "15a34c62becbb5f7833fd410eec588a23044424a317a33ab98d7168b77cf8ac2",
+          "durationUnits": 80,
+          "animatedNodeCount": 25,
+          "keyframeCount": 50,
+          "interpolation": {
+            "smooth": 50
+          }
+        },
+        "Walk": {
+          "path": "Common/NPC/Beast/Wolf/Animations/Default/Walk.blockyanim",
+          "sha256": "0cc961db5e0052cef758fc423c0fb7c5f726382bcacf3aebed0ad9ffa10b6b55",
+          "durationUnits": 48,
+          "animatedNodeCount": 25,
+          "keyframeCount": 114,
+          "interpolation": {
+            "smooth": 114
+          }
+        },
+        "Run": {
+          "path": "Common/NPC/Beast/Wolf/Animations/Default/Run.blockyanim",
+          "sha256": "7bd47e37024a4060fedf1e976792dd4edd66f451135facc00f8a3c8cc5ff6fd1",
+          "durationUnits": 20,
+          "animatedNodeCount": 27,
+          "keyframeCount": 96,
+          "interpolation": {
+            "smooth": 96
+          }
+        }
+      }
+    },
+    "Fox": {
+      "modelPath": "Common/NPC/Beast/Fox/Models/Model.blockymodel",
+      "modelSha256": "6e181225fcec9d31b6a6cf4df3d2a06e7ad761708126c43dab2952addac70225",
+      "nodes": 45,
+      "shapes": {
+        "box": 28,
+        "none": 4,
+        "quad": 13
+      },
+      "textures": [
+        {
+          "path": "Common/NPC/Beast/Fox/Models/Texture.png",
+          "width": 160,
+          "height": 160,
+          "crc32": "a7411e73"
+        }
+      ],
+      "animations": {
+        "Idle": {
+          "path": "Common/NPC/Beast/Fox/Animations/Default/Idle.blockyanim",
+          "sha256": "3564704bc9c4c486e48c6843e94aebeb2b00bb48718637a1228a3922683ab1cd",
+          "durationUnits": 80,
+          "animatedNodeCount": 28,
+          "keyframeCount": 71,
+          "interpolation": {
+            "smooth": 71
+          }
+        },
+        "Walk": {
+          "path": "Common/NPC/Beast/Fox/Animations/Default/Walk.blockyanim",
+          "sha256": "b97cf7c3ec377426e69c2e5eeff07d3af11567e147e9cc3bb67c6cf909baf0ed",
+          "durationUnits": 48,
+          "animatedNodeCount": 26,
+          "keyframeCount": 124,
+          "interpolation": {
+            "smooth": 124
+          }
+        },
+        "Run": {
+          "path": "Common/NPC/Beast/Fox/Animations/Default/Run.blockyanim",
+          "sha256": "5cfcad5026cb4263c647bcbf613a314007ffa0fa878ca79aff37a42e102bcb4e",
+          "durationUnits": 20,
+          "animatedNodeCount": 27,
+          "keyframeCount": 90,
+          "interpolation": {
+            "smooth": 90
+          }
+        }
+      }
+    },
+    "Hyena": {
+      "modelPath": "Common/NPC/Beast/Hyena/Models/Model.blockymodel",
+      "modelSha256": "7817286df8d2d464807ae58146d5453bc312fa5ff8860561bf45774efb7e0d6e",
+      "nodes": 49,
+      "shapes": {
+        "box": 29,
+        "none": 4,
+        "quad": 16
+      },
+      "textures": [
+        {
+          "path": "Common/NPC/Beast/Hyena/Models/Texture.png",
+          "width": 256,
+          "height": 192,
+          "crc32": "b5c10c1c"
+        }
+      ],
+      "animations": {
+        "Idle": {
+          "path": "Common/NPC/Beast/Hyena/Animations/Default/Idle.blockyanim",
+          "sha256": "de176a4fddb1378db8768acf1d92a097c657b937c1e3d2512390f616ef8e0883",
+          "durationUnits": 60,
+          "animatedNodeCount": 26,
+          "keyframeCount": 56,
+          "interpolation": {
+            "smooth": 56
+          }
+        },
+        "Walk": {
+          "path": "Common/NPC/Beast/Hyena/Animations/Default/Walk.blockyanim",
+          "sha256": "5f91b4feb186fdd8e3f42cfc5c7cd77d4327565da9edcbe1f15a5a819a99e79e",
+          "durationUnits": 48,
+          "animatedNodeCount": 25,
+          "keyframeCount": 121,
+          "interpolation": {
+            "smooth": 121
+          }
+        },
+        "Run": {
+          "path": "Common/NPC/Beast/Hyena/Animations/Default/Run.blockyanim",
+          "sha256": "cca0d24bb34a0a19dd1e558439fa18513c8a27064396ba4c4a16135db3c3608c",
+          "durationUnits": 20,
+          "animatedNodeCount": 27,
+          "keyframeCount": 85,
+          "interpolation": {
+            "smooth": 85
+          }
+        }
+      }
+    },
+    "Dog": {
+      "modelPath": "Common/NPC/Pets/Dog/Models/Model.blockymodel",
+      "modelSha256": "c00266bc8e0fd26e4098b907cff1700cdb3b3aba9ef53a6ee8b66f4f02e3b025",
+      "nodes": 31,
+      "shapes": {
+        "box": 26,
+        "quad": 5
+      },
+      "textures": [
+        {
+          "path": "Common/NPC/Pets/Dog/Models/Texture.png",
+          "width": 256,
+          "height": 128,
+          "crc32": "8b0e2783"
+        }
+      ],
+      "animations": {
+        "Idle": {
+          "path": "Common/NPC/Pets/Dog/Animations/Idle.blockyanim",
+          "sha256": "72756d65ed94b8a2c9455573867091c401ec008b6f80d7b953b36b21236876c4",
+          "durationUnits": 80,
+          "animatedNodeCount": 28,
+          "keyframeCount": 81,
+          "interpolation": {
+            "smooth": 81
+          }
+        },
+        "Walk": {
+          "path": "Common/NPC/Pets/Dog/Animations/Walk.blockyanim",
+          "sha256": "42901eeae5b2cae6e053c96dd08bca4aad4a55bd39dc24a564a4b04b2476facb",
+          "durationUnits": 48,
+          "animatedNodeCount": 26,
+          "keyframeCount": 104,
+          "interpolation": {
+            "smooth": 104
+          }
+        },
+        "Run": {
+          "path": "Common/NPC/Pets/Dog/Animations/Run.blockyanim",
+          "sha256": "581e9eeb417f9fca860675e11f777a8d39717125da3550d925757069a1936a8a",
+          "durationUnits": 20,
+          "animatedNodeCount": 26,
+          "keyframeCount": 67,
+          "interpolation": {
+            "smooth": 67
+          }
+        }
+      }
+    }
+  }
+}
