@@ -3,6 +3,8 @@ package dev.ifelse.zirion.genesis.config;
 import dev.ifelse.zirion.genesis.core.config.ServerConfig;
 import dev.ifelse.zirion.genesis.core.content.v2.CatalogBundle;
 import dev.ifelse.zirion.genesis.core.breeding.v2.BreedingContext;
+import dev.ifelse.zirion.genesis.core.wild.WildDistributionPolicy;
+import dev.ifelse.zirion.genesis.core.wild.WildGenerationContext;
 
 import java.io.InputStream;
 import java.util.Objects;
@@ -21,6 +23,11 @@ public final class ConfigurationRuntime {
 
         /** Retain this once at operation start; later reloads must not replace its values. */
         public BreedingContext breedingContext() { return new BreedingContext(revision, config, catalogs); }
+
+        /** No bundled balance policy exists: callers must supply an explicit, validated distribution. */
+        public WildGenerationContext wildContext(WildDistributionPolicy policy) {
+            return new WildGenerationContext(revision, config.genetics().wildArcana(), catalogs, policy);
+        }
     }
 
     private final CatalogBundle catalogs;
