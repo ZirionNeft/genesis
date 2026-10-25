@@ -1,0 +1,1005 @@
+{
+  "contentSha256": "f72171c3e9d6970514971f197bdd248ddf87ee35ebea5c523e4393682c14585a",
+  "isolatedInput": {
+    "genesis:body_frame": [
+      "genesis:normal",
+      "genesis:normal"
+    ],
+    "genesis:head_form": [
+      "genesis:standard",
+      "genesis:standard"
+    ],
+    "genesis:ear_form": [
+      "genesis:standard",
+      "genesis:standard"
+    ],
+    "genesis:tail_form": [
+      "genesis:standard",
+      "genesis:standard"
+    ],
+    "genesis:limb_form": [
+      "genesis:standard",
+      "genesis:standard"
+    ],
+    "genesis:foot_form": [
+      "genesis:standard",
+      "genesis:standard"
+    ],
+    "genesis:cover_type": [
+      "genesis:standard",
+      "genesis:standard"
+    ],
+    "genesis:coat_density": [
+      "genesis:normal",
+      "genesis:normal"
+    ],
+    "genesis:pigment": [
+      "genesis:ordinary",
+      "genesis:ordinary"
+    ],
+    "genesis:pattern": [
+      "genesis:plain",
+      "genesis:plain"
+    ],
+    "genesis:eye_appearance": [
+      "genesis:ordinary",
+      "genesis:ordinary"
+    ],
+    "genesis:muscle": [
+      "genesis:normal",
+      "genesis:normal"
+    ],
+    "genesis:bone_strength": [
+      "genesis:normal",
+      "genesis:normal"
+    ],
+    "genesis:endurance": [
+      "genesis:normal",
+      "genesis:normal"
+    ],
+    "genesis:metabolism": [
+      "genesis:normal",
+      "genesis:normal"
+    ],
+    "genesis:healing": [
+      "genesis:normal",
+      "genesis:normal"
+    ],
+    "genesis:defense": [
+      "genesis:normal",
+      "genesis:normal"
+    ],
+    "genesis:senses": [
+      "genesis:normal",
+      "genesis:normal"
+    ],
+    "genesis:temper": [
+      "genesis:cautious",
+      "genesis:cautious"
+    ],
+    "genesis:trainability": [
+      "genesis:normal",
+      "genesis:normal"
+    ],
+    "genesis:resource_trait": [
+      "genesis:normal",
+      "genesis:normal"
+    ],
+    "genesis:arcana": [
+      "genesis:quiet",
+      "genesis:quiet"
+    ],
+    "genesis:element": [
+      "genesis:stone",
+      "genesis:stone"
+    ],
+    "genesis:heritage_1": [
+      "genesis:wolf",
+      "genesis:wolf"
+    ],
+    "genesis:heritage_2": [
+      "genesis:wolf",
+      "genesis:wolf"
+    ],
+    "genesis:heritage_3": [
+      "genesis:wolf",
+      "genesis:wolf"
+    ]
+  },
+  "events": [
+    {
+      "seed": "4113",
+      "expected": {
+        "id": "genesis:alert_senses",
+        "category": "behavioral",
+        "gene": "genesis:senses",
+        "copy": 0,
+        "previous": "genesis:normal",
+        "target": "genesis:alert",
+        "after": [
+          "genesis:alert",
+          "genesis:normal"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4099",
+      "expected": {
+        "id": "genesis:alert_senses",
+        "category": "behavioral",
+        "gene": "genesis:senses",
+        "copy": 1,
+        "previous": "genesis:normal",
+        "target": "genesis:alert",
+        "after": [
+          "genesis:alert",
+          "genesis:normal"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4352",
+      "expected": {
+        "id": "genesis:arcane_awakening",
+        "category": "magical",
+        "gene": "genesis:arcana",
+        "copy": 0,
+        "previous": "genesis:quiet",
+        "target": "genesis:awake",
+        "after": [
+          "genesis:awake",
+          "genesis:quiet"
+        ],
+        "award": true
+      }
+    },
+    {
+      "seed": "4354",
+      "expected": {
+        "id": "genesis:arcane_awakening",
+        "category": "magical",
+        "gene": "genesis:arcana",
+        "copy": 1,
+        "previous": "genesis:quiet",
+        "target": "genesis:awake",
+        "after": [
+          "genesis:awake",
+          "genesis:quiet"
+        ],
+        "award": true
+      }
+    },
+    {
+      "seed": "4166",
+      "expected": {
+        "id": "genesis:brittle_bones",
+        "category": "physiological",
+        "gene": "genesis:bone_strength",
+        "copy": 0,
+        "previous": "genesis:normal",
+        "target": "genesis:brittle",
+        "after": [
+          "genesis:brittle",
+          "genesis:normal"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4165",
+      "expected": {
+        "id": "genesis:brittle_bones",
+        "category": "physiological",
+        "gene": "genesis:bone_strength",
+        "copy": 1,
+        "previous": "genesis:normal",
+        "target": "genesis:brittle",
+        "after": [
+          "genesis:brittle",
+          "genesis:normal"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4230",
+      "expected": {
+        "id": "genesis:curiosity",
+        "category": "behavioral",
+        "gene": "genesis:trainability",
+        "copy": 0,
+        "previous": "genesis:normal",
+        "target": "genesis:curious",
+        "after": [
+          "genesis:curious",
+          "genesis:normal"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4098",
+      "expected": {
+        "id": "genesis:curiosity",
+        "category": "behavioral",
+        "gene": "genesis:trainability",
+        "copy": 1,
+        "previous": "genesis:normal",
+        "target": "genesis:curious",
+        "after": [
+          "genesis:curious",
+          "genesis:normal"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4654",
+      "expected": {
+        "id": "genesis:dark_coat",
+        "category": "cosmetic",
+        "gene": "genesis:pigment",
+        "copy": 0,
+        "previous": "genesis:ordinary",
+        "target": "genesis:dark",
+        "after": [
+          "genesis:dark",
+          "genesis:ordinary"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4653",
+      "expected": {
+        "id": "genesis:dark_coat",
+        "category": "cosmetic",
+        "gene": "genesis:pigment",
+        "copy": 1,
+        "previous": "genesis:ordinary",
+        "target": "genesis:dark",
+        "after": [
+          "genesis:dark",
+          "genesis:ordinary"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4132",
+      "expected": {
+        "id": "genesis:deep_stamina",
+        "category": "physiological",
+        "gene": "genesis:endurance",
+        "copy": 0,
+        "previous": "genesis:normal",
+        "target": "genesis:deep",
+        "after": [
+          "genesis:deep",
+          "genesis:normal"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4139",
+      "expected": {
+        "id": "genesis:deep_stamina",
+        "category": "physiological",
+        "gene": "genesis:endurance",
+        "copy": 1,
+        "previous": "genesis:normal",
+        "target": "genesis:deep",
+        "after": [
+          "genesis:deep",
+          "genesis:normal"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4141",
+      "expected": {
+        "id": "genesis:dense_bones",
+        "category": "physiological",
+        "gene": "genesis:bone_strength",
+        "copy": 0,
+        "previous": "genesis:normal",
+        "target": "genesis:dense",
+        "after": [
+          "genesis:dense",
+          "genesis:normal"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4142",
+      "expected": {
+        "id": "genesis:dense_bones",
+        "category": "physiological",
+        "gene": "genesis:bone_strength",
+        "copy": 1,
+        "previous": "genesis:normal",
+        "target": "genesis:dense",
+        "after": [
+          "genesis:dense",
+          "genesis:normal"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4135",
+      "expected": {
+        "id": "genesis:efficient_metabolism",
+        "category": "physiological",
+        "gene": "genesis:metabolism",
+        "copy": 0,
+        "previous": "genesis:normal",
+        "target": "genesis:efficient",
+        "after": [
+          "genesis:efficient",
+          "genesis:normal"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4138",
+      "expected": {
+        "id": "genesis:efficient_metabolism",
+        "category": "physiological",
+        "gene": "genesis:metabolism",
+        "copy": 1,
+        "previous": "genesis:normal",
+        "target": "genesis:efficient",
+        "after": [
+          "genesis:efficient",
+          "genesis:normal"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4679",
+      "expected": {
+        "id": "genesis:glowing_eyes",
+        "category": "cosmetic",
+        "gene": "genesis:eye_appearance",
+        "copy": 0,
+        "previous": "genesis:ordinary",
+        "target": "genesis:luminous",
+        "after": [
+          "genesis:luminous",
+          "genesis:ordinary"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4664",
+      "expected": {
+        "id": "genesis:glowing_eyes",
+        "category": "cosmetic",
+        "gene": "genesis:eye_appearance",
+        "copy": 1,
+        "previous": "genesis:ordinary",
+        "target": "genesis:luminous",
+        "after": [
+          "genesis:luminous",
+          "genesis:ordinary"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4640",
+      "expected": {
+        "id": "genesis:keen_ears",
+        "category": "cosmetic",
+        "gene": "genesis:ear_form",
+        "copy": 0,
+        "previous": "genesis:standard",
+        "target": "genesis:keen",
+        "after": [
+          "genesis:keen",
+          "genesis:standard"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4641",
+      "expected": {
+        "id": "genesis:keen_ears",
+        "category": "cosmetic",
+        "gene": "genesis:ear_form",
+        "copy": 1,
+        "previous": "genesis:standard",
+        "target": "genesis:keen",
+        "after": [
+          "genesis:keen",
+          "genesis:standard"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4643",
+      "expected": {
+        "id": "genesis:layered_cover",
+        "category": "cosmetic",
+        "gene": "genesis:cover_type",
+        "copy": 0,
+        "previous": "genesis:standard",
+        "target": "genesis:layered",
+        "after": [
+          "genesis:layered",
+          "genesis:standard"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4646",
+      "expected": {
+        "id": "genesis:layered_cover",
+        "category": "cosmetic",
+        "gene": "genesis:cover_type",
+        "copy": 1,
+        "previous": "genesis:standard",
+        "target": "genesis:layered",
+        "after": [
+          "genesis:layered",
+          "genesis:standard"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4097",
+      "expected": {
+        "id": "genesis:nervous_temper",
+        "category": "behavioral",
+        "gene": "genesis:temper",
+        "copy": 0,
+        "previous": "genesis:cautious",
+        "target": "genesis:nervous",
+        "after": [
+          "genesis:cautious",
+          "genesis:nervous"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4112",
+      "expected": {
+        "id": "genesis:nervous_temper",
+        "category": "behavioral",
+        "gene": "genesis:temper",
+        "copy": 1,
+        "previous": "genesis:cautious",
+        "target": "genesis:nervous",
+        "after": [
+          "genesis:cautious",
+          "genesis:nervous"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4644",
+      "expected": {
+        "id": "genesis:plumed_tail",
+        "category": "cosmetic",
+        "gene": "genesis:tail_form",
+        "copy": 0,
+        "previous": "genesis:standard",
+        "target": "genesis:plumed",
+        "after": [
+          "genesis:plumed",
+          "genesis:standard"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4648",
+      "expected": {
+        "id": "genesis:plumed_tail",
+        "category": "cosmetic",
+        "gene": "genesis:tail_form",
+        "copy": 1,
+        "previous": "genesis:standard",
+        "target": "genesis:plumed",
+        "after": [
+          "genesis:plumed",
+          "genesis:standard"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4127",
+      "expected": {
+        "id": "genesis:productive",
+        "category": "behavioral",
+        "gene": "genesis:resource_trait",
+        "copy": 0,
+        "previous": "genesis:normal",
+        "target": "genesis:gifted",
+        "after": [
+          "genesis:gifted",
+          "genesis:normal"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4102",
+      "expected": {
+        "id": "genesis:productive",
+        "category": "behavioral",
+        "gene": "genesis:resource_trait",
+        "copy": 1,
+        "previous": "genesis:normal",
+        "target": "genesis:gifted",
+        "after": [
+          "genesis:gifted",
+          "genesis:normal"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4171",
+      "expected": {
+        "id": "genesis:quick_recovery",
+        "category": "physiological",
+        "gene": "genesis:healing",
+        "copy": 0,
+        "previous": "genesis:normal",
+        "target": "genesis:quick",
+        "after": [
+          "genesis:normal",
+          "genesis:quick"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4174",
+      "expected": {
+        "id": "genesis:quick_recovery",
+        "category": "physiological",
+        "gene": "genesis:healing",
+        "copy": 1,
+        "previous": "genesis:normal",
+        "target": "genesis:quick",
+        "after": [
+          "genesis:normal",
+          "genesis:quick"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4137",
+      "expected": {
+        "id": "genesis:sluggish_recovery",
+        "category": "physiological",
+        "gene": "genesis:healing",
+        "copy": 0,
+        "previous": "genesis:normal",
+        "target": "genesis:sluggish",
+        "after": [
+          "genesis:normal",
+          "genesis:sluggish"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4133",
+      "expected": {
+        "id": "genesis:sluggish_recovery",
+        "category": "physiological",
+        "gene": "genesis:healing",
+        "copy": 1,
+        "previous": "genesis:normal",
+        "target": "genesis:sluggish",
+        "after": [
+          "genesis:normal",
+          "genesis:sluggish"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4645",
+      "expected": {
+        "id": "genesis:spotted_cover",
+        "category": "cosmetic",
+        "gene": "genesis:pattern",
+        "copy": 0,
+        "previous": "genesis:plain",
+        "target": "genesis:spotted",
+        "after": [
+          "genesis:plain",
+          "genesis:spotted"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4652",
+      "expected": {
+        "id": "genesis:spotted_cover",
+        "category": "cosmetic",
+        "gene": "genesis:pattern",
+        "copy": 1,
+        "previous": "genesis:plain",
+        "target": "genesis:spotted",
+        "after": [
+          "genesis:plain",
+          "genesis:spotted"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4096",
+      "expected": {
+        "id": "genesis:steady_temper",
+        "category": "behavioral",
+        "gene": "genesis:temper",
+        "copy": 0,
+        "previous": "genesis:cautious",
+        "target": "genesis:steady",
+        "after": [
+          "genesis:cautious",
+          "genesis:steady"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4224",
+      "expected": {
+        "id": "genesis:steady_temper",
+        "category": "behavioral",
+        "gene": "genesis:temper",
+        "copy": 1,
+        "previous": "genesis:cautious",
+        "target": "genesis:steady",
+        "after": [
+          "genesis:cautious",
+          "genesis:steady"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4173",
+      "expected": {
+        "id": "genesis:strong_muscles",
+        "category": "physiological",
+        "gene": "genesis:muscle",
+        "copy": 0,
+        "previous": "genesis:normal",
+        "target": "genesis:strong",
+        "after": [
+          "genesis:normal",
+          "genesis:strong"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4169",
+      "expected": {
+        "id": "genesis:strong_muscles",
+        "category": "physiological",
+        "gene": "genesis:muscle",
+        "copy": 1,
+        "previous": "genesis:normal",
+        "target": "genesis:strong",
+        "after": [
+          "genesis:normal",
+          "genesis:strong"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4136",
+      "expected": {
+        "id": "genesis:thick_cover",
+        "category": "physiological",
+        "gene": "genesis:coat_density",
+        "copy": 0,
+        "previous": "genesis:normal",
+        "target": "genesis:thick",
+        "after": [
+          "genesis:normal",
+          "genesis:thick"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4143",
+      "expected": {
+        "id": "genesis:thick_cover",
+        "category": "physiological",
+        "gene": "genesis:coat_density",
+        "copy": 1,
+        "previous": "genesis:normal",
+        "target": "genesis:thick",
+        "after": [
+          "genesis:normal",
+          "genesis:thick"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4172",
+      "expected": {
+        "id": "genesis:voracious_metabolism",
+        "category": "physiological",
+        "gene": "genesis:metabolism",
+        "copy": 0,
+        "previous": "genesis:normal",
+        "target": "genesis:voracious",
+        "after": [
+          "genesis:normal",
+          "genesis:voracious"
+        ],
+        "award": false
+      }
+    },
+    {
+      "seed": "4129",
+      "expected": {
+        "id": "genesis:voracious_metabolism",
+        "category": "physiological",
+        "gene": "genesis:metabolism",
+        "copy": 1,
+        "previous": "genesis:normal",
+        "target": "genesis:voracious",
+        "after": [
+          "genesis:normal",
+          "genesis:voracious"
+        ],
+        "award": false
+      }
+    }
+  ],
+  "workflow": [
+    {
+      "inputIndex": 0,
+      "expected": {
+        "reason": "NO_EVENT",
+        "award": false
+      }
+    },
+    {
+      "inputIndex": 1,
+      "expected": {
+        "reason": "NO_EVENT",
+        "award": false
+      }
+    },
+    {
+      "inputIndex": 2,
+      "expected": {
+        "reason": "NO_EVENT",
+        "award": false
+      }
+    },
+    {
+      "inputIndex": 3,
+      "expected": null
+    },
+    {
+      "inputIndex": 4,
+      "expected": {
+        "id": "genesis:keen_ears",
+        "category": "cosmetic",
+        "gene": "genesis:ear_form",
+        "copy": 1,
+        "previous": "genesis:standard",
+        "target": "genesis:keen",
+        "after": [
+          "genesis:keen",
+          "genesis:keen"
+        ],
+        "award": false
+      }
+    },
+    {
+      "inputIndex": 5,
+      "expected": {
+        "reason": "NO_EVENT",
+        "award": false
+      }
+    },
+    {
+      "inputIndex": 6,
+      "expected": {
+        "reason": "NO_EVENT",
+        "award": false
+      }
+    },
+    {
+      "inputIndex": 7,
+      "expected": {
+        "reason": "NO_EVENT",
+        "award": false
+      }
+    },
+    {
+      "inputIndex": 8,
+      "expected": {
+        "reason": "NO_EVENT",
+        "award": false
+      }
+    },
+    {
+      "inputIndex": 9,
+      "expected": {
+        "reason": "NO_EVENT",
+        "award": false
+      }
+    },
+    {
+      "inputIndex": 10,
+      "expected": null
+    },
+    {
+      "inputIndex": 11,
+      "expected": {
+        "id": "genesis:keen_ears",
+        "category": "cosmetic",
+        "gene": "genesis:ear_form",
+        "copy": 1,
+        "previous": "genesis:standard",
+        "target": "genesis:keen",
+        "after": [
+          "genesis:keen",
+          "genesis:keen"
+        ],
+        "award": false
+      }
+    },
+    {
+      "inputIndex": 12,
+      "expected": {
+        "reason": "NO_EVENT",
+        "award": false
+      }
+    },
+    {
+      "inputIndex": 13,
+      "expected": {
+        "reason": "NO_EVENT",
+        "award": false
+      }
+    },
+    {
+      "inputIndex": 14,
+      "expected": {
+        "reason": "NO_EVENT",
+        "award": false
+      }
+    },
+    {
+      "inputIndex": 15,
+      "expected": {
+        "reason": "NO_EVENT",
+        "award": false
+      }
+    },
+    {
+      "inputIndex": 16,
+      "expected": {
+        "reason": "NO_EVENT",
+        "award": false
+      }
+    },
+    {
+      "inputIndex": 17,
+      "expected": null
+    },
+    {
+      "inputIndex": 18,
+      "expected": {
+        "id": "genesis:keen_ears",
+        "category": "cosmetic",
+        "gene": "genesis:ear_form",
+        "copy": 1,
+        "previous": "genesis:standard",
+        "target": "genesis:keen",
+        "after": [
+          "genesis:keen",
+          "genesis:keen"
+        ],
+        "award": false
+      }
+    },
+    {
+      "inputIndex": 19,
+      "expected": {
+        "reason": "NO_EVENT",
+        "award": false
+      }
+    },
+    {
+      "inputIndex": 20,
+      "expected": {
+        "reason": "NO_EVENT",
+        "award": false
+      }
+    },
+    {
+      "inputIndex": 21,
+      "expected": {
+        "reason": "NO_EVENT",
+        "award": false
+      }
+    },
+    {
+      "inputIndex": 22,
+      "expected": {
+        "reason": "NO_EVENT",
+        "award": false
+      }
+    },
+    {
+      "inputIndex": 23,
+      "expected": {
+        "reason": "NO_EVENT",
+        "award": false
+      }
+    },
+    {
+      "inputIndex": 24,
+      "expected": null
+    },
+    {
+      "inputIndex": 25,
+      "expected": {
+        "id": "genesis:keen_ears",
+        "category": "cosmetic",
+        "gene": "genesis:ear_form",
+        "copy": 1,
+        "previous": "genesis:standard",
+        "target": "genesis:keen",
+        "after": [
+          "genesis:keen",
+          "genesis:standard"
+        ],
+        "award": false
+      }
+    },
+    {
+      "inputIndex": 26,
+      "expected": {
+        "reason": "NO_EVENT",
+        "award": false
+      }
+    },
+    {
+      "inputIndex": 27,
+      "expected": {
+        "reason": "NO_EVENT",
+        "award": false
+      }
+    }
+  ]
+}

@@ -37,6 +37,20 @@ class ConfigurationRuntimeTest {
     }
 
     @Test
+    void v2BreedingContextRetainsItsConfigurationAfterReload() throws Exception {
+        var runtime = runtime(); var before = runtime.snapshot();
+        var retained = before.breedingContext();
+        var candidate = configJson(before);
+        at(candidate, "breeding").addProperty("baseSameFamilySuccess", 0.01);
+        at(candidate, "breeding").addProperty("baseCooldownMinutes", 20);
+        runtime.reload(stream(candidate.toString()), "reload");
+        assertEquals(0, retained.configRevision()); assertEquals(1, runtime.snapshot().breedingContext().configRevision());
+        assertSame(before.config(), retained.config()); assertSame(before.catalogs(), retained.catalogs());
+        assertEquals(new java.math.BigDecimal("0.7"), retained.config().breeding().baseSameFamilySuccess());
+        assertEquals(new java.math.BigDecimal("0.01"), runtime.snapshot().breedingContext().config().breeding().baseSameFamilySuccess());
+    }
+
+    @Test
     void invalidReloadAndRegistryReplacementLeaveThePreviousSnapshotActive() throws Exception {
         var runtime = runtime(); var old = runtime.snapshot();
         var invalid = configJson(old); at(invalid, "growth").addProperty("infantDurationMinutes", -1);

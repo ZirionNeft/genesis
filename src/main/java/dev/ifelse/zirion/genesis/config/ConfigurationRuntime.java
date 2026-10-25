@@ -2,6 +2,7 @@ package dev.ifelse.zirion.genesis.config;
 
 import dev.ifelse.zirion.genesis.core.config.ServerConfig;
 import dev.ifelse.zirion.genesis.core.content.v2.CatalogBundle;
+import dev.ifelse.zirion.genesis.core.breeding.v2.BreedingContext;
 
 import java.io.InputStream;
 import java.util.Objects;
@@ -17,6 +18,9 @@ public final class ConfigurationRuntime {
             Objects.requireNonNull(config); Objects.requireNonNull(catalogs);
             verifyPinnedDefinitions(config, catalogs.defaults());
         }
+
+        /** Retain this once at operation start; later reloads must not replace its values. */
+        public BreedingContext breedingContext() { return new BreedingContext(revision, config, catalogs); }
     }
 
     private final CatalogBundle catalogs;
